@@ -1,4 +1,4 @@
-<a class="btn btn-lg" href="/stories/{{page.language}}" class="button">Back to stories list</a><br><br>
+<a class="btn btn-lg" href="/storybooks-kenya/stories/{{page.language}}" class="button">Back to stories list</a><br><br>
 
 <div class="columns" id="text01">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/asp-imagebank/master/medium/{{ page.id }}/01.jpg"></div>
@@ -7,18 +7,18 @@
 <span class="en">{{page.entitle}}</span>
 <span class="fr">{{page.frtitle}}</span>
 			<div class="btn-group">
-				<a href="#text02" class="btn btn-lg"><img src="/css/arrow-down.svg" alt="Next page" width="16px"></a>
-				<button class=" btn btn-lg" onclick="playpause('{{ include.index }}')"><img src="/css/volume-up.svg" alt="Play/pause" width="16px"></button>
-				<audio id="audio{{ include.index }}" src="/audio/{{page.language}}/{{page.id}}/mp3/01.mp3"></audio>
+				<a href="#text02" class="btn btn-lg"><img src="/storybooks-kenya/css/arrow-down.svg" alt="Next page" width="16px"></a>
+				<button class=" btn btn-lg" onclick="playpause('{{ include.index }}')"><img src="/storybooks-kenya/css/volume-up.svg" alt="Play/pause" width="16px"></button>
+				<audio id="audio{{ include.index }}" src="http://storybookscanada.ca/audio/{{page.language}}/{{page.id}}/mp3/01.mp3"></audio>
 			</div>
 		</h1>
-		<h3><span class="tooltip tooltip-right" data-tooltip="Written by"><img class="cover-icon" src="/css/pencil.svg" alt="Written by" width="38px"></span> {{page.text}}</h3>
-		<h3><span class="tooltip tooltip-right" data-tooltip="Illustrated by"><img class="cover-icon" src="/css/art.svg" alt="Illustrated by" width="38px"></span> {{page.illustration}}</h3>{% if page.translation != "" %}
-		<h3><span class="tooltip tooltip-right" data-tooltip="Translated by"><img class="cover-icon" src="/css/global.svg" alt="Translated by" width="38px"></span> {{page.translation}}</h3>{% endif %}{% if page.reader != "" %}
-		<h3><span class="tooltip tooltip-right" data-tooltip="Read by"><img class="cover-icon" src="/css/megaphone.svg" alt="Read by" width="38px"></span> {{page.reader}}</h3>{% endif %}
-		<h3><span class="tooltip tooltip-right" data-tooltip="Language"><img class="cover-icon" src="/css/language.svg" alt="Language" width="38px"></span> <a href="/stories/{{page.language}}">{{page.langname}}</a></h3>
-		<h3><span class="tooltip tooltip-right" data-tooltip="Level"><img class="cover-icon" src="/css/level.svg" alt="Level" width="38px"></span> <a href="/stories/{{page.language}}/level{{page.level}}">Level {{page.level}}</a></h3>
-		<h3><span class="tooltip tooltip-right" data-tooltip="Narrate story"><img class="cover-icon" src="/css/speaker.svg" alt="Narrate full story" width="38px"></span> <audio id="audioplayer" controls><source src="http://storybookscanada.ca/audio/{{page.language}}/{{page.id}}/{{page.id}}.mp3" type="audio/mpeg"></audio></h3>
+		<h3><span class="tooltip tooltip-right" data-tooltip="Written by"><img class="cover-icon" src="/storybooks-kenya/css/pencil.svg" alt="Written by" width="38px"></span> {{page.text}}</h3>
+		<h3><span class="tooltip tooltip-right" data-tooltip="Illustrated by"><img class="cover-icon" src="/storybooks-kenya/css/art.svg" alt="Illustrated by" width="38px"></span> {{page.illustration}}</h3>{% if page.translation != "" %}
+		<h3><span class="tooltip tooltip-right" data-tooltip="Translated by"><img class="cover-icon" src="/storybooks-kenya/css/global.svg" alt="Translated by" width="38px"></span> {{page.translation}}</h3>{% endif %}{% if page.reader != "" %}
+		<h3><span class="tooltip tooltip-right" data-tooltip="Read by"><img class="cover-icon" src="/storybooks-kenya/css/megaphone.svg" alt="Read by" width="38px"></span> {{page.reader}}</h3>{% endif %}
+		<h3><span class="tooltip tooltip-right" data-tooltip="Language"><img class="cover-icon" src="/storybooks-kenya/css/language.svg" alt="Language" width="38px"></span> <a href="/storybooks-kenya/stories/{{page.language}}">{{page.langname}}</a></h3>
+		<h3><span class="tooltip tooltip-right" data-tooltip="Level"><img class="cover-icon" src="/storybooks-kenya/css/level.svg" alt="Level" width="38px"></span> <a href="/storybooks-kenya/stories/{{page.language}}/level{{page.level}}">Level {{page.level}}</a></h3>
+		<h3><span class="tooltip tooltip-right" data-tooltip="Narrate story"><img class="cover-icon" src="/storybooks-kenya/css/speaker.svg" alt="Narrate full story" width="38px"></span> <audio id="audioplayer" controls><source src="http://storybookscanada.ca/audio/{{page.language}}/{{page.id}}/{{page.id}}.mp3" type="audio/mpeg"></audio></h3>
 	</div>
 </div>
 <hr>
