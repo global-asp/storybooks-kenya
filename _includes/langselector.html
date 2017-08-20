@@ -1,0 +1,19 @@
+{% if page.layout == "story" %}<div class="float-right"><a class="btn btn-lg disabled" target="_blank" href="">Download PDF</a></div> {% endif %}
+
+<div class="float-right">
+	<select class="btn btn-lg" onchange="window.location=this.value" accesskey="l">
+		<option selected="" disabled="">Change language</option>
+		<option value="/stories/en/{{ page.id }}">English</option>
+		<option value="/stories/sw/{{ page.id }}">Swahili</option>
+		<option value="/stories/guz/{{ page.id }}">Ekegusii</option>
+		<option value="/stories/ki/{{ page.id }}">Gikuyu</option>
+		<option value="/stories/gu/{{ page.id }}">Gujarati</option>
+		<option value="/stories/kam/{{ page.id }}">Kikamba</option>
+		<option value="/stories/mas/{{ page.id }}">Maa</option>
+		<option value="/stories/tuv/{{ page.id }}">Ng'aturkana</option>
+		<option value="/stories/lko/{{ page.id }}">Olukhayo</option>
+		<option value="/stories/om/{{ page.id }}">Oromo</option>
+		<option value="/stories/saq/{{ page.id }}">Samburu</option>
+		<option value="/stories/so/{{ page.id }}">Somali</option>
+	</select>
+</div>

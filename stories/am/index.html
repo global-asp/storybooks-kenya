@@ -1,0 +1,37 @@
+---
+layout: langindex
+language: am
+langname: Amharic
+---
+<h1>Storybooks Kenya</h1>
+<h2>Amharic</h2>
+
+<div class="container">
+  <div class="columns">{% assign sorted_pages = site.pages | sort: "order" %}{% for page in sorted_pages %}{% if page.language == "am" and page.layout == "story" %}
+    <div class="column col-3 col-md-4 col-sm-6 col-xs-12">
+      <a class="btn-link" href="/stories/am/{{page.id}}/">
+        <div class="card">
+          <div class="card-image"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/asp-imagebank/master/medium/{{page.id}}/01.jpg"></div>
+          <div class="card-header">
+            <h3 class="card-title">{{page.title}}</h3>{% if page.level == "1" %}
+            <div class="bar">
+              <div class="bar-item tooltip" data-tooltip="Level 1" style="width:20%;">Level 1</div>
+            </div>{% endif %}{% if page.level == "2" %}
+            <div class="bar">
+              <div class="bar-item tooltip" data-tooltip="Level 2" style="width:40%;">Level 2</div>
+            </div>{% endif %}{% if page.level == "3" %}
+            <div class="bar">
+              <div class="bar-item tooltip" data-tooltip="Level 3" style="width:60%;">Level 3</div>
+            </div>{% endif %}{% if page.level == "4" %}
+            <div class="bar">
+              <div class="bar-item tooltip" data-tooltip="Level 4" style="width:80%;">Level 4</div>
+            </div>{% endif %}{% if page.level == "5" %}
+            <div class="bar">
+              <div class="bar-item tooltip" data-tooltip="Level 5" style="width:100%;">Level 5</div>
+            </div>{% endif %}
+          </div>
+        </div>
+      </a>
+    </div>{% endif %}{% endfor %}
+  </div>
+</div>

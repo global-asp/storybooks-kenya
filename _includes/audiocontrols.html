@@ -1,0 +1,12 @@
+<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
+	<div class="btn-group">
+		<a href="#text{{ include.prev }}" class="btn btn-lg"><img src="/css/arrow-up.svg" alt="Previous page" width="16px"></a>
+		<a href="#text{{ include.next }}" class="btn btn-lg"><img src="/css/arrow-down.svg" alt="Next page" width="16px"></a>
+		<audio id="audio{{ include.index }}" src="http://storybookscanada.ca/audio/{{page.language}}/{{page.id}}/mp3/{{ include.index }}.mp3"></audio>
+		<button class=" btn btn-lg" onclick="playpause('{{ include.index }}')"><img src="/css/volume-up.svg" alt="Play/pause" width="16px"></button>
+	</div>
+	<div class="btn-group">
+		<button onclick="switchlang('{{ page.language }}','en')" class="btn btn-lg lang-en" title="Switch between {{ page.langname }} and English">en</button>
+		<button onclick="switchlang('{{ page.language }}','sw')" class="btn btn-lg lang-sw" title="Switch between {{ page.langname }} and Swahili">sw</button>
+	</div>
+</div>
