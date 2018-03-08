@@ -1,37 +1,604 @@
----
-layout: langindex
-language: ar
-langname: Arabic
----
-<h1>Storybooks Kenya</h1>
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" href="/storybooks-kenya/favicon.ico?v=3" />
+	<title>Storybooks Kenya - Arabic</title>
+	<meta name="description" content="Storybooks Kenya is designed specifically for teachers and makes 40 stories from the African Storybook available in English and Swahili, as well as all the major regional and immigrant languages of Kenya (with text and audio in Amharic, Arabic, Embu / Kîembu, English, Gujarati, Ekegusii, Kamba / Kikamba, Gikuyu / Kikuyu, Kalenjin, Luganda, Olukhayo, Luo / Dholuo, Luhya / Oluluhya, Pokomo / Kipfokomo, Maa / Maasai, Meru / Kimîîru, Giryama / Kigiryama, Oromo / Afaan Oromo, Rendille, Samburu, Somali, Swahili / Kiswahili, and Turkana / Ng‘aturkana).
+">
+	<link rel="stylesheet" href="/storybooks-kenya/css/spectre.min.css">
+	<link rel="canonical" href="https://global-asp.github.io/storybooks-kenya//stories/ar/">
+	<link rel="alternate" type="application/rss+xml" title="Storybooks Kenya" href="https://global-asp.github.io/storybooks-kenya//storybooks-kenya/feed.xml">
+	<script src="/storybooks-kenya/js/sbc.js"></script>
+</head>
+
+  <body>
+
+    <div class="container">
+
+        <header class="navbar">
+	<section class="navbar-section">
+		<a href="/storybooks-kenya/" class="navbar-brand">
+			<object type="image/svg+xml" data="/storybooks-kenya/images/sbk_logo.svg" width="100" height="100" border="0"></object>
+		</a>
+		<div class="btn-group btn-group-block">
+			<a href="/storybooks-kenya/" class="btn btn-primary">Home</a>
+			<a href="/storybooks-kenya/about.html" class="btn btn-primary">About us</a>
+			<a href="/storybooks-kenya/how-to.html" class="btn btn-primary">How to use this website</a>
+			<a href="/storybooks-kenya/contact.html" class="btn btn-primary">Contact us</a>
+		</div>
+	</section>
+</header>
+
+        <div class="float-right">
+	<select class="btn btn-lg" onchange="window.location=this.value">
+		<option selected="" disabled="">Change level</option>
+		<option value="/storybooks-kenya/stories/ar/level1">Level 1</option>
+		<option value="/storybooks-kenya/stories/ar/level2">Level 2</option>
+		<option value="/storybooks-kenya/stories/ar/level3">Level 3</option>
+		<option value="/storybooks-kenya/stories/ar/level4">Level 4</option>
+		<option value="/storybooks-kenya/stories/ar/level5">Level 5</option>
+	</select>
+</div>
+
+<div class="float-right">
+	<select class="btn btn-lg" onchange="window.location=this.value" accesskey="l">
+		<option selected="" disabled="">Change language</option>
+		<option value="/storybooks-kenya/stories/en/">English</option>
+		<option value="/storybooks-kenya/stories/sw/">Swahili</option>
+		<option value="/storybooks-kenya/stories/guz/">Ekegusii</option>
+		<option value="/storybooks-kenya/stories/ki/">Gikuyu</option>
+		<option value="/storybooks-kenya/stories/gu/">Gujarati</option>
+		<option value="/storybooks-kenya/stories/kam/">Kikamba</option>
+		<option value="/storybooks-kenya/stories/mas/">Maa</option>
+		<option value="/storybooks-kenya/stories/tuv/">Ng'aturkana</option>
+		<option value="/storybooks-kenya/stories/lko/">Olukhayo</option>
+		<option value="/storybooks-kenya/stories/om/">Oromo</option>
+		<option value="/storybooks-kenya/stories/saq/">Samburu</option>
+		<option value="/storybooks-kenya/stories/so/">Somali</option>
+	</select>
+</div>
+
+        <h1>Storybooks Kenya</h1>
 <h2>Arabic</h2>
 
 <div class="container">
-  <div class="columns">{% assign sorted_pages = site.pages | sort: "order" %}{% for page in sorted_pages %}{% if page.language == "ar" and page.layout == "story" %}
+  <div class="columns">
     <div class="column col-3 col-md-4 col-sm-6 col-xs-12">
-      <a class="btn-link" href="/storybooks-kenya/stories/ar/{{page.id}}/">
+      <a class="btn-link" href="/storybooks-kenya/stories/ar/0087/">
         <div class="card">
-          <div class="card-image"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/asp-imagebank/master/medium/{{page.id}}/01.jpg"></div>
+          <div class="card-image"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/asp-imagebank/master/medium/0087/01.jpg"></div>
           <div class="card-header">
-            <h3 class="card-title">{{page.title}}</h3>{% if page.level == "1" %}
+            <h3 dir="rtl" class="card-title text-right">أُحِبُّ أَنْ أَقْرَأَ!</h3>
             <div class="bar">
               <div class="bar-item tooltip" data-tooltip="Level 1" style="width:20%;">Level 1</div>
-            </div>{% endif %}{% if page.level == "2" %}
-            <div class="bar">
-              <div class="bar-item tooltip" data-tooltip="Level 2" style="width:40%;">Level 2</div>
-            </div>{% endif %}{% if page.level == "3" %}
-            <div class="bar">
-              <div class="bar-item tooltip" data-tooltip="Level 3" style="width:60%;">Level 3</div>
-            </div>{% endif %}{% if page.level == "4" %}
-            <div class="bar">
-              <div class="bar-item tooltip" data-tooltip="Level 4" style="width:80%;">Level 4</div>
-            </div>{% endif %}{% if page.level == "5" %}
-            <div class="bar">
-              <div class="bar-item tooltip" data-tooltip="Level 5" style="width:100%;">Level 5</div>
-            </div>{% endif %}
+            </div>
           </div>
         </div>
       </a>
-    </div>{% endif %}{% endfor %}
+    </div>
+    <div class="column col-3 col-md-4 col-sm-6 col-xs-12">
+      <a class="btn-link" href="/storybooks-kenya/stories/ar/0327/">
+        <div class="card">
+          <div class="card-image"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/asp-imagebank/master/medium/0327/01.jpg"></div>
+          <div class="card-header">
+            <h3 dir="rtl" class="card-title text-right">لِنَعُدَّ الحَيَوَانَاتِ</h3>
+            <div class="bar">
+              <div class="bar-item tooltip" data-tooltip="Level 1" style="width:20%;">Level 1</div>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="column col-3 col-md-4 col-sm-6 col-xs-12">
+      <a class="btn-link" href="/storybooks-kenya/stories/ar/0030/">
+        <div class="card">
+          <div class="card-image"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/asp-imagebank/master/medium/0030/01.jpg"></div>
+          <div class="card-header">
+            <h3 dir="rtl" class="card-title text-right">المَشَاعِرُ</h3>
+            <div class="bar">
+              <div class="bar-item tooltip" data-tooltip="Level 1" style="width:20%;">Level 1</div>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="column col-3 col-md-4 col-sm-6 col-xs-12">
+      <a class="btn-link" href="/storybooks-kenya/stories/ar/0302/">
+        <div class="card">
+          <div class="card-image"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/asp-imagebank/master/medium/0302/01.jpg"></div>
+          <div class="card-header">
+            <h3 dir="rtl" class="card-title text-right">النَّارُ</h3>
+            <div class="bar">
+              <div class="bar-item tooltip" data-tooltip="Level 1" style="width:20%;">Level 1</div>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="column col-3 col-md-4 col-sm-6 col-xs-12">
+      <a class="btn-link" href="/storybooks-kenya/stories/ar/0156/">
+        <div class="card">
+          <div class="card-image"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/asp-imagebank/master/medium/0156/01.jpg"></div>
+          <div class="card-header">
+            <h3 dir="rtl" class="card-title text-right">التِّمْسَاحُ الجَائِعُ</h3>
+            <div class="bar">
+              <div class="bar-item tooltip" data-tooltip="Level 1" style="width:20%;">Level 1</div>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="column col-3 col-md-4 col-sm-6 col-xs-12">
+      <a class="btn-link" href="/storybooks-kenya/stories/ar/0002/">
+        <div class="card">
+          <div class="card-image"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/asp-imagebank/master/medium/0002/01.jpg"></div>
+          <div class="card-header">
+            <h3 dir="rtl" class="card-title text-right">اُنْظُرْ إِلَى الحَيَوَانَاتِ</h3>
+            <div class="bar">
+              <div class="bar-item tooltip" data-tooltip="Level 1" style="width:20%;">Level 1</div>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="column col-3 col-md-4 col-sm-6 col-xs-12">
+      <a class="btn-link" href="/storybooks-kenya/stories/ar/0003/">
+        <div class="card">
+          <div class="card-image"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/asp-imagebank/master/medium/0003/01.jpg"></div>
+          <div class="card-header">
+            <h3 dir="rtl" class="card-title text-right">مَلَابِسُ المَدْرَسَةِ</h3>
+            <div class="bar">
+              <div class="bar-item tooltip" data-tooltip="Level 1" style="width:20%;">Level 1</div>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="column col-3 col-md-4 col-sm-6 col-xs-12">
+      <a class="btn-link" href="/storybooks-kenya/stories/ar/0120/">
+        <div class="card">
+          <div class="card-image"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/asp-imagebank/master/medium/0120/01.jpg"></div>
+          <div class="card-header">
+            <h3 dir="rtl" class="card-title text-right">الشَّعْرُ</h3>
+            <div class="bar">
+              <div class="bar-item tooltip" data-tooltip="Level 1" style="width:20%;">Level 1</div>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="column col-3 col-md-4 col-sm-6 col-xs-12">
+      <a class="btn-link" href="/storybooks-kenya/stories/ar/0271/">
+        <div class="card">
+          <div class="card-image"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/asp-imagebank/master/medium/0271/01.jpg"></div>
+          <div class="card-header">
+            <h3 dir="rtl" class="card-title text-right">اثْنَانِ</h3>
+            <div class="bar">
+              <div class="bar-item tooltip" data-tooltip="Level 1" style="width:20%;">Level 1</div>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="column col-3 col-md-4 col-sm-6 col-xs-12">
+      <a class="btn-link" href="/storybooks-kenya/stories/ar/0231/">
+        <div class="card">
+          <div class="card-image"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/asp-imagebank/master/medium/0231/01.jpg"></div>
+          <div class="card-header">
+            <h3 dir="rtl" class="card-title text-right">كِتَابُ الطَّقْسِ</h3>
+            <div class="bar">
+              <div class="bar-item tooltip" data-tooltip="Level 1" style="width:20%;">Level 1</div>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="column col-3 col-md-4 col-sm-6 col-xs-12">
+      <a class="btn-link" href="/storybooks-kenya/stories/ar/0129/">
+        <div class="card">
+          <div class="card-image"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/asp-imagebank/master/medium/0129/01.jpg"></div>
+          <div class="card-header">
+            <h3 dir="rtl" class="card-title text-right">الأَخُ الصَّغِيرُ الكَسُولُ</h3>
+            <div class="bar">
+              <div class="bar-item tooltip" data-tooltip="Level 1" style="width:20%;">Level 1</div>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="column col-3 col-md-4 col-sm-6 col-xs-12">
+      <a class="btn-link" href="/storybooks-kenya/stories/ar/0067/">
+        <div class="card">
+          <div class="card-image"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/asp-imagebank/master/medium/0067/01.jpg"></div>
+          <div class="card-header">
+            <h3 dir="rtl" class="card-title text-right">الطَّبْخُ</h3>
+            <div class="bar">
+              <div class="bar-item tooltip" data-tooltip="Level 1" style="width:20%;">Level 1</div>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="column col-3 col-md-4 col-sm-6 col-xs-12">
+      <a class="btn-link" href="/storybooks-kenya/stories/ar/0008/">
+        <div class="card">
+          <div class="card-image"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/asp-imagebank/master/medium/0008/01.jpg"></div>
+          <div class="card-header">
+            <h3 dir="rtl" class="card-title text-right">مَاذَا تَفْعَلُ؟</h3>
+            <div class="bar">
+              <div class="bar-item tooltip" data-tooltip="Level 1" style="width:20%;">Level 1</div>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="column col-3 col-md-4 col-sm-6 col-xs-12">
+      <a class="btn-link" href="/storybooks-kenya/stories/ar/0009/">
+        <div class="card">
+          <div class="card-image"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/asp-imagebank/master/medium/0009/01.jpg"></div>
+          <div class="card-header">
+            <h3 dir="rtl" class="card-title text-right">أَيْنَ قِطَّتِي؟</h3>
+            <div class="bar">
+              <div class="bar-item tooltip" data-tooltip="Level 1" style="width:20%;">Level 1</div>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="column col-3 col-md-4 col-sm-6 col-xs-12">
+      <a class="btn-link" href="/storybooks-kenya/stories/ar/0112/">
+        <div class="card">
+          <div class="card-image"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/asp-imagebank/master/medium/0112/01.jpg"></div>
+          <div class="card-header">
+            <h3 dir="rtl" class="card-title text-right">جَسَدِي</h3>
+            <div class="bar">
+              <div class="bar-item tooltip" data-tooltip="Level 1" style="width:20%;">Level 1</div>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="column col-3 col-md-4 col-sm-6 col-xs-12">
+      <a class="btn-link" href="/storybooks-kenya/stories/ar/0111/">
+        <div class="card">
+          <div class="card-image"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/asp-imagebank/master/medium/0111/01.jpg"></div>
+          <div class="card-header">
+            <h3 dir="rtl" class="card-title text-right">لِمَاذَا لاَ تَمْلِكُ أَفْرَاسُ اَلْنَّهْرِ شَعْراً</h3>
+            <div class="bar">
+              <div class="bar-item tooltip" data-tooltip="Level 2" style="width:40%;">Level 2</div>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="column col-3 col-md-4 col-sm-6 col-xs-12">
+      <a class="btn-link" href="/storybooks-kenya/stories/ar/0337/">
+        <div class="card">
+          <div class="card-image"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/asp-imagebank/master/medium/0337/01.jpg"></div>
+          <div class="card-header">
+            <h3 dir="rtl" class="card-title text-right">أَطْفَالُ الشَّمْعِ</h3>
+            <div class="bar">
+              <div class="bar-item tooltip" data-tooltip="Level 2" style="width:40%;">Level 2</div>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="column col-3 col-md-4 col-sm-6 col-xs-12">
+      <a class="btn-link" href="/storybooks-kenya/stories/ar/0210/">
+        <div class="card">
+          <div class="card-image"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/asp-imagebank/master/medium/0210/01.jpg"></div>
+          <div class="card-header">
+            <h3 dir="rtl" class="card-title text-right">تِينْغِي وَ البَقَرُ</h3>
+            <div class="bar">
+              <div class="bar-item tooltip" data-tooltip="Level 2" style="width:40%;">Level 2</div>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="column col-3 col-md-4 col-sm-6 col-xs-12">
+      <a class="btn-link" href="/storybooks-kenya/stories/ar/0296/">
+        <div class="card">
+          <div class="card-image"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/asp-imagebank/master/medium/0296/01.jpg"></div>
+          <div class="card-header">
+            <h3 dir="rtl" class="card-title text-right">تُومْ، بَائِعُ المَوْزِ</h3>
+            <div class="bar">
+              <div class="bar-item tooltip" data-tooltip="Level 2" style="width:40%;">Level 2</div>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="column col-3 col-md-4 col-sm-6 col-xs-12">
+      <a class="btn-link" href="/storybooks-kenya/stories/ar/0027/">
+        <div class="card">
+          <div class="card-image"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/asp-imagebank/master/medium/0027/01.jpg"></div>
+          <div class="card-header">
+            <h3 dir="rtl" class="card-title text-right">القَرَارُ</h3>
+            <div class="bar">
+              <div class="bar-item tooltip" data-tooltip="Level 2" style="width:40%;">Level 2</div>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="column col-3 col-md-4 col-sm-6 col-xs-12">
+      <a class="btn-link" href="/storybooks-kenya/stories/ar/0342/">
+        <div class="card">
+          <div class="card-image"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/asp-imagebank/master/medium/0342/01.jpg"></div>
+          <div class="card-header">
+            <h3 dir="rtl" class="card-title text-right">العِقَابُ</h3>
+            <div class="bar">
+              <div class="bar-item tooltip" data-tooltip="Level 2" style="width:40%;">Level 2</div>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="column col-3 col-md-4 col-sm-6 col-xs-12">
+      <a class="btn-link" href="/storybooks-kenya/stories/ar/0089/">
+        <div class="card">
+          <div class="card-image"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/asp-imagebank/master/medium/0089/01.jpg"></div>
+          <div class="card-header">
+            <h3 dir="rtl" class="card-title text-right">خَلَايْ تَتَحَدَّثُ إِلَى النَّبَاتَاتِ</h3>
+            <div class="bar">
+              <div class="bar-item tooltip" data-tooltip="Level 2" style="width:40%;">Level 2</div>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="column col-3 col-md-4 col-sm-6 col-xs-12">
+      <a class="btn-link" href="/storybooks-kenya/stories/ar/0234/">
+        <div class="card">
+          <div class="card-image"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/asp-imagebank/master/medium/0234/01.jpg"></div>
+          <div class="card-header">
+            <h3 dir="rtl" class="card-title text-right">أَنْدِيسُوا نَجْمَةُ كُرَةِ اَلقَدَمِ</h3>
+            <div class="bar">
+              <div class="bar-item tooltip" data-tooltip="Level 2" style="width:40%;">Level 2</div>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="column col-3 col-md-4 col-sm-6 col-xs-12">
+      <a class="btn-link" href="/storybooks-kenya/stories/ar/0001/">
+        <div class="card">
+          <div class="card-image"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/asp-imagebank/master/medium/0001/01.jpg"></div>
+          <div class="card-header">
+            <h3 dir="rtl" class="card-title text-right">الرَّجُلُ ذُو القَامَةِ الطَّويلَةِ</h3>
+            <div class="bar">
+              <div class="bar-item tooltip" data-tooltip="Level 2" style="width:40%;">Level 2</div>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="column col-3 col-md-4 col-sm-6 col-xs-12">
+      <a class="btn-link" href="/storybooks-kenya/stories/ar/0095/">
+        <div class="card">
+          <div class="card-image"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/asp-imagebank/master/medium/0095/01.jpg"></div>
+          <div class="card-header">
+            <h3 dir="rtl" class="card-title text-right">زَامَا المُمَيَّزةْ!</h3>
+            <div class="bar">
+              <div class="bar-item tooltip" data-tooltip="Level 2" style="width:40%;">Level 2</div>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="column col-3 col-md-4 col-sm-6 col-xs-12">
+      <a class="btn-link" href="/storybooks-kenya/stories/ar/0004/">
+        <div class="card">
+          <div class="card-image"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/asp-imagebank/master/medium/0004/01.jpg"></div>
+          <div class="card-header">
+            <h3 dir="rtl" class="card-title text-right">المَاعِزُ وَالكَلْبُ وَالبَقَرَةُ</h3>
+            <div class="bar">
+              <div class="bar-item tooltip" data-tooltip="Level 2" style="width:40%;">Level 2</div>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="column col-3 col-md-4 col-sm-6 col-xs-12">
+      <a class="btn-link" href="/storybooks-kenya/stories/ar/0201/">
+        <div class="card">
+          <div class="card-image"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/asp-imagebank/master/medium/0201/01.jpg"></div>
+          <div class="card-header">
+            <h3 dir="rtl" class="card-title text-right">صغير الحمار</h3>
+            <div class="bar">
+              <div class="bar-item tooltip" data-tooltip="Level 3" style="width:60%;">Level 3</div>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="column col-3 col-md-4 col-sm-6 col-xs-12">
+      <a class="btn-link" href="/storybooks-kenya/stories/ar/0006/">
+        <div class="card">
+          <div class="card-image"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/asp-imagebank/master/medium/0006/01.jpg"></div>
+          <div class="card-header">
+            <h3 dir="rtl" class="card-title text-right">أنانسي و الحكمة</h3>
+            <div class="bar">
+              <div class="bar-item tooltip" data-tooltip="Level 3" style="width:60%;">Level 3</div>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="column col-3 col-md-4 col-sm-6 col-xs-12">
+      <a class="btn-link" href="/storybooks-kenya/stories/ar/0110/">
+        <div class="card">
+          <div class="card-image"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/asp-imagebank/master/medium/0110/01.jpg"></div>
+          <div class="card-header">
+            <h3 dir="rtl" class="card-title text-right">البذرة الصغيرة – حكاية ونقاري ماتهاي</h3>
+            <div class="bar">
+              <div class="bar-item tooltip" data-tooltip="Level 3" style="width:60%;">Level 3</div>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="column col-3 col-md-4 col-sm-6 col-xs-12">
+      <a class="btn-link" href="/storybooks-kenya/stories/ar/0158/">
+        <div class="card">
+          <div class="card-image"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/asp-imagebank/master/medium/0158/01.jpg"></div>
+          <div class="card-header">
+            <h3 dir="rtl" class="card-title text-right">الدجاجة والنسر</h3>
+            <div class="bar">
+              <div class="bar-item tooltip" data-tooltip="Level 3" style="width:60%;">Level 3</div>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="column col-3 col-md-4 col-sm-6 col-xs-12">
+      <a class="btn-link" href="/storybooks-kenya/stories/ar/0324/">
+        <div class="card">
+          <div class="card-image"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/asp-imagebank/master/medium/0324/01.jpg"></div>
+          <div class="card-header">
+            <h3 dir="rtl" class="card-title text-right">يوم تركت المنزل ذاهباً إلى المدينة</h3>
+            <div class="bar">
+              <div class="bar-item tooltip" data-tooltip="Level 3" style="width:60%;">Level 3</div>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="column col-3 col-md-4 col-sm-6 col-xs-12">
+      <a class="btn-link" href="/storybooks-kenya/stories/ar/0141/">
+        <div class="card">
+          <div class="card-image"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/asp-imagebank/master/medium/0141/01.jpg"></div>
+          <div class="card-header">
+            <h3 dir="rtl" class="card-title text-right">الدجاجة والدودة</h3>
+            <div class="bar">
+              <div class="bar-item tooltip" data-tooltip="Level 3" style="width:60%;">Level 3</div>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="column col-3 col-md-4 col-sm-6 col-xs-12">
+      <a class="btn-link" href="/storybooks-kenya/stories/ar/0066/">
+        <div class="card">
+          <div class="card-image"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/asp-imagebank/master/medium/0066/01.jpg"></div>
+          <div class="card-header">
+            <h3 dir="rtl" class="card-title text-right">نوزيبال والشعرات الثلاث</h3>
+            <div class="bar">
+              <div class="bar-item tooltip" data-tooltip="Level 3" style="width:60%;">Level 3</div>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="column col-3 col-md-4 col-sm-6 col-xs-12">
+      <a class="btn-link" href="/storybooks-kenya/stories/ar/0315/">
+        <div class="card">
+          <div class="card-image"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/asp-imagebank/master/medium/0315/01.jpg"></div>
+          <div class="card-header">
+            <h3 dir="rtl" class="card-title text-right">أغنية سكيما</h3>
+            <div class="bar">
+              <div class="bar-item tooltip" data-tooltip="Level 3" style="width:60%;">Level 3</div>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="column col-3 col-md-4 col-sm-6 col-xs-12">
+      <a class="btn-link" href="/storybooks-kenya/stories/ar/0291/">
+        <div class="card">
+          <div class="card-image"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/asp-imagebank/master/medium/0291/01.jpg"></div>
+          <div class="card-header">
+            <h3 dir="rtl" class="card-title text-right">ما قالته أخت فوسي</h3>
+            <div class="bar">
+              <div class="bar-item tooltip" data-tooltip="Level 4" style="width:80%;">Level 4</div>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="column col-3 col-md-4 col-sm-6 col-xs-12">
+      <a class="btn-link" href="/storybooks-kenya/stories/ar/0072/">
+        <div class="card">
+          <div class="card-image"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/asp-imagebank/master/medium/0072/01.jpg"></div>
+          <div class="card-header">
+            <h3 dir="rtl" class="card-title text-right">انتقام طائر دليل المناحل</h3>
+            <div class="bar">
+              <div class="bar-item tooltip" data-tooltip="Level 4" style="width:80%;">Level 4</div>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="column col-3 col-md-4 col-sm-6 col-xs-12">
+      <a class="btn-link" href="/storybooks-kenya/stories/ar/0294/">
+        <div class="card">
+          <div class="card-image"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/asp-imagebank/master/medium/0294/01.jpg"></div>
+          <div class="card-header">
+            <h3 dir="rtl" class="card-title text-right">موز جدتي</h3>
+            <div class="bar">
+              <div class="bar-item tooltip" data-tooltip="Level 4" style="width:80%;">Level 4</div>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="column col-3 col-md-4 col-sm-6 col-xs-12">
+      <a class="btn-link" href="/storybooks-kenya/stories/ar/0243/">
+        <div class="card">
+          <div class="card-image"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/asp-imagebank/master/medium/0243/01.jpg"></div>
+          <div class="card-header">
+            <h3 dir="rtl" class="card-title text-right">في عطلة مع الجدة</h3>
+            <div class="bar">
+              <div class="bar-item tooltip" data-tooltip="Level 4" style="width:80%;">Level 4</div>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="column col-3 col-md-4 col-sm-6 col-xs-12">
+      <a class="btn-link" href="/storybooks-kenya/stories/ar/0052/">
+        <div class="card">
+          <div class="card-image"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/asp-imagebank/master/medium/0052/01.jpg"></div>
+          <div class="card-header">
+            <h3 dir="rtl" class="card-title text-right">سمبقواير</h3>
+            <div class="bar">
+              <div class="bar-item tooltip" data-tooltip="Level 5" style="width:100%;">Level 5</div>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="column col-3 col-md-4 col-sm-6 col-xs-12">
+      <a class="btn-link" href="/storybooks-kenya/stories/ar/0262/">
+        <div class="card">
+          <div class="card-image"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/asp-imagebank/master/medium/0262/01.jpg"></div>
+          <div class="card-header">
+            <h3 dir="rtl" class="card-title text-right">ماقزوي</h3>
+            <div class="bar">
+              <div class="bar-item tooltip" data-tooltip="Level 5" style="width:100%;">Level 5</div>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
   </div>
 </div>
+
+    </div>
+
+    <footer>
+	<div class="container">
+		<h3>Additional resources</h3>
+		<a class="btn btn-lg" target="_blank" href="http://africanstorybook.org/">African Storybook</a> <a class="btn btn-lg" target="_blank" href="/storybooks-kenya/contact.html">Email us</a> <a class="btn btn-lg disabled" target="_blank" href="">Advanced Features (coming soon)</a>
+<br><br> &copy; Storybooks Kenya. <a href="https://creativecommons.org/licenses/by/4.0/">Some rights reserved</a>.<br><br>
+	</div>
+</footer>
+
+  </body>
+
+</html>
