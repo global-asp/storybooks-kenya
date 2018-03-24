@@ -9,8 +9,9 @@
 	<meta name="description" content="Storybooks Kenya is designed specifically for teachers and makes 40 stories from the African Storybook available in English and Swahili, as well as all the major regional and immigrant languages of Kenya (with text and audio in Amharic, Arabic, Embu / Kîembu, English, Gujarati, Ekegusii, Kamba / Kikamba, Gikuyu / Kikuyu, Kalenjin, Luganda, Olukhayo, Luo / Dholuo, Luhya / Oluluhya, Pokomo / Kipfokomo, Maa / Maasai, Meru / Kimîîru, Giryama / Kigiryama, Oromo / Afaan Oromo, Rendille, Samburu, Somali, Swahili / Kiswahili, and Turkana / Ng‘aturkana).
 ">
 	<link rel="stylesheet" href="/storybooks-kenya/css/spectre.min.css">
-	<link rel="canonical" href="https://global-asp.github.io/storybooks-kenya//stories/tuv/0201/">
-	<link rel="alternate" type="application/rss+xml" title="Storybooks Kenya" href="https://global-asp.github.io/storybooks-kenya/">
+	<link rel="stylesheet" href="/storybooks-kenya/css/fontello.min.css">
+	<link rel="canonical" href="https://global-asp.github.io//storybooks-kenya/stories/tuv/0201/">
+	<link rel="alternate" type="application/rss+xml" title="Storybooks Kenya" href="/storybooks-kenya">
 	<script src="/storybooks-kenya/js/sbc.js"></script>
 </head>
 
@@ -61,9 +62,9 @@
 <span class="en">Donkey Child</span>
 <span class="sw">Mtoto Punda</span>
 			<div class="btn-group">
-				<a href="#text02" class="btn btn-lg"><img src="/storybooks-kenya/css/arrow-down.svg" alt="Next page" width="16px"></a>
-				<button class=" btn btn-lg" onclick="playpause('')"><img src="/storybooks-kenya/css/volume-up.svg" alt="Play/pause" width="16px"></button>
-				<audio id="audio" src="http://storybookscanada.ca/audio/tuv/0201/mp3/01.mp3"></audio>
+				<a href="#text02" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
+				<button class="btn btn-lg" id="playbutton" onclick="playpause('')" title="Play/pause"><i class="icon-volume-up"></i></button>
+				<audio id="audio01" onended="resetbutton('01')" src="http://globalstorybooks.net/media/audio/tuv/0201/mp3/01.mp3"></audio>
 			</div>
 		</h1>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Written by"><img class="cover-icon" src="/storybooks-kenya/css/pencil.svg" alt="Written by" width="38px"></span> Lindiwe Matshikiza</h3>
@@ -71,7 +72,7 @@
 		<h3><span class="tooltip tooltip-right" data-tooltip="Translated by"><img class="cover-icon" src="/storybooks-kenya/css/global.svg" alt="Translated by" width="38px"></span> Jacob Emekwi, Agnes Ngilimo</h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Language"><img class="cover-icon" src="/storybooks-kenya/css/language.svg" alt="Language" width="38px"></span> <a href="/storybooks-kenya/stories/tuv">Turkana</a></h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Level"><img class="cover-icon" src="/storybooks-kenya/css/level.svg" alt="Level" width="38px"></span> <a href="/storybooks-kenya/stories/tuv/level3">Level 3</a></h3>
-		<h3><span class="tooltip tooltip-right" data-tooltip="Narrate story"><img class="cover-icon" src="/storybooks-kenya/css/speaker.svg" alt="Narrate full story" width="38px"></span> <audio id="audioplayer" controls><source src="http://storybookscanada.ca/audio/tuv/0201/0201.mp3" type="audio/mpeg"></audio></h3>
+		<h3><span class="tooltip tooltip-right" data-tooltip="Narrate story"><img class="cover-icon" src="/storybooks-kenya/css/speaker.svg" alt="Narrate full story" width="38px"></span> <audio id="audioplayer" controls><source src="http://globalstorybooks.net/media/audio/tuv/0201/0201.mp3" type="audio/mpeg"></audio></h3>
 	</div>
 </div>
 <hr>
@@ -90,10 +91,10 @@
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
 	<div class="btn-group">
-		<a href="#text01" class="btn btn-lg"><img src="/storybooks-kenya/css/arrow-up.svg" alt="Previous page" width="16px"></a>
-		<a href="#text03" class="btn btn-lg"><img src="/storybooks-kenya/css/arrow-down.svg" alt="Next page" width="16px"></a>
-		<audio id="audio02" src="http://storybookscanada.ca/audio/tuv/0201/mp3/02.mp3"></audio>
-		<button class=" btn btn-lg" onclick="playpause('02')"><img src="/storybooks-kenya/css/volume-up.svg" alt="Play/pause" width="16px"></button>
+		<a href="#text01" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
+		<a href="#text03" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
+		<audio id="audio02" onended="resetbutton('02')" src="http://globalstorybooks.net/media/audio/tuv/0201/mp3/02.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton02" onclick="playpause('02')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group">
 		<button onclick="switchlang('tuv','en')" class="btn btn-lg lang-en" title="Switch between Turkana and English">en</button>
@@ -118,10 +119,10 @@
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
 	<div class="btn-group">
-		<a href="#text02" class="btn btn-lg"><img src="/storybooks-kenya/css/arrow-up.svg" alt="Previous page" width="16px"></a>
-		<a href="#text04" class="btn btn-lg"><img src="/storybooks-kenya/css/arrow-down.svg" alt="Next page" width="16px"></a>
-		<audio id="audio03" src="http://storybookscanada.ca/audio/tuv/0201/mp3/03.mp3"></audio>
-		<button class=" btn btn-lg" onclick="playpause('03')"><img src="/storybooks-kenya/css/volume-up.svg" alt="Play/pause" width="16px"></button>
+		<a href="#text02" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
+		<a href="#text04" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
+		<audio id="audio03" onended="resetbutton('03')" src="http://globalstorybooks.net/media/audio/tuv/0201/mp3/03.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton03" onclick="playpause('03')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group">
 		<button onclick="switchlang('tuv','en')" class="btn btn-lg lang-en" title="Switch between Turkana and English">en</button>
@@ -150,10 +151,10 @@
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
 	<div class="btn-group">
-		<a href="#text03" class="btn btn-lg"><img src="/storybooks-kenya/css/arrow-up.svg" alt="Previous page" width="16px"></a>
-		<a href="#text05" class="btn btn-lg"><img src="/storybooks-kenya/css/arrow-down.svg" alt="Next page" width="16px"></a>
-		<audio id="audio04" src="http://storybookscanada.ca/audio/tuv/0201/mp3/04.mp3"></audio>
-		<button class=" btn btn-lg" onclick="playpause('04')"><img src="/storybooks-kenya/css/volume-up.svg" alt="Play/pause" width="16px"></button>
+		<a href="#text03" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
+		<a href="#text05" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
+		<audio id="audio04" onended="resetbutton('04')" src="http://globalstorybooks.net/media/audio/tuv/0201/mp3/04.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton04" onclick="playpause('04')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group">
 		<button onclick="switchlang('tuv','en')" class="btn btn-lg lang-en" title="Switch between Turkana and English">en</button>
@@ -194,10 +195,10 @@
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
 	<div class="btn-group">
-		<a href="#text04" class="btn btn-lg"><img src="/storybooks-kenya/css/arrow-up.svg" alt="Previous page" width="16px"></a>
-		<a href="#text06" class="btn btn-lg"><img src="/storybooks-kenya/css/arrow-down.svg" alt="Next page" width="16px"></a>
-		<audio id="audio05" src="http://storybookscanada.ca/audio/tuv/0201/mp3/05.mp3"></audio>
-		<button class=" btn btn-lg" onclick="playpause('05')"><img src="/storybooks-kenya/css/volume-up.svg" alt="Play/pause" width="16px"></button>
+		<a href="#text04" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
+		<a href="#text06" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
+		<audio id="audio05" onended="resetbutton('05')" src="http://globalstorybooks.net/media/audio/tuv/0201/mp3/05.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton05" onclick="playpause('05')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group">
 		<button onclick="switchlang('tuv','en')" class="btn btn-lg lang-en" title="Switch between Turkana and English">en</button>
@@ -226,10 +227,10 @@
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
 	<div class="btn-group">
-		<a href="#text05" class="btn btn-lg"><img src="/storybooks-kenya/css/arrow-up.svg" alt="Previous page" width="16px"></a>
-		<a href="#text07" class="btn btn-lg"><img src="/storybooks-kenya/css/arrow-down.svg" alt="Next page" width="16px"></a>
-		<audio id="audio06" src="http://storybookscanada.ca/audio/tuv/0201/mp3/06.mp3"></audio>
-		<button class=" btn btn-lg" onclick="playpause('06')"><img src="/storybooks-kenya/css/volume-up.svg" alt="Play/pause" width="16px"></button>
+		<a href="#text05" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
+		<a href="#text07" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
+		<audio id="audio06" onended="resetbutton('06')" src="http://globalstorybooks.net/media/audio/tuv/0201/mp3/06.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton06" onclick="playpause('06')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group">
 		<button onclick="switchlang('tuv','en')" class="btn btn-lg lang-en" title="Switch between Turkana and English">en</button>
@@ -262,10 +263,10 @@
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
 	<div class="btn-group">
-		<a href="#text06" class="btn btn-lg"><img src="/storybooks-kenya/css/arrow-up.svg" alt="Previous page" width="16px"></a>
-		<a href="#text08" class="btn btn-lg"><img src="/storybooks-kenya/css/arrow-down.svg" alt="Next page" width="16px"></a>
-		<audio id="audio07" src="http://storybookscanada.ca/audio/tuv/0201/mp3/07.mp3"></audio>
-		<button class=" btn btn-lg" onclick="playpause('07')"><img src="/storybooks-kenya/css/volume-up.svg" alt="Play/pause" width="16px"></button>
+		<a href="#text06" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
+		<a href="#text08" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
+		<audio id="audio07" onended="resetbutton('07')" src="http://globalstorybooks.net/media/audio/tuv/0201/mp3/07.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton07" onclick="playpause('07')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group">
 		<button onclick="switchlang('tuv','en')" class="btn btn-lg lang-en" title="Switch between Turkana and English">en</button>
@@ -298,10 +299,10 @@ She wondered what to do with herself.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
 	<div class="btn-group">
-		<a href="#text07" class="btn btn-lg"><img src="/storybooks-kenya/css/arrow-up.svg" alt="Previous page" width="16px"></a>
-		<a href="#text09" class="btn btn-lg"><img src="/storybooks-kenya/css/arrow-down.svg" alt="Next page" width="16px"></a>
-		<audio id="audio08" src="http://storybookscanada.ca/audio/tuv/0201/mp3/08.mp3"></audio>
-		<button class=" btn btn-lg" onclick="playpause('08')"><img src="/storybooks-kenya/css/volume-up.svg" alt="Play/pause" width="16px"></button>
+		<a href="#text07" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
+		<a href="#text09" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
+		<audio id="audio08" onended="resetbutton('08')" src="http://globalstorybooks.net/media/audio/tuv/0201/mp3/08.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton08" onclick="playpause('08')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group">
 		<button onclick="switchlang('tuv','en')" class="btn btn-lg lang-en" title="Switch between Turkana and English">en</button>
@@ -326,10 +327,10 @@ She wondered what to do with herself.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
 	<div class="btn-group">
-		<a href="#text08" class="btn btn-lg"><img src="/storybooks-kenya/css/arrow-up.svg" alt="Previous page" width="16px"></a>
-		<a href="#text10" class="btn btn-lg"><img src="/storybooks-kenya/css/arrow-down.svg" alt="Next page" width="16px"></a>
-		<audio id="audio09" src="http://storybookscanada.ca/audio/tuv/0201/mp3/09.mp3"></audio>
-		<button class=" btn btn-lg" onclick="playpause('09')"><img src="/storybooks-kenya/css/volume-up.svg" alt="Play/pause" width="16px"></button>
+		<a href="#text08" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
+		<a href="#text10" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
+		<audio id="audio09" onended="resetbutton('09')" src="http://globalstorybooks.net/media/audio/tuv/0201/mp3/09.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton09" onclick="playpause('09')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group">
 		<button onclick="switchlang('tuv','en')" class="btn btn-lg lang-en" title="Switch between Turkana and English">en</button>
@@ -358,10 +359,10 @@ And no matter how hard he tried, he could not behave like a human being. His mot
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
 	<div class="btn-group">
-		<a href="#text09" class="btn btn-lg"><img src="/storybooks-kenya/css/arrow-up.svg" alt="Previous page" width="16px"></a>
-		<a href="#text11" class="btn btn-lg"><img src="/storybooks-kenya/css/arrow-down.svg" alt="Next page" width="16px"></a>
-		<audio id="audio10" src="http://storybookscanada.ca/audio/tuv/0201/mp3/10.mp3"></audio>
-		<button class=" btn btn-lg" onclick="playpause('10')"><img src="/storybooks-kenya/css/volume-up.svg" alt="Play/pause" width="16px"></button>
+		<a href="#text09" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
+		<a href="#text11" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
+		<audio id="audio10" onended="resetbutton('10')" src="http://globalstorybooks.net/media/audio/tuv/0201/mp3/10.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton10" onclick="playpause('10')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group">
 		<button onclick="switchlang('tuv','en')" class="btn btn-lg lang-en" title="Switch between Turkana and English">en</button>
@@ -390,10 +391,10 @@ He became so angry that, one day, he kicked his mother to the ground.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
 	<div class="btn-group">
-		<a href="#text10" class="btn btn-lg"><img src="/storybooks-kenya/css/arrow-up.svg" alt="Previous page" width="16px"></a>
-		<a href="#text12" class="btn btn-lg"><img src="/storybooks-kenya/css/arrow-down.svg" alt="Next page" width="16px"></a>
-		<audio id="audio11" src="http://storybookscanada.ca/audio/tuv/0201/mp3/11.mp3"></audio>
-		<button class=" btn btn-lg" onclick="playpause('11')"><img src="/storybooks-kenya/css/volume-up.svg" alt="Play/pause" width="16px"></button>
+		<a href="#text10" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
+		<a href="#text12" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
+		<audio id="audio11" onended="resetbutton('11')" src="http://globalstorybooks.net/media/audio/tuv/0201/mp3/11.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton11" onclick="playpause('11')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group">
 		<button onclick="switchlang('tuv','en')" class="btn btn-lg lang-en" title="Switch between Turkana and English">en</button>
@@ -418,10 +419,10 @@ He became so angry that, one day, he kicked his mother to the ground.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
 	<div class="btn-group">
-		<a href="#text11" class="btn btn-lg"><img src="/storybooks-kenya/css/arrow-up.svg" alt="Previous page" width="16px"></a>
-		<a href="#text13" class="btn btn-lg"><img src="/storybooks-kenya/css/arrow-down.svg" alt="Next page" width="16px"></a>
-		<audio id="audio12" src="http://storybookscanada.ca/audio/tuv/0201/mp3/12.mp3"></audio>
-		<button class=" btn btn-lg" onclick="playpause('12')"><img src="/storybooks-kenya/css/volume-up.svg" alt="Play/pause" width="16px"></button>
+		<a href="#text11" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
+		<a href="#text13" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
+		<audio id="audio12" onended="resetbutton('12')" src="http://globalstorybooks.net/media/audio/tuv/0201/mp3/12.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton12" onclick="playpause('12')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group">
 		<button onclick="switchlang('tuv','en')" class="btn btn-lg lang-en" title="Switch between Turkana and English">en</button>
@@ -458,10 +459,10 @@ Curling himself into a tight ball, he fell into a deep and troubled sleep.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
 	<div class="btn-group">
-		<a href="#text12" class="btn btn-lg"><img src="/storybooks-kenya/css/arrow-up.svg" alt="Previous page" width="16px"></a>
-		<a href="#text14" class="btn btn-lg"><img src="/storybooks-kenya/css/arrow-down.svg" alt="Next page" width="16px"></a>
-		<audio id="audio13" src="http://storybookscanada.ca/audio/tuv/0201/mp3/13.mp3"></audio>
-		<button class=" btn btn-lg" onclick="playpause('13')"><img src="/storybooks-kenya/css/volume-up.svg" alt="Play/pause" width="16px"></button>
+		<a href="#text12" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
+		<a href="#text14" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
+		<audio id="audio13" onended="resetbutton('13')" src="http://globalstorybooks.net/media/audio/tuv/0201/mp3/13.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton13" onclick="playpause('13')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group">
 		<button onclick="switchlang('tuv','en')" class="btn btn-lg lang-en" title="Switch between Turkana and English">en</button>
@@ -486,10 +487,10 @@ Curling himself into a tight ball, he fell into a deep and troubled sleep.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
 	<div class="btn-group">
-		<a href="#text13" class="btn btn-lg"><img src="/storybooks-kenya/css/arrow-up.svg" alt="Previous page" width="16px"></a>
-		<a href="#text15" class="btn btn-lg"><img src="/storybooks-kenya/css/arrow-down.svg" alt="Next page" width="16px"></a>
-		<audio id="audio14" src="http://storybookscanada.ca/audio/tuv/0201/mp3/14.mp3"></audio>
-		<button class=" btn btn-lg" onclick="playpause('14')"><img src="/storybooks-kenya/css/volume-up.svg" alt="Play/pause" width="16px"></button>
+		<a href="#text13" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
+		<a href="#text15" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
+		<audio id="audio14" onended="resetbutton('14')" src="http://globalstorybooks.net/media/audio/tuv/0201/mp3/14.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton14" onclick="playpause('14')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group">
 		<button onclick="switchlang('tuv','en')" class="btn btn-lg lang-en" title="Switch between Turkana and English">en</button>
@@ -518,10 +519,10 @@ Donkey listened and learned, and so did the old man. They helped each other, and
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
 	<div class="btn-group">
-		<a href="#text14" class="btn btn-lg"><img src="/storybooks-kenya/css/arrow-up.svg" alt="Previous page" width="16px"></a>
-		<a href="#text16" class="btn btn-lg"><img src="/storybooks-kenya/css/arrow-down.svg" alt="Next page" width="16px"></a>
-		<audio id="audio15" src="http://storybookscanada.ca/audio/tuv/0201/mp3/15.mp3"></audio>
-		<button class=" btn btn-lg" onclick="playpause('15')"><img src="/storybooks-kenya/css/volume-up.svg" alt="Play/pause" width="16px"></button>
+		<a href="#text14" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
+		<a href="#text16" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
+		<audio id="audio15" onended="resetbutton('15')" src="http://globalstorybooks.net/media/audio/tuv/0201/mp3/15.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton15" onclick="playpause('15')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group">
 		<button onclick="switchlang('tuv','en')" class="btn btn-lg lang-en" title="Switch between Turkana and English">en</button>
@@ -546,10 +547,10 @@ Donkey listened and learned, and so did the old man. They helped each other, and
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
 	<div class="btn-group">
-		<a href="#text15" class="btn btn-lg"><img src="/storybooks-kenya/css/arrow-up.svg" alt="Previous page" width="16px"></a>
-		<a href="#text17" class="btn btn-lg"><img src="/storybooks-kenya/css/arrow-down.svg" alt="Next page" width="16px"></a>
-		<audio id="audio16" src="http://storybookscanada.ca/audio/tuv/0201/mp3/16.mp3"></audio>
-		<button class=" btn btn-lg" onclick="playpause('16')"><img src="/storybooks-kenya/css/volume-up.svg" alt="Play/pause" width="16px"></button>
+		<a href="#text15" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
+		<a href="#text17" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
+		<audio id="audio16" onended="resetbutton('16')" src="http://globalstorybooks.net/media/audio/tuv/0201/mp3/16.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton16" onclick="playpause('16')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group">
 		<button onclick="switchlang('tuv','en')" class="btn btn-lg lang-en" title="Switch between Turkana and English">en</button>
@@ -582,10 +583,10 @@ And when he woke up...
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
 	<div class="btn-group">
-		<a href="#text16" class="btn btn-lg"><img src="/storybooks-kenya/css/arrow-up.svg" alt="Previous page" width="16px"></a>
-		<a href="#text18" class="btn btn-lg"><img src="/storybooks-kenya/css/arrow-down.svg" alt="Next page" width="16px"></a>
-		<audio id="audio17" src="http://storybookscanada.ca/audio/tuv/0201/mp3/17.mp3"></audio>
-		<button class=" btn btn-lg" onclick="playpause('17')"><img src="/storybooks-kenya/css/volume-up.svg" alt="Play/pause" width="16px"></button>
+		<a href="#text16" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
+		<a href="#text18" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
+		<audio id="audio17" onended="resetbutton('17')" src="http://globalstorybooks.net/media/audio/tuv/0201/mp3/17.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton17" onclick="playpause('17')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group">
 		<button onclick="switchlang('tuv','en')" class="btn btn-lg lang-en" title="Switch between Turkana and English">en</button>
@@ -610,10 +611,10 @@ And when he woke up...
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
 	<div class="btn-group">
-		<a href="#text17" class="btn btn-lg"><img src="/storybooks-kenya/css/arrow-up.svg" alt="Previous page" width="16px"></a>
-		<a href="#text19" class="btn btn-lg"><img src="/storybooks-kenya/css/arrow-down.svg" alt="Next page" width="16px"></a>
-		<audio id="audio18" src="http://storybookscanada.ca/audio/tuv/0201/mp3/18.mp3"></audio>
-		<button class=" btn btn-lg" onclick="playpause('18')"><img src="/storybooks-kenya/css/volume-up.svg" alt="Play/pause" width="16px"></button>
+		<a href="#text17" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
+		<a href="#text19" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
+		<audio id="audio18" onended="resetbutton('18')" src="http://globalstorybooks.net/media/audio/tuv/0201/mp3/18.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton18" onclick="playpause('18')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group">
 		<button onclick="switchlang('tuv','en')" class="btn btn-lg lang-en" title="Switch between Turkana and English">en</button>
@@ -638,10 +639,10 @@ And when he woke up...
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
 	<div class="btn-group">
-		<a href="#text18" class="btn btn-lg"><img src="/storybooks-kenya/css/arrow-up.svg" alt="Previous page" width="16px"></a>
-		<a href="#text20" class="btn btn-lg"><img src="/storybooks-kenya/css/arrow-down.svg" alt="Next page" width="16px"></a>
-		<audio id="audio19" src="http://storybookscanada.ca/audio/tuv/0201/mp3/19.mp3"></audio>
-		<button class=" btn btn-lg" onclick="playpause('19')"><img src="/storybooks-kenya/css/volume-up.svg" alt="Play/pause" width="16px"></button>
+		<a href="#text18" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
+		<a href="#text20" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
+		<audio id="audio19" onended="resetbutton('19')" src="http://globalstorybooks.net/media/audio/tuv/0201/mp3/19.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton19" onclick="playpause('19')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group">
 		<button onclick="switchlang('tuv','en')" class="btn btn-lg lang-en" title="Switch between Turkana and English">en</button>
@@ -670,10 +671,10 @@ And then hugged each other very hard.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
 	<div class="btn-group">
-		<a href="#text19" class="btn btn-lg"><img src="/storybooks-kenya/css/arrow-up.svg" alt="Previous page" width="16px"></a>
-		<a href="#text21" class="btn btn-lg"><img src="/storybooks-kenya/css/arrow-down.svg" alt="Next page" width="16px"></a>
-		<audio id="audio20" src="http://storybookscanada.ca/audio/tuv/0201/mp3/20.mp3"></audio>
-		<button class=" btn btn-lg" onclick="playpause('20')"><img src="/storybooks-kenya/css/volume-up.svg" alt="Play/pause" width="16px"></button>
+		<a href="#text19" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
+		<a href="#text21" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
+		<audio id="audio20" onended="resetbutton('20')" src="http://globalstorybooks.net/media/audio/tuv/0201/mp3/20.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton20" onclick="playpause('20')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group">
 		<button onclick="switchlang('tuv','en')" class="btn btn-lg lang-en" title="Switch between Turkana and English">en</button>
@@ -700,10 +701,10 @@ Slowly, all around them, other families have started to settle.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
 	<div class="btn-group">
-		<a href="#text20" class="btn btn-lg"><img src="/storybooks-kenya/css/arrow-up.svg" alt="Previous page" width="16px"></a>
-		<a href="#colophon" class="btn btn-lg"><img src="/storybooks-kenya/css/arrow-down.svg" alt="Story credits" width="16px"></a>
-		<audio id="audio21" src="http://storybookscanada.ca/audio/tuv/0201/mp3/21.mp3"></audio>
-		<button class=" btn btn-lg" onclick="playpause('21')"><img src="/storybooks-kenya/css/volume-up.svg" alt="Play/pause" width="16px"></button>
+		<a href="#text20" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
+		<a href="#colophon" class="btn btn-lg" title="Story credits"><i class="icon-arrow-down"></i></a>
+		<audio id="audio21" onended="resetbutton('21')" src="http://globalstorybooks.net/media/audio/tuv/0201/mp3/21.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton21" onclick="playpause('21')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group">
 		<button onclick="switchlang('tuv','en')" class="btn btn-lg lang-en" title="Switch between Turkana and English">en</button>

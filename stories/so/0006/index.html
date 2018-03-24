@@ -9,8 +9,9 @@
 	<meta name="description" content="Storybooks Kenya is designed specifically for teachers and makes 40 stories from the African Storybook available in English and Swahili, as well as all the major regional and immigrant languages of Kenya (with text and audio in Amharic, Arabic, Embu / Kîembu, English, Gujarati, Ekegusii, Kamba / Kikamba, Gikuyu / Kikuyu, Kalenjin, Luganda, Olukhayo, Luo / Dholuo, Luhya / Oluluhya, Pokomo / Kipfokomo, Maa / Maasai, Meru / Kimîîru, Giryama / Kigiryama, Oromo / Afaan Oromo, Rendille, Samburu, Somali, Swahili / Kiswahili, and Turkana / Ng‘aturkana).
 ">
 	<link rel="stylesheet" href="/storybooks-kenya/css/spectre.min.css">
-	<link rel="canonical" href="https://global-asp.github.io/storybooks-kenya//stories/so/0006/">
-	<link rel="alternate" type="application/rss+xml" title="Storybooks Kenya" href="https://global-asp.github.io/storybooks-kenya/">
+	<link rel="stylesheet" href="/storybooks-kenya/css/fontello.min.css">
+	<link rel="canonical" href="https://global-asp.github.io//storybooks-kenya/stories/so/0006/">
+	<link rel="alternate" type="application/rss+xml" title="Storybooks Kenya" href="/storybooks-kenya">
 	<script src="/storybooks-kenya/js/sbc.js"></script>
 </head>
 
@@ -61,9 +62,9 @@
 <span class="en">Anansi and Wisdom</span>
 <span class="sw">Anansi na hekima</span>
 			<div class="btn-group">
-				<a href="#text02" class="btn btn-lg"><img src="/storybooks-kenya/css/arrow-down.svg" alt="Next page" width="16px"></a>
-				<button class=" btn btn-lg" onclick="playpause('')"><img src="/storybooks-kenya/css/volume-up.svg" alt="Play/pause" width="16px"></button>
-				<audio id="audio" src="http://storybookscanada.ca/audio/so/0006/mp3/01.mp3"></audio>
+				<a href="#text02" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
+				<button class="btn btn-lg" id="playbutton" onclick="playpause('')" title="Play/pause"><i class="icon-volume-up"></i></button>
+				<audio id="audio01" onended="resetbutton('01')" src="http://globalstorybooks.net/media/audio/so/0006/mp3/01.mp3"></audio>
 			</div>
 		</h1>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Written by"><img class="cover-icon" src="/storybooks-kenya/css/pencil.svg" alt="Written by" width="38px"></span> Ghanaian folktale</h3>
@@ -71,7 +72,7 @@
 		<h3><span class="tooltip tooltip-right" data-tooltip="Translated by"><img class="cover-icon" src="/storybooks-kenya/css/global.svg" alt="Translated by" width="38px"></span> Anwar Mohamed Dirie</h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Language"><img class="cover-icon" src="/storybooks-kenya/css/language.svg" alt="Language" width="38px"></span> <a href="/storybooks-kenya/stories/so">Somali</a></h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Level"><img class="cover-icon" src="/storybooks-kenya/css/level.svg" alt="Level" width="38px"></span> <a href="/storybooks-kenya/stories/so/level3">Level 3</a></h3>
-		<h3><span class="tooltip tooltip-right" data-tooltip="Narrate story"><img class="cover-icon" src="/storybooks-kenya/css/speaker.svg" alt="Narrate full story" width="38px"></span> <audio id="audioplayer" controls><source src="http://storybookscanada.ca/audio/so/0006/0006.mp3" type="audio/mpeg"></audio></h3>
+		<h3><span class="tooltip tooltip-right" data-tooltip="Narrate story"><img class="cover-icon" src="/storybooks-kenya/css/speaker.svg" alt="Narrate full story" width="38px"></span> <audio id="audioplayer" controls><source src="http://globalstorybooks.net/media/audio/so/0006/0006.mp3" type="audio/mpeg"></audio></h3>
 	</div>
 </div>
 <hr>
@@ -79,7 +80,7 @@
 <div id="text02" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0006/02.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 def"><h3>
-	Waagii hore dadku waxba ma ayan aqoon. Ma ayan aqoon sida miro loo beero, sida dhar loo sameeyo, iyo sida bir qalab looga sameeyo toona. Illaaha cirka ee Nyame ayaa xikmadda dunida oo dhan yiqiin. Waxana uu ku riday oo ku kaydiyey dhari dhoobo ka sameysan.
+	Waagii hore dadku waxba ma aysan aqoon. Ma aynan aqoon sida miro loo beero ama sida dhar loo sameeyo ama sida bir qalab looga sameeyo. Illaaha cirka kore ee Nyame ayaa lahaa xikmadi aduunka oo idil. Waxa uu na ku kaydiyey dhari dhoobo ah.
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
@@ -97,10 +98,10 @@ He kept it safe in a clay pot.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
 	<div class="btn-group">
-		<a href="#text01" class="btn btn-lg"><img src="/storybooks-kenya/css/arrow-up.svg" alt="Previous page" width="16px"></a>
-		<a href="#text03" class="btn btn-lg"><img src="/storybooks-kenya/css/arrow-down.svg" alt="Next page" width="16px"></a>
-		<audio id="audio02" src="http://storybookscanada.ca/audio/so/0006/mp3/02.mp3"></audio>
-		<button class=" btn btn-lg" onclick="playpause('02')"><img src="/storybooks-kenya/css/volume-up.svg" alt="Play/pause" width="16px"></button>
+		<a href="#text01" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
+		<a href="#text03" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
+		<audio id="audio02" onended="resetbutton('02')" src="http://globalstorybooks.net/media/audio/so/0006/mp3/02.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton02" onclick="playpause('02')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group">
 		<button onclick="switchlang('so','en')" class="btn btn-lg lang-en" title="Switch between Somali and English">en</button>
@@ -114,7 +115,7 @@ He kept it safe in a clay pot.
 <div id="text03" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0006/03.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 def"><h3>
-	Maalin maalmaha ka mid ah, ayuu go'aansaday Nyame in uu dhariga xikmadda siiyo Anansi. Mar walba oo uu Anansi eego dhariga dhoobada ah gudihiisa, wax cusub ayuu ka bartaa. Waxana ay ahayd arrin aad u xiisa badan!
+	Maalin maalmaha ka mid ah, Nyame waxuu goansaday in uu dhariga xikmada ah siiyo Anansi. Mar walba oo uu Anansi eego gudaha dhariga dhoobada ah, waxuu bartaa wax cusub. Waxa ayna ahayd arin aad u xiiso badan!
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
@@ -130,10 +131,10 @@ new. It was so exciting!
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
 	<div class="btn-group">
-		<a href="#text02" class="btn btn-lg"><img src="/storybooks-kenya/css/arrow-up.svg" alt="Previous page" width="16px"></a>
-		<a href="#text04" class="btn btn-lg"><img src="/storybooks-kenya/css/arrow-down.svg" alt="Next page" width="16px"></a>
-		<audio id="audio03" src="http://storybookscanada.ca/audio/so/0006/mp3/03.mp3"></audio>
-		<button class=" btn btn-lg" onclick="playpause('03')"><img src="/storybooks-kenya/css/volume-up.svg" alt="Play/pause" width="16px"></button>
+		<a href="#text02" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
+		<a href="#text04" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
+		<audio id="audio03" onended="resetbutton('03')" src="http://globalstorybooks.net/media/audio/so/0006/mp3/03.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton03" onclick="playpause('03')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group">
 		<button onclick="switchlang('so','en')" class="btn btn-lg lang-en" title="Switch between Somali and English">en</button>
@@ -147,7 +148,7 @@ new. It was so exciting!
 <div id="text04" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0006/04.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 def"><h3>
-	Damaacigii Anansi waxa uu is tusay, "waa in aan dhariga ku qarsadaa geed dheer dushii. Si aan la iila wadaagin keligayna aan u lahaado!" Waxa uu soohay xarig dheer, dharigii ayuuna si wareeg ah ugu xiray, dhexda ayuuna ku sii xirtay. Dabadeedna waxa uu bilaabay in uu geedka la tafo. Aad ayay ugu dhib badnaatay in uu geedka si sahlan u tafaayi oo dhariga ayaa jilbaha ka garaacayey mar walba.
+	Damaaci Anansi waxuu ku fikiray "waa in aan ku xafidaa dhariga dusha geed dheer. Si aan dhamaan kaligay u heysto!" Waxa uu soohay xarig dheer, dharigii dhoobada ayuu ku wareejiyay, dhexda ayuuna ku sii xirtay. Waxuu bilaabay in uu geedka fuulo. Lakin aad ayay ugu adkayd fuulida geedka ayadoo dhariga ka garaacayay jilbaha mar walba.
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
@@ -168,10 +169,10 @@ knees all the time.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
 	<div class="btn-group">
-		<a href="#text03" class="btn btn-lg"><img src="/storybooks-kenya/css/arrow-up.svg" alt="Previous page" width="16px"></a>
-		<a href="#text05" class="btn btn-lg"><img src="/storybooks-kenya/css/arrow-down.svg" alt="Next page" width="16px"></a>
-		<audio id="audio04" src="http://storybookscanada.ca/audio/so/0006/mp3/04.mp3"></audio>
-		<button class=" btn btn-lg" onclick="playpause('04')"><img src="/storybooks-kenya/css/volume-up.svg" alt="Play/pause" width="16px"></button>
+		<a href="#text03" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
+		<a href="#text05" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
+		<audio id="audio04" onended="resetbutton('04')" src="http://globalstorybooks.net/media/audio/so/0006/mp3/04.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton04" onclick="playpause('04')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group">
 		<button onclick="switchlang('so','en')" class="btn btn-lg lang-en" title="Switch between Somali and English">en</button>
@@ -185,7 +186,7 @@ knees all the time.
 <div id="text05" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0006/05.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 def"><h3>
-	Intaa oo dhan waxa geedka hoostiisa taagnaa oo daawanayey Anansi wiilkiisa yar. Waxana uu ku yiri, "Miyaanay sahlanayn in aad geedka si fiican u tafto haddii aad dhariga dhabarka ku xirato?" Anansi waxa uu isku deyey in uu dharigii ay xikmaddu ka buuxday uu dhabarka ku xirto, aadna waa ay u caawisay.
+	Intaa oo dhan Anansi wiilkiisi yaraa ayaa taagnaa geedka hoostiisa oo daawanayay. Waxuu yiri, "Miyaysan sahlanaan laheyn in aad fuusho hadii aad dhariga dhabarka ku xirato?" Anansi waxa uu isku dayay ku xirashada dharigii dhoobada ahaa oo ay xikmadu ka buuxday dhabarkiisa, waxayna dhab ahaanti aheyd mid in badan fudud.
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
@@ -204,10 +205,10 @@ really was a lot easier.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
 	<div class="btn-group">
-		<a href="#text04" class="btn btn-lg"><img src="/storybooks-kenya/css/arrow-up.svg" alt="Previous page" width="16px"></a>
-		<a href="#text06" class="btn btn-lg"><img src="/storybooks-kenya/css/arrow-down.svg" alt="Next page" width="16px"></a>
-		<audio id="audio05" src="http://storybookscanada.ca/audio/so/0006/mp3/05.mp3"></audio>
-		<button class=" btn btn-lg" onclick="playpause('05')"><img src="/storybooks-kenya/css/volume-up.svg" alt="Play/pause" width="16px"></button>
+		<a href="#text04" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
+		<a href="#text06" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
+		<audio id="audio05" onended="resetbutton('05')" src="http://globalstorybooks.net/media/audio/so/0006/mp3/05.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton05" onclick="playpause('05')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group">
 		<button onclick="switchlang('so','en')" class="btn btn-lg lang-en" title="Switch between Somali and English">en</button>
@@ -221,7 +222,7 @@ really was a lot easier.
 <div id="text06" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0006/06.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 def"><h3>
-	Si degdeg ah oo fudud ayuu ugu baxay geedka dushiisii. Laakiin markiiba waxa uu is yiri, "Aniga uun bay ahayd in aan haysto xikmadda oo dhan, laakiin wiilkayga oo aad iiga diricsan ayaa halkaa taagan! Anansi aad buu u carooday dharigiina dhoobada ka samaysnaana wuu ka dhacay.
+	Waqti yar ba waxuu gaaray geedka dushiisa. Laakiin markiiba wuu istaagay waxa uu na ka fikiray, "Aniga uun bay ahayd midka heysto xikmad oo dhan, hadana meeshan wiilkayga ayaa iga xariifsan aniga! Anansi aad buu u carooday dharigii dhoobada ayuu geedka kasoo tuuray.
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
@@ -241,10 +242,10 @@ out of the tree.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
 	<div class="btn-group">
-		<a href="#text05" class="btn btn-lg"><img src="/storybooks-kenya/css/arrow-up.svg" alt="Previous page" width="16px"></a>
-		<a href="#text07" class="btn btn-lg"><img src="/storybooks-kenya/css/arrow-down.svg" alt="Next page" width="16px"></a>
-		<audio id="audio06" src="http://storybookscanada.ca/audio/so/0006/mp3/06.mp3"></audio>
-		<button class=" btn btn-lg" onclick="playpause('06')"><img src="/storybooks-kenya/css/volume-up.svg" alt="Play/pause" width="16px"></button>
+		<a href="#text05" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
+		<a href="#text07" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
+		<audio id="audio06" onended="resetbutton('06')" src="http://globalstorybooks.net/media/audio/so/0006/mp3/06.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton06" onclick="playpause('06')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group">
 		<button onclick="switchlang('so','en')" class="btn btn-lg lang-en" title="Switch between Somali and English">en</button>
@@ -258,7 +259,7 @@ out of the tree.
 <div id="text07" class="columns">
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0006/07.jpg"></div>
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 def"><h3>
-	Dhulka ayuuna cadcad ugu barburay. Xikmaddii way xorowday oo qof waliba qayb ayuu ka helay. Waana sababta ay hadda dadku u barteen sida beer loo fasho, dhar loo sameysto, bir qalab looga sameysto, iyo wax walba oo kale oo dadku ay hadda ayaqaanaan sida loo sameeyo.
+	Dhulka ayuuna jajab ugu burburay. Xikmaddii way xorowday si qof waliba qayb uga helo. Waana sababta ay hadda dadku u barteen sid loo beerto, sida dhar loo tosho, qalab looga sameysto birta, iyo wax walba oo kale oo dadku ay hada yaqaanaan sida loo sameeyo.
 	</h3></div>
 
 	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
@@ -277,10 +278,10 @@ how to do.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
 	<div class="btn-group">
-		<a href="#text06" class="btn btn-lg"><img src="/storybooks-kenya/css/arrow-up.svg" alt="Previous page" width="16px"></a>
-		<a href="#colophon" class="btn btn-lg"><img src="/storybooks-kenya/css/arrow-down.svg" alt="Story credits" width="16px"></a>
-		<audio id="audio07" src="http://storybookscanada.ca/audio/so/0006/mp3/07.mp3"></audio>
-		<button class=" btn btn-lg" onclick="playpause('07')"><img src="/storybooks-kenya/css/volume-up.svg" alt="Play/pause" width="16px"></button>
+		<a href="#text06" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
+		<a href="#colophon" class="btn btn-lg" title="Story credits"><i class="icon-arrow-down"></i></a>
+		<audio id="audio07" onended="resetbutton('07')" src="http://globalstorybooks.net/media/audio/so/0006/mp3/07.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton07" onclick="playpause('07')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group">
 		<button onclick="switchlang('so','en')" class="btn btn-lg lang-en" title="Switch between Somali and English">en</button>
@@ -305,13 +306,13 @@ how to do.
 	</div>
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12">
 		<h5>Read more <a href="/storybooks-kenya/stories/so/level3">level 3</a> stories:</h5>
-			<label class="chip"><a href="/storybooks-kenya/stories/so/0110/">Mir yar: Sheekadii Wangari Maathai</a></label>
-			<label class="chip"><a href="/storybooks-kenya/stories/so/0066/">Nozibele iyo saddexdii timood</a></label>
-			<label class="chip"><a href="/storybooks-kenya/stories/so/0141/">Digaag iyo Dixiri</a></label>
-			<label class="chip"><a href="/storybooks-kenya/stories/so/0315/">Heestii Sakima</a></label>
-			<label class="chip"><a href="/storybooks-kenya/stories/so/0324/">Maalintii an katagay guriga een magalada aaday.</a></label>
-			<label class="chip"><a href="/storybooks-kenya/stories/so/0158/">Digaagad iyo Galayr</a></label>
+			<label class="chip"><a href="/storybooks-kenya/stories/so/0110/">Mir yar: Sheekadii Wangari Mathaay</a></label>
+			<label class="chip"><a href="/storybooks-kenya/stories/so/0066/">Nozibele iyo saddexdii timo</a></label>
+			<label class="chip"><a href="/storybooks-kenya/stories/so/0141/">Digaag iyo hangaraarac</a></label>
 			<label class="chip"><a href="/storybooks-kenya/stories/so/0201/">Ilmo dameer ah</a></label>
+			<label class="chip"><a href="/storybooks-kenya/stories/so/0324/">Maalintii aan ka tagay guriga een magalada aaday</a></label>
+			<label class="chip"><a href="/storybooks-kenya/stories/so/0158/">Digaagad iyo Galayr</a></label>
+			<label class="chip"><a href="/storybooks-kenya/stories/so/0315/">Heestii Sakima</a></label>
 	</div>
 </div>
 <div>

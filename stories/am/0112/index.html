@@ -9,8 +9,9 @@
 	<meta name="description" content="Storybooks Kenya is designed specifically for teachers and makes 40 stories from the African Storybook available in English and Swahili, as well as all the major regional and immigrant languages of Kenya (with text and audio in Amharic, Arabic, Embu / Kîembu, English, Gujarati, Ekegusii, Kamba / Kikamba, Gikuyu / Kikuyu, Kalenjin, Luganda, Olukhayo, Luo / Dholuo, Luhya / Oluluhya, Pokomo / Kipfokomo, Maa / Maasai, Meru / Kimîîru, Giryama / Kigiryama, Oromo / Afaan Oromo, Rendille, Samburu, Somali, Swahili / Kiswahili, and Turkana / Ng‘aturkana).
 ">
 	<link rel="stylesheet" href="/storybooks-kenya/css/spectre.min.css">
-	<link rel="canonical" href="https://global-asp.github.io/storybooks-kenya//stories/am/0112/">
-	<link rel="alternate" type="application/rss+xml" title="Storybooks Kenya" href="https://global-asp.github.io/storybooks-kenya/">
+	<link rel="stylesheet" href="/storybooks-kenya/css/fontello.min.css">
+	<link rel="canonical" href="https://global-asp.github.io//storybooks-kenya/stories/am/0112/">
+	<link rel="alternate" type="application/rss+xml" title="Storybooks Kenya" href="/storybooks-kenya">
 	<script src="/storybooks-kenya/js/sbc.js"></script>
 </head>
 
@@ -61,9 +62,9 @@
 <span class="en">My body</span>
 <span class="sw">Mwili wangu</span>
 			<div class="btn-group">
-				<a href="#text02" class="btn btn-lg"><img src="/storybooks-kenya/css/arrow-down.svg" alt="Next page" width="16px"></a>
-				<button class=" btn btn-lg" onclick="playpause('')"><img src="/storybooks-kenya/css/volume-up.svg" alt="Play/pause" width="16px"></button>
-				<audio id="audio" src="http://storybookscanada.ca/audio/am/0112/mp3/01.mp3"></audio>
+				<a href="#text02" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
+				<button class="btn btn-lg" id="playbutton" onclick="playpause('')" title="Play/pause"><i class="icon-volume-up"></i></button>
+				<audio id="audio01" onended="resetbutton('01')" src="http://globalstorybooks.net/media/audio/am/0112/mp3/01.mp3"></audio>
 			</div>
 		</h1>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Written by"><img class="cover-icon" src="/storybooks-kenya/css/pencil.svg" alt="Written by" width="38px"></span> Clare Verbeek, Thembani Dladla, Zanele Buthelezi</h3>
@@ -71,7 +72,7 @@
 		<h3><span class="tooltip tooltip-right" data-tooltip="Translated by"><img class="cover-icon" src="/storybooks-kenya/css/global.svg" alt="Translated by" width="38px"></span> Mezemir Girma</h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Language"><img class="cover-icon" src="/storybooks-kenya/css/language.svg" alt="Language" width="38px"></span> <a href="/storybooks-kenya/stories/am">Amharic</a></h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Level"><img class="cover-icon" src="/storybooks-kenya/css/level.svg" alt="Level" width="38px"></span> <a href="/storybooks-kenya/stories/am/level1">Level 1</a></h3>
-		<h3><span class="tooltip tooltip-right" data-tooltip="Narrate story"><img class="cover-icon" src="/storybooks-kenya/css/speaker.svg" alt="Narrate full story" width="38px"></span> <audio id="audioplayer" controls><source src="http://storybookscanada.ca/audio/am/0112/0112.mp3" type="audio/mpeg"></audio></h3>
+		<h3><span class="tooltip tooltip-right" data-tooltip="Narrate story"><img class="cover-icon" src="/storybooks-kenya/css/speaker.svg" alt="Narrate full story" width="38px"></span> <audio id="audioplayer" controls><source src="http://globalstorybooks.net/media/audio/am/0112/0112.mp3" type="audio/mpeg"></audio></h3>
 	</div>
 </div>
 <hr>
@@ -90,10 +91,10 @@
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
 	<div class="btn-group">
-		<a href="#text01" class="btn btn-lg"><img src="/storybooks-kenya/css/arrow-up.svg" alt="Previous page" width="16px"></a>
-		<a href="#text03" class="btn btn-lg"><img src="/storybooks-kenya/css/arrow-down.svg" alt="Next page" width="16px"></a>
-		<audio id="audio02" src="http://storybookscanada.ca/audio/am/0112/mp3/02.mp3"></audio>
-		<button class=" btn btn-lg" onclick="playpause('02')"><img src="/storybooks-kenya/css/volume-up.svg" alt="Play/pause" width="16px"></button>
+		<a href="#text01" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
+		<a href="#text03" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
+		<audio id="audio02" onended="resetbutton('02')" src="http://globalstorybooks.net/media/audio/am/0112/mp3/02.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton02" onclick="playpause('02')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group">
 		<button onclick="switchlang('am','en')" class="btn btn-lg lang-en" title="Switch between Amharic and English">en</button>
@@ -118,10 +119,10 @@
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
 	<div class="btn-group">
-		<a href="#text02" class="btn btn-lg"><img src="/storybooks-kenya/css/arrow-up.svg" alt="Previous page" width="16px"></a>
-		<a href="#text04" class="btn btn-lg"><img src="/storybooks-kenya/css/arrow-down.svg" alt="Next page" width="16px"></a>
-		<audio id="audio03" src="http://storybookscanada.ca/audio/am/0112/mp3/03.mp3"></audio>
-		<button class=" btn btn-lg" onclick="playpause('03')"><img src="/storybooks-kenya/css/volume-up.svg" alt="Play/pause" width="16px"></button>
+		<a href="#text02" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
+		<a href="#text04" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
+		<audio id="audio03" onended="resetbutton('03')" src="http://globalstorybooks.net/media/audio/am/0112/mp3/03.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton03" onclick="playpause('03')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group">
 		<button onclick="switchlang('am','en')" class="btn btn-lg lang-en" title="Switch between Amharic and English">en</button>
@@ -146,10 +147,10 @@
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
 	<div class="btn-group">
-		<a href="#text03" class="btn btn-lg"><img src="/storybooks-kenya/css/arrow-up.svg" alt="Previous page" width="16px"></a>
-		<a href="#text05" class="btn btn-lg"><img src="/storybooks-kenya/css/arrow-down.svg" alt="Next page" width="16px"></a>
-		<audio id="audio04" src="http://storybookscanada.ca/audio/am/0112/mp3/04.mp3"></audio>
-		<button class=" btn btn-lg" onclick="playpause('04')"><img src="/storybooks-kenya/css/volume-up.svg" alt="Play/pause" width="16px"></button>
+		<a href="#text03" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
+		<a href="#text05" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
+		<audio id="audio04" onended="resetbutton('04')" src="http://globalstorybooks.net/media/audio/am/0112/mp3/04.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton04" onclick="playpause('04')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group">
 		<button onclick="switchlang('am','en')" class="btn btn-lg lang-en" title="Switch between Amharic and English">en</button>
@@ -174,10 +175,10 @@
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
 	<div class="btn-group">
-		<a href="#text04" class="btn btn-lg"><img src="/storybooks-kenya/css/arrow-up.svg" alt="Previous page" width="16px"></a>
-		<a href="#text06" class="btn btn-lg"><img src="/storybooks-kenya/css/arrow-down.svg" alt="Next page" width="16px"></a>
-		<audio id="audio05" src="http://storybookscanada.ca/audio/am/0112/mp3/05.mp3"></audio>
-		<button class=" btn btn-lg" onclick="playpause('05')"><img src="/storybooks-kenya/css/volume-up.svg" alt="Play/pause" width="16px"></button>
+		<a href="#text04" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
+		<a href="#text06" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
+		<audio id="audio05" onended="resetbutton('05')" src="http://globalstorybooks.net/media/audio/am/0112/mp3/05.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton05" onclick="playpause('05')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group">
 		<button onclick="switchlang('am','en')" class="btn btn-lg lang-en" title="Switch between Amharic and English">en</button>
@@ -202,10 +203,10 @@
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
 	<div class="btn-group">
-		<a href="#text05" class="btn btn-lg"><img src="/storybooks-kenya/css/arrow-up.svg" alt="Previous page" width="16px"></a>
-		<a href="#text07" class="btn btn-lg"><img src="/storybooks-kenya/css/arrow-down.svg" alt="Next page" width="16px"></a>
-		<audio id="audio06" src="http://storybookscanada.ca/audio/am/0112/mp3/06.mp3"></audio>
-		<button class=" btn btn-lg" onclick="playpause('06')"><img src="/storybooks-kenya/css/volume-up.svg" alt="Play/pause" width="16px"></button>
+		<a href="#text05" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
+		<a href="#text07" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
+		<audio id="audio06" onended="resetbutton('06')" src="http://globalstorybooks.net/media/audio/am/0112/mp3/06.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton06" onclick="playpause('06')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group">
 		<button onclick="switchlang('am','en')" class="btn btn-lg lang-en" title="Switch between Amharic and English">en</button>
@@ -230,10 +231,10 @@
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
 	<div class="btn-group">
-		<a href="#text06" class="btn btn-lg"><img src="/storybooks-kenya/css/arrow-up.svg" alt="Previous page" width="16px"></a>
-		<a href="#text08" class="btn btn-lg"><img src="/storybooks-kenya/css/arrow-down.svg" alt="Next page" width="16px"></a>
-		<audio id="audio07" src="http://storybookscanada.ca/audio/am/0112/mp3/07.mp3"></audio>
-		<button class=" btn btn-lg" onclick="playpause('07')"><img src="/storybooks-kenya/css/volume-up.svg" alt="Play/pause" width="16px"></button>
+		<a href="#text06" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
+		<a href="#text08" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
+		<audio id="audio07" onended="resetbutton('07')" src="http://globalstorybooks.net/media/audio/am/0112/mp3/07.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton07" onclick="playpause('07')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group">
 		<button onclick="switchlang('am','en')" class="btn btn-lg lang-en" title="Switch between Amharic and English">en</button>
@@ -258,10 +259,10 @@
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
 	<div class="btn-group">
-		<a href="#text07" class="btn btn-lg"><img src="/storybooks-kenya/css/arrow-up.svg" alt="Previous page" width="16px"></a>
-		<a href="#text09" class="btn btn-lg"><img src="/storybooks-kenya/css/arrow-down.svg" alt="Next page" width="16px"></a>
-		<audio id="audio08" src="http://storybookscanada.ca/audio/am/0112/mp3/08.mp3"></audio>
-		<button class=" btn btn-lg" onclick="playpause('08')"><img src="/storybooks-kenya/css/volume-up.svg" alt="Play/pause" width="16px"></button>
+		<a href="#text07" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
+		<a href="#text09" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
+		<audio id="audio08" onended="resetbutton('08')" src="http://globalstorybooks.net/media/audio/am/0112/mp3/08.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton08" onclick="playpause('08')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group">
 		<button onclick="switchlang('am','en')" class="btn btn-lg lang-en" title="Switch between Amharic and English">en</button>
@@ -287,10 +288,10 @@ it.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
 	<div class="btn-group">
-		<a href="#text08" class="btn btn-lg"><img src="/storybooks-kenya/css/arrow-up.svg" alt="Previous page" width="16px"></a>
-		<a href="#colophon" class="btn btn-lg"><img src="/storybooks-kenya/css/arrow-down.svg" alt="Story credits" width="16px"></a>
-		<audio id="audio09" src="http://storybookscanada.ca/audio/am/0112/mp3/09.mp3"></audio>
-		<button class=" btn btn-lg" onclick="playpause('09')"><img src="/storybooks-kenya/css/volume-up.svg" alt="Play/pause" width="16px"></button>
+		<a href="#text08" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
+		<a href="#colophon" class="btn btn-lg" title="Story credits"><i class="icon-arrow-down"></i></a>
+		<audio id="audio09" onended="resetbutton('09')" src="http://globalstorybooks.net/media/audio/am/0112/mp3/09.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton09" onclick="playpause('09')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group">
 		<button onclick="switchlang('am','en')" class="btn btn-lg lang-en" title="Switch between Amharic and English">en</button>
