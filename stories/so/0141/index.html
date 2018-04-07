@@ -4,9 +4,16 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="icon" href="/storybooks-kenya/favicon.ico?v=3" />
+	<link rel="apple-touch-icon" sizes="180x180" href="/storybooks-kenya/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/storybooks-kenya/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/storybooks-kenya/favicon-16x16.png">
+	<link rel="manifest" href="/storybooks-kenya/site.webmanifest">
+	<link rel="mask-icon" href="/storybooks-kenya/safari-pinned-tab.svg" color="#5bbad5">
+	<link rel="shortcut icon" href=/storybooks-kenya/favicon.ico?v=4">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
 	<title>Digaag iyo hangaraarac - Storybooks Kenya</title>
-	<meta name="description" content="Storybooks Kenya is designed specifically for teachers and makes 40 stories from the African Storybook available in English and Swahili, as well as all the major regional and immigrant languages of Kenya (with text and audio in Amharic, Arabic, Embu / Kîembu, English, Gujarati, Ekegusii, Kamba / Kikamba, Gikuyu / Kikuyu, Kalenjin, Luganda, Olukhayo, Luo / Dholuo, Luhya / Oluluhya, Pokomo / Kipfokomo, Maa / Maasai, Meru / Kimîîru, Giryama / Kigiryama, Oromo / Afaan Oromo, Rendille, Samburu, Somali, Swahili / Kiswahili, and Turkana / Ng‘aturkana).
+	<meta name="description" content="Storybooks Kenya is designed specifically for teachers, parents, and community members. It makes 40 stories from the African Storybook available in English and Swahili, as well as all the major regional and immigrant languages of Kenya (with text and audio in Amharic, Arabic, Embu / Kîembu, English, Gujarati, Ekegusii, Kamba / Kikamba, Gikuyu / Kikuyu, Kalenjin, Luganda, Olukhayo, Luo / Dholuo, Luhya / Oluluhya, Pokomo / Kipfokomo, Maa / Maasai, Meru / Kimîîru, Giryama / Kigiryama, Oromo / Afaan Oromo, Rendille, Samburu, Somali, Swahili / Kiswahili, and Turkana / Ng‘aturkana, among others).
 ">
 	<link rel="stylesheet" href="/storybooks-kenya/css/spectre.min.css">
 	<link rel="stylesheet" href="/storybooks-kenya/css/fontello.min.css">
@@ -22,13 +29,18 @@
         <header class="navbar">
 	<section class="navbar-section">
 		<a href="/storybooks-kenya/" class="navbar-brand">
-			<object type="image/svg+xml" data="/storybooks-kenya/images/sbk_logo.svg" width="100" height="100" border="0"></object>
+			<object type="image/svg+xml" data="/storybooks-kenya/images/sbke_logo.svg" width="100" height="100" border="0"></object>
 		</a>
 		<div class="btn-group btn-group-block">
 			<a href="/storybooks-kenya/" class="btn btn-primary">Home</a>
-			<a href="/storybooks-kenya/about.html" class="btn btn-primary">About us</a>
-			<a href="/storybooks-kenya/how-to.html" class="btn btn-primary">How to use this website</a>
-			<a href="/storybooks-kenya/contact.html" class="btn btn-primary">Contact us</a>
+			<div class="dropdown">
+				<a href="#" class="btn btn-primary dropdown-toggle" tabindex="0">About</a>
+				<ul class="menu">
+					<li class="menu-item"><a href="/storybooks-kenya/about">About us</a></li>
+				</ul>
+			</div>
+			<a href="/storybooks-kenya/how-to" class="btn btn-primary">How to use this website</a>
+			<a href="/storybooks-kenya/contact" class="btn btn-primary">Contact us</a>
 		</div>
 	</section>
 </header>
@@ -59,20 +71,23 @@
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0141/01.jpg"></div>
 	<div class=" column col-7 col-lg-12 col-md-12 col-sm-12">
 		<h1><span class="def">Digaag iyo hangaraarac</span>
-<span class="en">Chicken and Millipede</span>
-<span class="sw">Kuku na Jongoo</span>
-			<div class="btn-group">
-				<a href="#text02" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-				<button class="btn btn-lg" id="playbutton" onclick="playpause('')" title="Play/pause"><i class="icon-volume-up"></i></button>
-				<audio id="audio01" onended="resetbutton('01')" src="http://globalstorybooks.net/media/audio/so/0141/mp3/01.mp3"></audio>
-			</div>
+<span class="l1">Chicken and Millipede</span>
+<span class="l2">Kuku na Jongoo</span>
+		<div class="btn-group">
+			<a href="#text02" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
+			<button class="btn btn-lg" id="playbutton01" onclick="playpause('01')" title="Play/pause"><i class="icon-volume-up"></i></button>
+			<audio id="audio01" onended="resetbutton('01')" src="http://globalstorybooks.net/media/audio/so/0141/mp3/01.mp3"></audio>
+			<button onclick="switchlang('so,en','en,sw,so')" class="btn btn-lg lang-primary" title="Switch between Somali and English">en</button>
+			<button onclick="switchlang('so,sw','en,sw,so')" class="btn btn-lg lang-secondary" title="Switch between Somali and Swahili">sw</button>
+		</div>
 		</h1>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Written by"><img class="cover-icon" src="/storybooks-kenya/css/pencil.svg" alt="Written by" width="38px"></span> Winny Asara</h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Illustrated by"><img class="cover-icon" src="/storybooks-kenya/css/art.svg" alt="Illustrated by" width="38px"></span> Winny Asara</h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Translated by"><img class="cover-icon" src="/storybooks-kenya/css/global.svg" alt="Translated by" width="38px"></span> Abdi Muse</h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Language"><img class="cover-icon" src="/storybooks-kenya/css/language.svg" alt="Language" width="38px"></span> <a href="/storybooks-kenya/stories/so">Somali</a></h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Level"><img class="cover-icon" src="/storybooks-kenya/css/level.svg" alt="Level" width="38px"></span> <a href="/storybooks-kenya/stories/so/level3">Level 3</a></h3>
-		<h3><span class="tooltip tooltip-right" data-tooltip="Narrate story"><img class="cover-icon" src="/storybooks-kenya/css/speaker.svg" alt="Narrate full story" width="38px"></span> <audio id="audioplayer" controls><source src="http://globalstorybooks.net/media/audio/so/0141/0141.mp3" type="audio/mpeg"></audio></h3>
+		<h3><span class="tooltip tooltip-right" data-tooltip="Narrate story"><img class="cover-icon" src="/storybooks-kenya/css/speaker.svg" alt="Narrate full story" width="38px"></span> <audio id="audioplayer" controls><source src="http://globalstorybooks.net/media/audio/so/0141/so-0141_chicken.mp3" type="audio/mpeg"></audio></h3>
+		<h3><span class="tooltip tooltip-right" data-tooltip="Autoplay story (beta - desktop only)"><img id="autoplay_icon" class="cover-icon" src="https://dohliam.github.io/elegant-circles/svg/play.svg" alt="Autoplay story" style="cursor:pointer" width="38px" onclick="autoplay()"></span></h3>
 	</div>
 </div>
 <hr>
@@ -83,10 +98,10 @@
 	Digaag iyo Dixiri waxay ahaayeen saaxiibo. Laakiin had iyo jeer waxay ahaayeen kuwo tartamo. Hal maalin waxay go'aansadeen inay ciyaaraan kubadda cagta si ay u arkaan midka ah ciyaaryahanka ugu fiican.
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3>
 	Chicken and Millipede were friends. But they were always competing with each other. One day they decided to play football to see who the best player was.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3>
 	Kuku na Jongoo walikuwa marafiki. Ila walikuwa wanashindana kila mara. Siku moja wakaamua kucheza mpira wa miguu ili waweze kubaini nani alikuwa mchezaji bora zaidi.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -97,8 +112,8 @@
 		<button class="btn btn-lg" id="playbutton02" onclick="playpause('02')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('so','en')" class="btn btn-lg lang-en" title="Switch between Somali and English">en</button>
-		<button onclick="switchlang('so','sw')" class="btn btn-lg lang-sw" title="Switch between Somali and Swahili">sw</button>
+		<button onclick="switchlang('so,en','en,sw,so')" class="btn btn-lg lang-primary" title="Switch between Somali and English">en</button>
+		<button onclick="switchlang('so,sw','en,sw,so')" class="btn btn-lg lang-secondary" title="Switch between Somali and Swahili">sw</button>
 	</div>
 </div>
 
@@ -111,10 +126,10 @@
 	Waxay aadeen garoonka kubada cagta waxayna bilaabeen ciyaartooda. Digaagadu waxay ahayd mid dhakhso badan, laakiin hangaraaraca ayaa kasii dhakhso badnaa. Digaaggadu waxay u darbeysay meel fog laakiin hangaraarici ayaa u darbeeyay meel kasii fog. Digaaggadu waxay bilawday inay dareento xanaaq.
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3>
 	They went to the football field and started their game. Chicken was fast, but Millipede was faster. Chicken kicked far, but Millipede kicked further. Chicken started to feel grumpy.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3>
 	Wakaenda uwanjani na wakaanza kucheza. Kuku alikuwa na kasi ila Jongoo alikuwa na kasi zaidi. Kuku alipiga mpira mbali, ila Jongoo alipiga mbali zaidi. Kuku akaanza kupandwa na hasira.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -125,8 +140,8 @@
 		<button class="btn btn-lg" id="playbutton03" onclick="playpause('03')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('so','en')" class="btn btn-lg lang-en" title="Switch between Somali and English">en</button>
-		<button onclick="switchlang('so','sw')" class="btn btn-lg lang-sw" title="Switch between Somali and Swahili">sw</button>
+		<button onclick="switchlang('so,en','en,sw,so')" class="btn btn-lg lang-primary" title="Switch between Somali and English">en</button>
+		<button onclick="switchlang('so,sw','en,sw,so')" class="btn btn-lg lang-secondary" title="Switch between Somali and Swahili">sw</button>
 	</div>
 </div>
 
@@ -139,10 +154,10 @@
 	Waxay go'aansadeen in ay ciyaaraan gool ku laad. Waxaa goolhaye ku hormaray hangaraarici. Digaagtii waxay dhalisay hal gool oo kaliya. Kadibna waxay ahayd digaaggada markeedi in ay difaacdo goolka.
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3>
 	They decided to play a penalty shoot-out. First Millipede was goal keeper. Chicken scored only one goal. Then it was the chicken's turn to defend the goal.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3>
 	Wakaamua kupigiana penati. Jongoo akaenda golini. Kuku alifunga goli moja pekee. Ikawa zamu ya kuku kwenda golini.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -153,8 +168,8 @@
 		<button class="btn btn-lg" id="playbutton04" onclick="playpause('04')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('so','en')" class="btn btn-lg lang-en" title="Switch between Somali and English">en</button>
-		<button onclick="switchlang('so','sw')" class="btn btn-lg lang-sw" title="Switch between Somali and Swahili">sw</button>
+		<button onclick="switchlang('so,en','en,sw,so')" class="btn btn-lg lang-primary" title="Switch between Somali and English">en</button>
+		<button onclick="switchlang('so,sw','en,sw,so')" class="btn btn-lg lang-secondary" title="Switch between Somali and Swahili">sw</button>
 	</div>
 </div>
 
@@ -167,12 +182,12 @@
 	Hangaraarici wuu darbeeyay kubadii waa uu na dhaliyay. Hangaraarici ayaa soo ceyriyay kubada wuuna dhaliyay. Hangaraaraci ayaa madaxa ku soo tuuray kubada wuuna dhaliyay. Hangaraarici waxa uu dhaliyay shan gool.
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3>
 	Millipede kicked the ball and scored.
 
 Millipede dribbled the ball and scored. Millipede headed the ball and scored. Millipede scored five goals.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3>
 	Jongoo alipiga mpira akafunga. Jongoo akapiga chenga akafunga. Jongoo akapiga kichwa akafunga. Jongoo akafunga magoli matano.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -183,8 +198,8 @@ Millipede dribbled the ball and scored. Millipede headed the ball and scored. Mi
 		<button class="btn btn-lg" id="playbutton05" onclick="playpause('05')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('so','en')" class="btn btn-lg lang-en" title="Switch between Somali and English">en</button>
-		<button onclick="switchlang('so','sw')" class="btn btn-lg lang-sw" title="Switch between Somali and Swahili">sw</button>
+		<button onclick="switchlang('so,en','en,sw,so')" class="btn btn-lg lang-primary" title="Switch between Somali and English">en</button>
+		<button onclick="switchlang('so,sw','en,sw,so')" class="btn btn-lg lang-secondary" title="Switch between Somali and Swahili">sw</button>
 	</div>
 </div>
 
@@ -197,10 +212,10 @@ Millipede dribbled the ball and scored. Millipede headed the ball and scored. Mi
 	Digaaggadu waxay ka cadhootay in ay guuldareysatay. Waxay ahayd kuuldareyste aad u xun. Hangaraarac waxuu bilaabay in uu qoslo sababtoo ah saaxiibkiisa ayaa ahaa mid sidaas u buuqa.
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3>
 	Chicken was furious that she lost. She was a very bad loser. Millipede started laughing because his friend was making such a fuss.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3>
 	Kuku akakasirika kwa kuwa amefungwa. Hakuwa mshindani mzuri. Jongoo akaanza kucheka kwa sababu rafiki yake alikuwa analalamika.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -211,8 +226,8 @@ Millipede dribbled the ball and scored. Millipede headed the ball and scored. Mi
 		<button class="btn btn-lg" id="playbutton06" onclick="playpause('06')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('so','en')" class="btn btn-lg lang-en" title="Switch between Somali and English">en</button>
-		<button onclick="switchlang('so','sw')" class="btn btn-lg lang-sw" title="Switch between Somali and Swahili">sw</button>
+		<button onclick="switchlang('so,en','en,sw,so')" class="btn btn-lg lang-primary" title="Switch between Somali and English">en</button>
+		<button onclick="switchlang('so,sw','en,sw,so')" class="btn btn-lg lang-secondary" title="Switch between Somali and Swahili">sw</button>
 	</div>
 </div>
 
@@ -225,10 +240,10 @@ Millipede dribbled the ball and scored. Millipede headed the ball and scored. Mi
 	Digaaggadii aad ayay u xanaaqday oo waxay aad ukala qaaday afkeedii waxayna liqday hangaraaricii.
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3>
 	Chicken was so angry that she opened her beak wide and swallowed the millipede.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3>
 	Kuku alipatwa na hasira kiasi kwamba akafungua mdomo wake mkubwa na akammeza Jongoo.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -239,8 +254,8 @@ Millipede dribbled the ball and scored. Millipede headed the ball and scored. Mi
 		<button class="btn btn-lg" id="playbutton07" onclick="playpause('07')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('so','en')" class="btn btn-lg lang-en" title="Switch between Somali and English">en</button>
-		<button onclick="switchlang('so','sw')" class="btn btn-lg lang-sw" title="Switch between Somali and Swahili">sw</button>
+		<button onclick="switchlang('so,en','en,sw,so')" class="btn btn-lg lang-primary" title="Switch between Somali and English">en</button>
+		<button onclick="switchlang('so,sw','en,sw,so')" class="btn btn-lg lang-secondary" title="Switch between Somali and Swahili">sw</button>
 	</div>
 </div>
 
@@ -253,12 +268,12 @@ Millipede dribbled the ball and scored. Millipede headed the ball and scored. Mi
 	Iyadoo digaaggadi u soo socotay guriga, waxay la kulantay hangaraarac hooyadii. Hangaraarac hooyadii baa waydiisay, "Ma aragtay ilmahaygi?" Digaagada waxbo maysan odhan. Hooyadii Hangaraaraca ayaa walwashay.
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3>
 	As Chicken was walking home, she met Mother Millipede. Mother Millipede asked, "Have you seen my child?" Chicken didn't say anything.
 
 Mother Millipede was worried.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3>
 	Kuku alipokuwa anarudi nyumbani alikutana na Mama yake Jongoo. Mama Jongoo akamuuliza, "Umemwona mwanangu?" Kuku hakujibu kitu. Mama Jongoo akapatwa na wasiwasi.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -269,8 +284,8 @@ Mother Millipede was worried.
 		<button class="btn btn-lg" id="playbutton08" onclick="playpause('08')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('so','en')" class="btn btn-lg lang-en" title="Switch between Somali and English">en</button>
-		<button onclick="switchlang('so','sw')" class="btn btn-lg lang-sw" title="Switch between Somali and Swahili">sw</button>
+		<button onclick="switchlang('so,en','en,sw,so')" class="btn btn-lg lang-primary" title="Switch between Somali and English">en</button>
+		<button onclick="switchlang('so,sw','en,sw,so')" class="btn btn-lg lang-secondary" title="Switch between Somali and Swahili">sw</button>
 	</div>
 </div>
 
@@ -283,10 +298,10 @@ Mother Millipede was worried.
 	Kadibna Hooyadii Hangaraaraca waxay maqashay cod aad u yar. "Hooyo i caawi!" ayuu ku dhawaaqay codka. Hooyadii Hangaraarac waxay fiirisay agagaarka oou dhageysatay si taxaddar leh. Codka ayaa ka yimid digaaggada dhexdeeda.
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3>
 	Then Mother Millipede heard a tiny voice. "Help me mom!" cried the voice. Mother Millipede looked around and listened carefully. The voice came from inside the chicken.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3>
 	Mama Jongoo akasikia sauti kwa mbali. "Nisaidie mama!" ile sauti ililia. Mama Jongoo akaangalia huku na kule na kusikiliza kwa makini. Sauti ilitokea tumboni mwa kuku.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -297,8 +312,8 @@ Mother Millipede was worried.
 		<button class="btn btn-lg" id="playbutton09" onclick="playpause('09')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('so','en')" class="btn btn-lg lang-en" title="Switch between Somali and English">en</button>
-		<button onclick="switchlang('so','sw')" class="btn btn-lg lang-sw" title="Switch between Somali and Swahili">sw</button>
+		<button onclick="switchlang('so,en','en,sw,so')" class="btn btn-lg lang-primary" title="Switch between Somali and English">en</button>
+		<button onclick="switchlang('so,sw','en,sw,so')" class="btn btn-lg lang-secondary" title="Switch between Somali and Swahili">sw</button>
 	</div>
 </div>
 
@@ -311,10 +326,10 @@ Mother Millipede was worried.
 	Hooyadii Hangaraaraca ayaa ku qaylisay, "Isticmaal awooddaada khaaska ah cunugeyga!" Hangaraaracyaasha waxay samayn karaan shiir xun iyo dhadhan daran. Digaaggadii waxay bilawday in ay dareento xanuun.
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3>
 	Mother Millipede shouted, "Use your special power my child!" Millipedes can make a bad smell and a terrible taste. Chicken began to feel ill.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3>
 	Mama Jongoo alipiga kelele, "Tumia nguvu yako ya kipekee mwanangu!" Majongoo wanaweza kutoa harufu mbaya na ladha ya ajabu. Kuku akaanza kujisikia mgonjwa.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -325,8 +340,8 @@ Mother Millipede was worried.
 		<button class="btn btn-lg" id="playbutton10" onclick="playpause('10')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('so','en')" class="btn btn-lg lang-en" title="Switch between Somali and English">en</button>
-		<button onclick="switchlang('so','sw')" class="btn btn-lg lang-sw" title="Switch between Somali and Swahili">sw</button>
+		<button onclick="switchlang('so,en','en,sw,so')" class="btn btn-lg lang-primary" title="Switch between Somali and English">en</button>
+		<button onclick="switchlang('so,sw','en,sw,so')" class="btn btn-lg lang-secondary" title="Switch between Somali and Swahili">sw</button>
 	</div>
 </div>
 
@@ -339,10 +354,10 @@ Mother Millipede was worried.
 	Digaaggadu waa aay daacsatay. Kadibna way liqday oo candhuuf tuftay. Kadibna way hindhistay oo qufacday. Oo qufacday. Hangaraaricii waxuu ahaa karaahiyo!
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3>
 	Chicken burped. Then she swallowed and spat. Then she sneezed and coughed. And coughed. The millipede was disgusting!
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3>
 	Kuku akabeuwa. Akameza mate na kutema. Halafu akapiga chafya na kukohoa. Akakohoa tena. Jongoo alimfanya ajisikie vibaya.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -353,8 +368,8 @@ Mother Millipede was worried.
 		<button class="btn btn-lg" id="playbutton11" onclick="playpause('11')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('so','en')" class="btn btn-lg lang-en" title="Switch between Somali and English">en</button>
-		<button onclick="switchlang('so','sw')" class="btn btn-lg lang-sw" title="Switch between Somali and Swahili">sw</button>
+		<button onclick="switchlang('so,en','en,sw,so')" class="btn btn-lg lang-primary" title="Switch between Somali and English">en</button>
+		<button onclick="switchlang('so,sw','en,sw,so')" class="btn btn-lg lang-secondary" title="Switch between Somali and Swahili">sw</button>
 	</div>
 </div>
 
@@ -367,10 +382,10 @@ Mother Millipede was worried.
 	Digaaggadii waa ay qufacday ilaa ay qufacday Hangraaricii ku jiray caloosheeda. Hooyadii hangaraaraca iyo ilmaheedi waxay ku guurguurteen geed korkiisa si ay iskugu qariyaan.
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3>
 	Chicken coughed until she coughed out the millipede that was in her stomach. Mother Millipede and her child crawled up a tree to hide.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3>
 	Kuku alikohoa, hadi akamtema jongoo aliyekuwa tumboni mwake. Mama Jongoo na mwanaye wakakwea mti kujificha.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -381,8 +396,8 @@ Mother Millipede was worried.
 		<button class="btn btn-lg" id="playbutton12" onclick="playpause('12')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('so','en')" class="btn btn-lg lang-en" title="Switch between Somali and English">en</button>
-		<button onclick="switchlang('so','sw')" class="btn btn-lg lang-sw" title="Switch between Somali and Swahili">sw</button>
+		<button onclick="switchlang('so,en','en,sw,so')" class="btn btn-lg lang-primary" title="Switch between Somali and English">en</button>
+		<button onclick="switchlang('so,sw','en,sw,so')" class="btn btn-lg lang-secondary" title="Switch between Somali and Swahili">sw</button>
 	</div>
 </div>
 
@@ -395,10 +410,10 @@ Mother Millipede was worried.
 	Laga soo bilaabo wakhtigaas, digaagga iyo hangaraacyaasha waxay is ku ahaayeen cadow.
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3>
 	From that time, chickens and millipedes were enemies.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3>
 	Tangu hapo, Kuku na Jongoo ni maadui.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -409,8 +424,8 @@ Mother Millipede was worried.
 		<button class="btn btn-lg" id="playbutton13" onclick="playpause('13')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('so','en')" class="btn btn-lg lang-en" title="Switch between Somali and English">en</button>
-		<button onclick="switchlang('so','sw')" class="btn btn-lg lang-sw" title="Switch between Somali and Swahili">sw</button>
+		<button onclick="switchlang('so,en','en,sw,so')" class="btn btn-lg lang-primary" title="Switch between Somali and English">en</button>
+		<button onclick="switchlang('so,sw','en,sw,so')" class="btn btn-lg lang-secondary" title="Switch between Somali and Swahili">sw</button>
 	</div>
 </div>
 
@@ -431,13 +446,6 @@ Mother Millipede was worried.
 	</div>
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12">
 		<h5>Read more <a href="/storybooks-kenya/stories/so/level3">level 3</a> stories:</h5>
-			<label class="chip"><a href="/storybooks-kenya/stories/so/0110/">Mir yar: Sheekadii Wangari Mathaay</a></label>
-			<label class="chip"><a href="/storybooks-kenya/stories/so/0066/">Nozibele iyo saddexdii timo</a></label>
-			<label class="chip"><a href="/storybooks-kenya/stories/so/0201/">Ilmo dameer ah</a></label>
-			<label class="chip"><a href="/storybooks-kenya/stories/so/0006/">Anansi iyo xikmad</a></label>
-			<label class="chip"><a href="/storybooks-kenya/stories/so/0324/">Maalintii aan ka tagay guriga een magalada aaday</a></label>
-			<label class="chip"><a href="/storybooks-kenya/stories/so/0158/">Digaagad iyo Galayr</a></label>
-			<label class="chip"><a href="/storybooks-kenya/stories/so/0315/">Heestii Sakima</a></label>
 	</div>
 </div>
 <div>

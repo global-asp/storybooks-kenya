@@ -4,9 +4,16 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="icon" href="/storybooks-kenya/favicon.ico?v=3" />
+	<link rel="apple-touch-icon" sizes="180x180" href="/storybooks-kenya/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/storybooks-kenya/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/storybooks-kenya/favicon-16x16.png">
+	<link rel="manifest" href="/storybooks-kenya/site.webmanifest">
+	<link rel="mask-icon" href="/storybooks-kenya/safari-pinned-tab.svg" color="#5bbad5">
+	<link rel="shortcut icon" href=/storybooks-kenya/favicon.ico?v=4">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
 	<title>Ekibonerezo - Storybooks Kenya</title>
-	<meta name="description" content="Storybooks Kenya is designed specifically for teachers and makes 40 stories from the African Storybook available in English and Swahili, as well as all the major regional and immigrant languages of Kenya (with text and audio in Amharic, Arabic, Embu / Kîembu, English, Gujarati, Ekegusii, Kamba / Kikamba, Gikuyu / Kikuyu, Kalenjin, Luganda, Olukhayo, Luo / Dholuo, Luhya / Oluluhya, Pokomo / Kipfokomo, Maa / Maasai, Meru / Kimîîru, Giryama / Kigiryama, Oromo / Afaan Oromo, Rendille, Samburu, Somali, Swahili / Kiswahili, and Turkana / Ng‘aturkana).
+	<meta name="description" content="Storybooks Kenya is designed specifically for teachers, parents, and community members. It makes 40 stories from the African Storybook available in English and Swahili, as well as all the major regional and immigrant languages of Kenya (with text and audio in Amharic, Arabic, Embu / Kîembu, English, Gujarati, Ekegusii, Kamba / Kikamba, Gikuyu / Kikuyu, Kalenjin, Luganda, Olukhayo, Luo / Dholuo, Luhya / Oluluhya, Pokomo / Kipfokomo, Maa / Maasai, Meru / Kimîîru, Giryama / Kigiryama, Oromo / Afaan Oromo, Rendille, Samburu, Somali, Swahili / Kiswahili, and Turkana / Ng‘aturkana, among others).
 ">
 	<link rel="stylesheet" href="/storybooks-kenya/css/spectre.min.css">
 	<link rel="stylesheet" href="/storybooks-kenya/css/fontello.min.css">
@@ -22,13 +29,18 @@
         <header class="navbar">
 	<section class="navbar-section">
 		<a href="/storybooks-kenya/" class="navbar-brand">
-			<object type="image/svg+xml" data="/storybooks-kenya/images/sbk_logo.svg" width="100" height="100" border="0"></object>
+			<object type="image/svg+xml" data="/storybooks-kenya/images/sbke_logo.svg" width="100" height="100" border="0"></object>
 		</a>
 		<div class="btn-group btn-group-block">
 			<a href="/storybooks-kenya/" class="btn btn-primary">Home</a>
-			<a href="/storybooks-kenya/about.html" class="btn btn-primary">About us</a>
-			<a href="/storybooks-kenya/how-to.html" class="btn btn-primary">How to use this website</a>
-			<a href="/storybooks-kenya/contact.html" class="btn btn-primary">Contact us</a>
+			<div class="dropdown">
+				<a href="#" class="btn btn-primary dropdown-toggle" tabindex="0">About</a>
+				<ul class="menu">
+					<li class="menu-item"><a href="/storybooks-kenya/about">About us</a></li>
+				</ul>
+			</div>
+			<a href="/storybooks-kenya/how-to" class="btn btn-primary">How to use this website</a>
+			<a href="/storybooks-kenya/contact" class="btn btn-primary">Contact us</a>
 		</div>
 	</section>
 </header>
@@ -59,19 +71,22 @@
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0342/01.jpg"></div>
 	<div class=" column col-7 col-lg-12 col-md-12 col-sm-12">
 		<h1><span class="def">Ekibonerezo</span>
-<span class="en">Punishment</span>
-<span class="sw">Adhabu</span>
-			<div class="btn-group">
-				<a href="#text02" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-				<button class="btn btn-lg" id="playbutton" onclick="playpause('')" title="Play/pause"><i class="icon-volume-up"></i></button>
-				<audio id="audio01" onended="resetbutton('01')" src="http://globalstorybooks.net/media/audio/lg/0342/mp3/01.mp3"></audio>
-			</div>
+<span class="l1">Punishment</span>
+<span class="l2">Adhabu</span>
+		<div class="btn-group">
+			<a href="#text02" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
+			<button class="btn btn-lg" id="playbutton01" onclick="playpause('01')" title="Play/pause"><i class="icon-volume-up"></i></button>
+			<audio id="audio01" onended="resetbutton('01')" src="http://globalstorybooks.net/media/audio/lg/0342/mp3/01.mp3"></audio>
+			<button onclick="switchlang('lg,en','en,sw,lg')" class="btn btn-lg lang-primary" title="Switch between Luganda and English">en</button>
+			<button onclick="switchlang('lg,sw','en,sw,lg')" class="btn btn-lg lang-secondary" title="Switch between Luganda and Swahili">sw</button>
+		</div>
 		</h1>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Written by"><img class="cover-icon" src="/storybooks-kenya/css/pencil.svg" alt="Written by" width="38px"></span> Adelheid Marie Bwire</h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Illustrated by"><img class="cover-icon" src="/storybooks-kenya/css/art.svg" alt="Illustrated by" width="38px"></span> Melany Pietersen</h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Language"><img class="cover-icon" src="/storybooks-kenya/css/language.svg" alt="Language" width="38px"></span> <a href="/storybooks-kenya/stories/lg">Luganda</a></h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Level"><img class="cover-icon" src="/storybooks-kenya/css/level.svg" alt="Level" width="38px"></span> <a href="/storybooks-kenya/stories/lg/level2">Level 2</a></h3>
-		<h3><span class="tooltip tooltip-right" data-tooltip="Narrate story"><img class="cover-icon" src="/storybooks-kenya/css/speaker.svg" alt="Narrate full story" width="38px"></span> <audio id="audioplayer" controls><source src="http://globalstorybooks.net/media/audio/lg/0342/0342.mp3" type="audio/mpeg"></audio></h3>
+		<h3><span class="tooltip tooltip-right" data-tooltip="Narrate story"><img class="cover-icon" src="/storybooks-kenya/css/speaker.svg" alt="Narrate full story" width="38px"></span> <audio id="audioplayer" controls><source src="http://globalstorybooks.net/media/audio/lg/0342/lg-0342_punishment.mp3" type="audio/mpeg"></audio></h3>
+		<h3><span class="tooltip tooltip-right" data-tooltip="Autoplay story (beta - desktop only)"><img id="autoplay_icon" class="cover-icon" src="https://dohliam.github.io/elegant-circles/svg/play.svg" alt="Autoplay story" style="cursor:pointer" width="38px" onclick="autoplay()"></span></h3>
 	</div>
 </div>
 <hr>
@@ -82,11 +97,11 @@
 	Olunaku lumu maama yale ebibala, ennanansi, amenvu, emicu emiyembe amapeera. Yabiwanika ku kabada wag.
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3>
 	One day, mama got a
 lot of fruit.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3>
 	Siku moja, mama alileta matunda mengi.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -97,8 +112,8 @@ lot of fruit.
 		<button class="btn btn-lg" id="playbutton02" onclick="playpause('02')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('lg','en')" class="btn btn-lg lang-en" title="Switch between Luganda and English">en</button>
-		<button onclick="switchlang('lg','sw')" class="btn btn-lg lang-sw" title="Switch between Luganda and Swahili">sw</button>
+		<button onclick="switchlang('lg,en','en,sw,lg')" class="btn btn-lg lang-primary" title="Switch between Luganda and English">en</button>
+		<button onclick="switchlang('lg,sw','en,sw,lg')" class="btn btn-lg lang-secondary" title="Switch between Luganda and Swahili">sw</button>
 	</div>
 </div>
 
@@ -111,13 +126,13 @@ lot of fruit.
 	Twabuuza maama nti "Ffe tunaalya ddi ku bibala?" Maama yaddamu nti, "Tujja kulya olwaleero."
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3>
 	"When can we have
 some fruit?" we ask.
 "We will eat the fruit
 tonight," says mama.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3>
 	“Tutakula matunda lini?” tunauliza. “Tutakula matunda leo jioni,” mama anasema.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -128,8 +143,8 @@ tonight," says mama.
 		<button class="btn btn-lg" id="playbutton03" onclick="playpause('03')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('lg','en')" class="btn btn-lg lang-en" title="Switch between Luganda and English">en</button>
-		<button onclick="switchlang('lg','sw')" class="btn btn-lg lang-sw" title="Switch between Luganda and Swahili">sw</button>
+		<button onclick="switchlang('lg,en','en,sw,lg')" class="btn btn-lg lang-primary" title="Switch between Luganda and English">en</button>
+		<button onclick="switchlang('lg,sw','en,sw,lg')" class="btn btn-lg lang-secondary" title="Switch between Luganda and Swahili">sw</button>
 	</div>
 </div>
 
@@ -142,12 +157,12 @@ tonight," says mama.
 	Muganda wange Kayima wamululu nnyo. Yagenda alumaluma ku buli kibala. ebisinga yeyabirya. Bweyamala okubirya ye nagenda okuzannya.
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3>
 	My brother Rahim is
 greedy. He tastes all the
 fruit. He eats a lot of it.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3>
 	Kaka yangu Rahim ni mlafi. Anaonja onja matunda yote. Anakula matunda mengi.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -158,8 +173,8 @@ fruit. He eats a lot of it.
 		<button class="btn btn-lg" id="playbutton04" onclick="playpause('04')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('lg','en')" class="btn btn-lg lang-en" title="Switch between Luganda and English">en</button>
-		<button onclick="switchlang('lg','sw')" class="btn btn-lg lang-sw" title="Switch between Luganda and Swahili">sw</button>
+		<button onclick="switchlang('lg,en','en,sw,lg')" class="btn btn-lg lang-primary" title="Switch between Luganda and English">en</button>
+		<button onclick="switchlang('lg,sw','en,sw,lg')" class="btn btn-lg lang-secondary" title="Switch between Luganda and Swahili">sw</button>
 	</div>
 </div>
 
@@ -172,14 +187,14 @@ fruit. He eats a lot of it.
 	Muto wange omulala yagamba nti "Mazima labayo kayima kyakoze!" Kayima si muntu mulungi ate alina nnyo omululu.
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3>
 	"Look at what Rahim
 did!" shouts my little
 brother. "Rahim is
 naughty and selfish," I
 say.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3>
 	“Angalia Rahim alichokifanya!” mdogo wangu analalamika kwa sauti. “Rahim ni mtundu na mchoyo,” ninasema.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -190,8 +205,8 @@ say.
 		<button class="btn btn-lg" id="playbutton05" onclick="playpause('05')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('lg','en')" class="btn btn-lg lang-en" title="Switch between Luganda and English">en</button>
-		<button onclick="switchlang('lg','sw')" class="btn btn-lg lang-sw" title="Switch between Luganda and Swahili">sw</button>
+		<button onclick="switchlang('lg,en','en,sw,lg')" class="btn btn-lg lang-primary" title="Switch between Luganda and English">en</button>
+		<button onclick="switchlang('lg,sw','en,sw,lg')" class="btn btn-lg lang-secondary" title="Switch between Luganda and Swahili">sw</button>
 	</div>
 </div>
 
@@ -204,11 +219,11 @@ say.
 	Maama yanyigira nnyo Kayima.
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3>
 	Mother is angry with
 Rahim.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3>
 	Mama amekasirishwa na Rahim.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -219,8 +234,8 @@ Rahim.
 		<button class="btn btn-lg" id="playbutton06" onclick="playpause('06')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('lg','en')" class="btn btn-lg lang-en" title="Switch between Luganda and English">en</button>
-		<button onclick="switchlang('lg','sw')" class="btn btn-lg lang-sw" title="Switch between Luganda and Swahili">sw</button>
+		<button onclick="switchlang('lg,en','en,sw,lg')" class="btn btn-lg lang-primary" title="Switch between Luganda and English">en</button>
+		<button onclick="switchlang('lg,sw','en,sw,lg')" class="btn btn-lg lang-secondary" title="Switch between Luganda and Swahili">sw</button>
 	</div>
 </div>
 
@@ -233,12 +248,12 @@ Rahim.
 	Era naffe twanyigira nnyo Kayima. Kyokka yye Kayima nga teyefiirayo.
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3>
 	We are also angry with
 Rahim. But Rahim is not
 sorry.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3>
 	Sisi pia tumekasirishwa na Rahim. Lakini Rahim haombi msamaha.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -249,8 +264,8 @@ sorry.
 		<button class="btn btn-lg" id="playbutton07" onclick="playpause('07')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('lg','en')" class="btn btn-lg lang-en" title="Switch between Luganda and English">en</button>
-		<button onclick="switchlang('lg','sw')" class="btn btn-lg lang-sw" title="Switch between Luganda and Swahili">sw</button>
+		<button onclick="switchlang('lg,en','en,sw,lg')" class="btn btn-lg lang-primary" title="Switch between Luganda and English">en</button>
+		<button onclick="switchlang('lg,sw','en,sw,lg')" class="btn btn-lg lang-secondary" title="Switch between Luganda and Swahili">sw</button>
 	</div>
 </div>
 
@@ -263,12 +278,12 @@ sorry.
 	Muto wange yabuuza maama nti "Kayima togenda kumubonereza?"
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3>
 	"Aren't you going to
 punish Rahim?" asks
 little brother.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3>
 	“Hutamwadhibu Rahim?” mdogo wangu anauliza.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -279,8 +294,8 @@ little brother.
 		<button class="btn btn-lg" id="playbutton08" onclick="playpause('08')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('lg','en')" class="btn btn-lg lang-en" title="Switch between Luganda and English">en</button>
-		<button onclick="switchlang('lg','sw')" class="btn btn-lg lang-sw" title="Switch between Luganda and Swahili">sw</button>
+		<button onclick="switchlang('lg,en','en,sw,lg')" class="btn btn-lg lang-primary" title="Switch between Luganda and English">en</button>
+		<button onclick="switchlang('lg,sw','en,sw,lg')" class="btn btn-lg lang-secondary" title="Switch between Luganda and Swahili">sw</button>
 	</div>
 </div>
 
@@ -293,11 +308,11 @@ little brother.
 	"Kayima, olina okutwentondera mangu ddala"
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3>
 	"Rahim, soon you will
 be sorry," warns mama.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3>
 	“Rahim, muda si mrefu utajuta,” mama anaonya.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -308,8 +323,8 @@ be sorry," warns mama.
 		<button class="btn btn-lg" id="playbutton09" onclick="playpause('09')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('lg','en')" class="btn btn-lg lang-en" title="Switch between Luganda and English">en</button>
-		<button onclick="switchlang('lg','sw')" class="btn btn-lg lang-sw" title="Switch between Luganda and Swahili">sw</button>
+		<button onclick="switchlang('lg,en','en,sw,lg')" class="btn btn-lg lang-primary" title="Switch between Luganda and English">en</button>
+		<button onclick="switchlang('lg,sw','en,sw,lg')" class="btn btn-lg lang-secondary" title="Switch between Luganda and Swahili">sw</button>
 	</div>
 </div>
 
@@ -322,11 +337,11 @@ be sorry," warns mama.
 	Kati kayima tawulira bulungi.
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3>
 	Rahim starts to feel
 sick.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3>
 	Rahim anaanza kuhisi kuumwa.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -337,8 +352,8 @@ sick.
 		<button class="btn btn-lg" id="playbutton10" onclick="playpause('10')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('lg','en')" class="btn btn-lg lang-en" title="Switch between Luganda and English">en</button>
-		<button onclick="switchlang('lg','sw')" class="btn btn-lg lang-sw" title="Switch between Luganda and Swahili">sw</button>
+		<button onclick="switchlang('lg,en','en,sw,lg')" class="btn btn-lg lang-primary" title="Switch between Luganda and English">en</button>
+		<button onclick="switchlang('lg,sw','en,sw,lg')" class="btn btn-lg lang-secondary" title="Switch between Luganda and Swahili">sw</button>
 	</div>
 </div>
 
@@ -351,11 +366,11 @@ sick.
 	Kayima yayogera mu kaama nti "Olubuto lunnuma nnyo."
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3>
 	"My tummy is so sore,"
 whispers Rahim.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3>
 	“Tumbo langu linauma sana,” Rahim ananong’ona.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -366,8 +381,8 @@ whispers Rahim.
 		<button class="btn btn-lg" id="playbutton11" onclick="playpause('11')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('lg','en')" class="btn btn-lg lang-en" title="Switch between Luganda and English">en</button>
-		<button onclick="switchlang('lg','sw')" class="btn btn-lg lang-sw" title="Switch between Luganda and Swahili">sw</button>
+		<button onclick="switchlang('lg,en','en,sw,lg')" class="btn btn-lg lang-primary" title="Switch between Luganda and English">en</button>
+		<button onclick="switchlang('lg,sw','en,sw,lg')" class="btn btn-lg lang-secondary" title="Switch between Luganda and Swahili">sw</button>
 	</div>
 </div>
 
@@ -380,12 +395,12 @@ whispers Rahim.
 	Maama yali yakitegedde dda nti olubuto lujja kumuluma. Kati ebibala bibonereza Kayima!
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3>
 	Mama knew this would
 happen. The fruit is
 punishing Rahim!
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3>
 	Mama alijua hili litatokea. Matunda yanamwadhibu Rahim!
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -396,8 +411,8 @@ punishing Rahim!
 		<button class="btn btn-lg" id="playbutton12" onclick="playpause('12')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('lg','en')" class="btn btn-lg lang-en" title="Switch between Luganda and English">en</button>
-		<button onclick="switchlang('lg','sw')" class="btn btn-lg lang-sw" title="Switch between Luganda and Swahili">sw</button>
+		<button onclick="switchlang('lg,en','en,sw,lg')" class="btn btn-lg lang-primary" title="Switch between Luganda and English">en</button>
+		<button onclick="switchlang('lg,sw','en,sw,lg')" class="btn btn-lg lang-secondary" title="Switch between Luganda and Swahili">sw</button>
 	</div>
 </div>
 
@@ -410,14 +425,14 @@ punishing Rahim!
 	Oluvanyuma Kayima yatusaba tumusonyiwe. Yagamba nti "sikyaddamu kubeera na mululu mulundi mulala" naffe twamusonyiwa.
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3>
 	Later, Rahim says sorry
 to us. "I will never be so
 greedy again," he
 promises. And we all
 believe him.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3>
 	Baadaye, Rahim anatuomba msamaha. “Kamwe sitakuwa mlafi tena,” anaahidi. Na sote tunamwamini.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -428,8 +443,8 @@ believe him.
 		<button class="btn btn-lg" id="playbutton13" onclick="playpause('13')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('lg','en')" class="btn btn-lg lang-en" title="Switch between Luganda and English">en</button>
-		<button onclick="switchlang('lg','sw')" class="btn btn-lg lang-sw" title="Switch between Luganda and Swahili">sw</button>
+		<button onclick="switchlang('lg,en','en,sw,lg')" class="btn btn-lg lang-primary" title="Switch between Luganda and English">en</button>
+		<button onclick="switchlang('lg,sw','en,sw,lg')" class="btn btn-lg lang-secondary" title="Switch between Luganda and Swahili">sw</button>
 	</div>
 </div>
 
@@ -449,11 +464,6 @@ believe him.
 	</div>
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12">
 		<h5>Read more <a href="/storybooks-kenya/stories/lg/level2">level 2</a> stories:</h5>
-			<label class="chip"><a href="/storybooks-kenya/stories/lg/0337/">Abaana abaava mu nvumbo</a></label>
-			<label class="chip"><a href="/storybooks-kenya/stories/lg/0111/">Lwaki Envubu tezirina bwoya</a></label>
-			<label class="chip"><a href="/storybooks-kenya/stories/lg/0210/">Tingi n'ente</a></label>
-			<label class="chip"><a href="/storybooks-kenya/stories/lg/0004/">Wambuzi, Wambwa ne Wante</a></label>
-			<label class="chip"><a href="/storybooks-kenya/stories/lg/0001/">Omusajja Omuwanvu ennyo</a></label>
 	</div>
 </div>
 <div>

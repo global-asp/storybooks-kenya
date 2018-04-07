@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Storybooks Kenya</title>
-    <description>Storybooks Kenya is designed specifically for teachers and makes 40 stories from the African Storybook available in English and Swahili, as well as all the major regional and immigrant languages of Kenya (with text and audio in Amharic, Arabic, Embu / Kîembu, English, Gujarati, Ekegusii, Kamba / Kikamba, Gikuyu / Kikuyu, Kalenjin, Luganda, Olukhayo, Luo / Dholuo, Luhya / Oluluhya, Pokomo / Kipfokomo, Maa / Maasai, Meru / Kimîîru, Giryama / Kigiryama, Oromo / Afaan Oromo, Rendille, Samburu, Somali, Swahili / Kiswahili, and Turkana / Ng‘aturkana).
+    <description>Storybooks Kenya is designed specifically for teachers, parents, and community members. It makes 40 stories from the African Storybook available in English and Swahili, as well as all the major regional and immigrant languages of Kenya (with text and audio in Amharic, Arabic, Embu / Kîembu, English, Gujarati, Ekegusii, Kamba / Kikamba, Gikuyu / Kikuyu, Kalenjin, Luganda, Olukhayo, Luo / Dholuo, Luhya / Oluluhya, Pokomo / Kipfokomo, Maa / Maasai, Meru / Kimîîru, Giryama / Kigiryama, Oromo / Afaan Oromo, Rendille, Samburu, Somali, Swahili / Kiswahili, and Turkana / Ng‘aturkana, among others).
 </description>
     <link>https://global-asp.github.io//storybooks-kenya/</link>
     <atom:link href="https://global-asp.github.io//storybooks-kenya/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 31 Mar 2018 13:46:21 -0700</pubDate>
-    <lastBuildDate>Sat, 31 Mar 2018 13:46:21 -0700</lastBuildDate>
+    <pubDate>Sat, 07 Apr 2018 07:43:08 -0700</pubDate>
+    <lastBuildDate>Sat, 07 Apr 2018 07:43:08 -0700</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
   </channel>

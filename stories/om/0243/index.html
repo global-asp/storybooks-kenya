@@ -4,9 +4,16 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="icon" href="/storybooks-kenya/favicon.ico?v=3" />
+	<link rel="apple-touch-icon" sizes="180x180" href="/storybooks-kenya/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/storybooks-kenya/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/storybooks-kenya/favicon-16x16.png">
+	<link rel="manifest" href="/storybooks-kenya/site.webmanifest">
+	<link rel="mask-icon" href="/storybooks-kenya/safari-pinned-tab.svg" color="#5bbad5">
+	<link rel="shortcut icon" href=/storybooks-kenya/favicon.ico?v=4">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
 	<title>Ayyaana Akko Wajjiin - Storybooks Kenya</title>
-	<meta name="description" content="Storybooks Kenya is designed specifically for teachers and makes 40 stories from the African Storybook available in English and Swahili, as well as all the major regional and immigrant languages of Kenya (with text and audio in Amharic, Arabic, Embu / Kîembu, English, Gujarati, Ekegusii, Kamba / Kikamba, Gikuyu / Kikuyu, Kalenjin, Luganda, Olukhayo, Luo / Dholuo, Luhya / Oluluhya, Pokomo / Kipfokomo, Maa / Maasai, Meru / Kimîîru, Giryama / Kigiryama, Oromo / Afaan Oromo, Rendille, Samburu, Somali, Swahili / Kiswahili, and Turkana / Ng‘aturkana).
+	<meta name="description" content="Storybooks Kenya is designed specifically for teachers, parents, and community members. It makes 40 stories from the African Storybook available in English and Swahili, as well as all the major regional and immigrant languages of Kenya (with text and audio in Amharic, Arabic, Embu / Kîembu, English, Gujarati, Ekegusii, Kamba / Kikamba, Gikuyu / Kikuyu, Kalenjin, Luganda, Olukhayo, Luo / Dholuo, Luhya / Oluluhya, Pokomo / Kipfokomo, Maa / Maasai, Meru / Kimîîru, Giryama / Kigiryama, Oromo / Afaan Oromo, Rendille, Samburu, Somali, Swahili / Kiswahili, and Turkana / Ng‘aturkana, among others).
 ">
 	<link rel="stylesheet" href="/storybooks-kenya/css/spectre.min.css">
 	<link rel="stylesheet" href="/storybooks-kenya/css/fontello.min.css">
@@ -22,13 +29,18 @@
         <header class="navbar">
 	<section class="navbar-section">
 		<a href="/storybooks-kenya/" class="navbar-brand">
-			<object type="image/svg+xml" data="/storybooks-kenya/images/sbk_logo.svg" width="100" height="100" border="0"></object>
+			<object type="image/svg+xml" data="/storybooks-kenya/images/sbke_logo.svg" width="100" height="100" border="0"></object>
 		</a>
 		<div class="btn-group btn-group-block">
 			<a href="/storybooks-kenya/" class="btn btn-primary">Home</a>
-			<a href="/storybooks-kenya/about.html" class="btn btn-primary">About us</a>
-			<a href="/storybooks-kenya/how-to.html" class="btn btn-primary">How to use this website</a>
-			<a href="/storybooks-kenya/contact.html" class="btn btn-primary">Contact us</a>
+			<div class="dropdown">
+				<a href="#" class="btn btn-primary dropdown-toggle" tabindex="0">About</a>
+				<ul class="menu">
+					<li class="menu-item"><a href="/storybooks-kenya/about">About us</a></li>
+				</ul>
+			</div>
+			<a href="/storybooks-kenya/how-to" class="btn btn-primary">How to use this website</a>
+			<a href="/storybooks-kenya/contact" class="btn btn-primary">Contact us</a>
 		</div>
 	</section>
 </header>
@@ -59,20 +71,23 @@
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0243/01.jpg"></div>
 	<div class=" column col-7 col-lg-12 col-md-12 col-sm-12">
 		<h1><span class="def">Ayyaana Akko Wajjiin</span>
-<span class="en">Holidays with grandmother</span>
-<span class="sw">Likizo kwa bibi</span>
-			<div class="btn-group">
-				<a href="#text02" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-				<button class="btn btn-lg" id="playbutton" onclick="playpause('')" title="Play/pause"><i class="icon-volume-up"></i></button>
-				<audio id="audio01" onended="resetbutton('01')" src="http://globalstorybooks.net/media/audio/om/0243/mp3/01.mp3"></audio>
-			</div>
+<span class="l1">Holidays with grandmother</span>
+<span class="l2">Likizo kwa bibi</span>
+		<div class="btn-group">
+			<a href="#text02" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
+			<button class="btn btn-lg" id="playbutton01" onclick="playpause('01')" title="Play/pause"><i class="icon-volume-up"></i></button>
+			<audio id="audio01" onended="resetbutton('01')" src="http://globalstorybooks.net/media/audio/om/0243/mp3/01.mp3"></audio>
+			<button onclick="switchlang('om,en','en,sw,om')" class="btn btn-lg lang-primary" title="Switch between Oromo and English">en</button>
+			<button onclick="switchlang('om,sw','en,sw,om')" class="btn btn-lg lang-secondary" title="Switch between Oromo and Swahili">sw</button>
+		</div>
 		</h1>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Written by"><img class="cover-icon" src="/storybooks-kenya/css/pencil.svg" alt="Written by" width="38px"></span> Violet Otieno</h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Illustrated by"><img class="cover-icon" src="/storybooks-kenya/css/art.svg" alt="Illustrated by" width="38px"></span> Catherine Groenewald</h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Translated by"><img class="cover-icon" src="/storybooks-kenya/css/global.svg" alt="Translated by" width="38px"></span> Demoze Degefa</h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Language"><img class="cover-icon" src="/storybooks-kenya/css/language.svg" alt="Language" width="38px"></span> <a href="/storybooks-kenya/stories/om">Oromo</a></h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Level"><img class="cover-icon" src="/storybooks-kenya/css/level.svg" alt="Level" width="38px"></span> <a href="/storybooks-kenya/stories/om/level4">Level 4</a></h3>
-		<h3><span class="tooltip tooltip-right" data-tooltip="Narrate story"><img class="cover-icon" src="/storybooks-kenya/css/speaker.svg" alt="Narrate full story" width="38px"></span> <audio id="audioplayer" controls><source src="http://globalstorybooks.net/media/audio/om/0243/0243.mp3" type="audio/mpeg"></audio></h3>
+		<h3><span class="tooltip tooltip-right" data-tooltip="Narrate story"><img class="cover-icon" src="/storybooks-kenya/css/speaker.svg" alt="Narrate full story" width="38px"></span> <audio id="audioplayer" controls><source src="http://globalstorybooks.net/media/audio/om/0243/om-0243_holidays.mp3" type="audio/mpeg"></audio></h3>
+		<h3><span class="tooltip tooltip-right" data-tooltip="Autoplay story (beta - desktop only)"><img id="autoplay_icon" class="cover-icon" src="https://dohliam.github.io/elegant-circles/svg/play.svg" alt="Autoplay story" style="cursor:pointer" width="38px" onclick="autoplay()"></span></h3>
 	</div>
 </div>
 <hr>
@@ -83,7 +98,7 @@
 	Odongo fi Apiyoon abba isaani wajjiin magaala kessa jiraatu. Ayyaana dhufa jiruu hawwidhan eeggachaa turan. Manni barumsaa waan cufamef oto hinta'in akkoo isaani bira waandemanif. Akkoon isaanis lafa qurxxumin itti argamu haroo tokko bira jiratan.
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3>
 	Odongo and Apiyo lived in the
 city with their father.
 They looked forward to the
@@ -94,7 +109,7 @@ grandmother.
 She lived in a fishing village
 near a large lake.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3>
 	Odongo na Apiyo waliishi mjini na baba yao. Walisubiri likizo kwa hamu. Siyo tu kwa shule kufungwa, bali ni kwa sababu walienda kumtembelea bibi yao. Aliishi katika kijiji cha uvuvi karibu na ziwa kubwa.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -105,8 +120,8 @@ near a large lake.
 		<button class="btn btn-lg" id="playbutton02" onclick="playpause('02')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('om','en')" class="btn btn-lg lang-en" title="Switch between Oromo and English">en</button>
-		<button onclick="switchlang('om','sw')" class="btn btn-lg lang-sw" title="Switch between Oromo and Swahili">sw</button>
+		<button onclick="switchlang('om,en','en,sw,om')" class="btn btn-lg lang-primary" title="Switch between Oromo and English">en</button>
+		<button onclick="switchlang('om,sw','en,sw,om')" class="btn btn-lg lang-secondary" title="Switch between Oromo and Swahili">sw</button>
 	</div>
 </div>
 
@@ -119,7 +134,7 @@ near a large lake.
 	Odongo fi Apiyon bayee gammadan sabaaban isaas akkoo isaani wanargatanif. Guyyaa tokko dura imala gara ganda ishee godhamuf qopha'an. Hirribnis oto isan hinfudhatin halkan guutuu wa'ee ayyannichaa hasa'a bulan.
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3>
 	Odongo and Apiyo were excited
 because it was time to visit
 their grandmother again.
@@ -130,7 +145,7 @@ They could not sleep and talked
 the whole night about the
 holiday.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3>
 	Odongo na Apiyo walichangamka kwani ulikuwa wakati wa kumtembelea bibi kwa mara nyingine. Usiku huo, walipanga mizigo yao na kujiandaa kwa safari ndefu ya kwenda kijijini. Hawakuweza kulala ila waliongea usiku kucha juu ya likizo yao.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -141,8 +156,8 @@ holiday.
 		<button class="btn btn-lg" id="playbutton03" onclick="playpause('03')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('om','en')" class="btn btn-lg lang-en" title="Switch between Oromo and English">en</button>
-		<button onclick="switchlang('om','sw')" class="btn btn-lg lang-sw" title="Switch between Oromo and Swahili">sw</button>
+		<button onclick="switchlang('om,en','en,sw,om')" class="btn btn-lg lang-primary" title="Switch between Oromo and English">en</button>
+		<button onclick="switchlang('om,sw','en,sw,om')" class="btn btn-lg lang-secondary" title="Switch between Oromo and Swahili">sw</button>
 	</div>
 </div>
 
@@ -155,7 +170,7 @@ holiday.
 	Barii sana konkolaata abbaa isaanitin deeman. Karaa isaani gubbatti benensoota daggalaa, garreen fi masii shayi bira kutani dhaqan. Imalaa isaani gubbtais sirbaa deeman.
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3>
 	Early the next morning, they
 left for the village in their
 father's car.
@@ -165,7 +180,7 @@ plantations.
 They counted cars and sang
 songs.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3>
 	Mapema asubuhi iliyofuata, waliondoka katika gari la baba yao kuelekea kijijini. Walipita milima, wanyama pori na mashamba ya majani ya chai. Walihesabu magari na kuimba nyimbo.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -176,8 +191,8 @@ songs.
 		<button class="btn btn-lg" id="playbutton04" onclick="playpause('04')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('om','en')" class="btn btn-lg lang-en" title="Switch between Oromo and English">en</button>
-		<button onclick="switchlang('om','sw')" class="btn btn-lg lang-sw" title="Switch between Oromo and Swahili">sw</button>
+		<button onclick="switchlang('om,en','en,sw,om')" class="btn btn-lg lang-primary" title="Switch between Oromo and English">en</button>
+		<button onclick="switchlang('om,sw','en,sw,om')" class="btn btn-lg lang-secondary" title="Switch between Oromo and Swahili">sw</button>
 	</div>
 </div>
 
@@ -190,11 +205,11 @@ songs.
 	Yeroo muraasa booda hirribini isaan fudhatee rafan.
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3>
 	After a while, the children were
 tired and fell asleep.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3>
 	Baada ya muda, watoto walichoka na kusinzia.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -205,8 +220,8 @@ tired and fell asleep.
 		<button class="btn btn-lg" id="playbutton05" onclick="playpause('05')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('om','en')" class="btn btn-lg lang-en" title="Switch between Oromo and English">en</button>
-		<button onclick="switchlang('om','sw')" class="btn btn-lg lang-sw" title="Switch between Oromo and Swahili">sw</button>
+		<button onclick="switchlang('om,en','en,sw,om')" class="btn btn-lg lang-primary" title="Switch between Oromo and English">en</button>
+		<button onclick="switchlang('om,sw','en,sw,om')" class="btn btn-lg lang-secondary" title="Switch between Oromo and Swahili">sw</button>
 	</div>
 </div>
 
@@ -219,7 +234,7 @@ tired and fell asleep.
 	Yeroo gandaa gahan abban isaani hirribarra isan kaase. Yeroo ganda sana gahan Akkoon isaani Nyar-Kanyadan muka jala afaa afatee ciiftee jirti. Nyar-Kanyada jechuun itaala ummata Kaynada jechuu dha. Dubarti barredu fi cimtuu turtee.
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3>
 	Father woke up Odongo and
 Apiyo as they arrived in the
 village.
@@ -232,7 +247,7 @@ Kanyada'.
 She was a strong and beautiful
 woman.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3>
 	Baba aliwaamsha Odongo na Apiyo walipofika kijijini. Walimkuta bibi yao, Nyar-Kanyada, akipumzika kwenye mkeka chini ya mti. Kwa Dholuo, Nyar-Kanyada maana yake ni 'binti wa watu wa Kanyada'. Alikuwa ni mwanamke mrembo na imara.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -243,8 +258,8 @@ woman.
 		<button class="btn btn-lg" id="playbutton06" onclick="playpause('06')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('om','en')" class="btn btn-lg lang-en" title="Switch between Oromo and English">en</button>
-		<button onclick="switchlang('om','sw')" class="btn btn-lg lang-sw" title="Switch between Oromo and Swahili">sw</button>
+		<button onclick="switchlang('om,en','en,sw,om')" class="btn btn-lg lang-primary" title="Switch between Oromo and English">en</button>
+		<button onclick="switchlang('om,sw','en,sw,om')" class="btn btn-lg lang-secondary" title="Switch between Oromo and Swahili">sw</button>
 	</div>
 </div>
 
@@ -257,7 +272,7 @@ woman.
 	Nyar-Kanyadan sibaafi gammachuudhan isaan fudhaate. Akkakileen ishees kennaa magaalaa irra fidan kan akkoo isaanitif laatudhaf baye gammadan. "Dura kennaa ko banaa jette Odongon." "Lakki kiyya duraa banaa," jedhee Apiyoon.
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3>
 	Nyar-Kanyada welcomed them
 into the house and danced
 around the room singing with
@@ -269,7 +284,7 @@ brought from the city.
 Odongo.
 "No, my gift first!" said Apiyo.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3>
 	Nyar-Kanyada aliwakaribisha ndani kwa kucheza na kuimba kwa furaha. Wajukuu wake walikuwa na shauku ya kumpa zawadi walizomletea kutoka mjini. "Fungua yangu kwanza," Odongo alisema. "Hapana, yangu kwanza!" Apiyo akasema.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -280,8 +295,8 @@ Odongo.
 		<button class="btn btn-lg" id="playbutton07" onclick="playpause('07')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('om','en')" class="btn btn-lg lang-en" title="Switch between Oromo and English">en</button>
-		<button onclick="switchlang('om','sw')" class="btn btn-lg lang-sw" title="Switch between Oromo and Swahili">sw</button>
+		<button onclick="switchlang('om,en','en,sw,om')" class="btn btn-lg lang-primary" title="Switch between Oromo and English">en</button>
+		<button onclick="switchlang('om,sw','en,sw,om')" class="btn btn-lg lang-secondary" title="Switch between Oromo and Swahili">sw</button>
 	</div>
 </div>
 
@@ -294,13 +309,13 @@ Odongo.
 	Eegaa kenna sana bantee booda, Nyar-Kanyadan akaakilee ishee hala ummaa tureen ibifitee.
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3>
 	After she opened the presents,
 Nyar-Kanyada blessed her
 grandchildren in a traditional
 way.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3>
 	Baada ya kufungua zawadi, Nyar-Kanyada aliwabariki wajukuu wake kitamaduni.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -311,8 +326,8 @@ way.
 		<button class="btn btn-lg" id="playbutton08" onclick="playpause('08')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('om','en')" class="btn btn-lg lang-en" title="Switch between Oromo and English">en</button>
-		<button onclick="switchlang('om','sw')" class="btn btn-lg lang-sw" title="Switch between Oromo and Swahili">sw</button>
+		<button onclick="switchlang('om,en','en,sw,om')" class="btn btn-lg lang-primary" title="Switch between Oromo and English">en</button>
+		<button onclick="switchlang('om,sw','en,sw,om')" class="btn btn-lg lang-secondary" title="Switch between Oromo and Swahili">sw</button>
 	</div>
 </div>
 
@@ -325,12 +340,12 @@ way.
 	Sana booda Odongo fi Apiyon gara alaa bahani billabillo fi simbrroo ari'aa taphatan.
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3>
 	Then Odongo and Apiyo went
 outside. They chased butterflies
 and birds.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3>
 	Kisha Odongo na Apiyo wakaenda nje. Waliwakimbiza vipepeo na ndege.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -341,8 +356,8 @@ and birds.
 		<button class="btn btn-lg" id="playbutton09" onclick="playpause('09')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('om','en')" class="btn btn-lg lang-en" title="Switch between Oromo and English">en</button>
-		<button onclick="switchlang('om','sw')" class="btn btn-lg lang-sw" title="Switch between Oromo and Swahili">sw</button>
+		<button onclick="switchlang('om,en','en,sw,om')" class="btn btn-lg lang-primary" title="Switch between Oromo and English">en</button>
+		<button onclick="switchlang('om,sw','en,sw,om')" class="btn btn-lg lang-secondary" title="Switch between Oromo and Swahili">sw</button>
 	</div>
 </div>
 
@@ -355,12 +370,12 @@ and birds.
 	Muka gubbaa korani bishaan kessati kufan.
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3>
 	They climbed trees and
 splashed in the water of the
 lake.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3>
 	Walipanda kwenye miti na kurushiana maji ziwani.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -371,8 +386,8 @@ lake.
 		<button class="btn btn-lg" id="playbutton10" onclick="playpause('10')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('om','en')" class="btn btn-lg lang-en" title="Switch between Oromo and English">en</button>
-		<button onclick="switchlang('om','sw')" class="btn btn-lg lang-sw" title="Switch between Oromo and Swahili">sw</button>
+		<button onclick="switchlang('om,en','en,sw,om')" class="btn btn-lg lang-primary" title="Switch between Oromo and English">en</button>
+		<button onclick="switchlang('om,sw','en,sw,om')" class="btn btn-lg lang-secondary" title="Switch between Oromo and Swahili">sw</button>
 	</div>
 </div>
 
@@ -385,13 +400,13 @@ lake.
 	Gara galagalaa gara manaatu irrbataaf debi'an. Oto nyataa hinxummurin hiribinni isan qabe.
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3>
 	When it was dark they returned
 to the house for dinner.
 Before they could finish eating,
 they were falling asleep!
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3>
 	Giza Iilipoingia, walirudi nyumbani kwa ajili ya chakula cha jioni. Kabla hata ya kumaliza kula, walikuwa wanasinzia!
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -402,8 +417,8 @@ they were falling asleep!
 		<button class="btn btn-lg" id="playbutton11" onclick="playpause('11')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('om','en')" class="btn btn-lg lang-en" title="Switch between Oromo and English">en</button>
-		<button onclick="switchlang('om','sw')" class="btn btn-lg lang-sw" title="Switch between Oromo and Swahili">sw</button>
+		<button onclick="switchlang('om,en','en,sw,om')" class="btn btn-lg lang-primary" title="Switch between Oromo and English">en</button>
+		<button onclick="switchlang('om,sw','en,sw,om')" class="btn btn-lg lang-secondary" title="Switch between Oromo and Swahili">sw</button>
 	</div>
 </div>
 
@@ -416,12 +431,12 @@ they were falling asleep!
 	Barii isaa abban isaan ijoole sana Akko isaani birati disee gara magaalaa deebi'e.
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3>
 	The next day, the children's
 father drove back to the city
 leaving them with Nyar-Kanyada.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3>
 	Siku iliyofuata, baba yao alirudi mjini na kuwaacha na Nyar-Kanyada.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -432,8 +447,8 @@ leaving them with Nyar-Kanyada.
 		<button class="btn btn-lg" id="playbutton12" onclick="playpause('12')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('om','en')" class="btn btn-lg lang-en" title="Switch between Oromo and English">en</button>
-		<button onclick="switchlang('om','sw')" class="btn btn-lg lang-sw" title="Switch between Oromo and Swahili">sw</button>
+		<button onclick="switchlang('om,en','en,sw,om')" class="btn btn-lg lang-primary" title="Switch between Oromo and English">en</button>
+		<button onclick="switchlang('om,sw','en,sw,om')" class="btn btn-lg lang-secondary" title="Switch between Oromo and Swahili">sw</button>
 	</div>
 </div>
 
@@ -446,7 +461,7 @@ leaving them with Nyar-Kanyada.
 	Odongo fi Apiyon akkoo isaani hojii manaatin gargaaran. Buphaa fi kuddara sassabudhan gargaaran.
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3>
 	Odongo and Apiyo helped their
 grandmother with household
 chores.
@@ -456,7 +471,7 @@ They collected eggs from the
 chickens and picked greens
 from the garden.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3>
 	Odongo na Apiyo walimsaidia bibi yao na kazi za nyumbani. Walichota maji na kuokota kuni. Walikusanya mayai ya kuku na kuchuma mboga za majani kutoka kwenye bustani.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -467,8 +482,8 @@ from the garden.
 		<button class="btn btn-lg" id="playbutton13" onclick="playpause('13')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('om','en')" class="btn btn-lg lang-en" title="Switch between Oromo and English">en</button>
-		<button onclick="switchlang('om','sw')" class="btn btn-lg lang-sw" title="Switch between Oromo and Swahili">sw</button>
+		<button onclick="switchlang('om,en','en,sw,om')" class="btn btn-lg lang-primary" title="Switch between Oromo and English">en</button>
+		<button onclick="switchlang('om,sw','en,sw,om')" class="btn btn-lg lang-secondary" title="Switch between Oromo and Swahili">sw</button>
 	</div>
 </div>
 
@@ -481,7 +496,7 @@ from the garden.
 	Nyar-Kanyadan ijoole akakille ishee ugaali fi itto qopheesu barsistee. Ruzza akkati tolchani qurxxummi wajjiin nyatan ittiagrasiste.
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3>
 	Nyar-Kanyada taught her
 grandchildren to make soft ugali
 to eat with stew.
@@ -489,7 +504,7 @@ She showed them how to make
 coconut rice to eat with roast
 fish.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3>
 	Nyar-Kanyada aliwafundisha wajukuu wake jinsi ya kupika ugali mwepesi wa kula na mchuzi. Aliwaonesha namna ya kupika wali wa nazi wa kuliwa na samaki wa kukaanga.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -500,8 +515,8 @@ fish.
 		<button class="btn btn-lg" id="playbutton14" onclick="playpause('14')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('om','en')" class="btn btn-lg lang-en" title="Switch between Oromo and English">en</button>
-		<button onclick="switchlang('om','sw')" class="btn btn-lg lang-sw" title="Switch between Oromo and Swahili">sw</button>
+		<button onclick="switchlang('om,en','en,sw,om')" class="btn btn-lg lang-primary" title="Switch between Oromo and English">en</button>
+		<button onclick="switchlang('om,sw','en,sw,om')" class="btn btn-lg lang-secondary" title="Switch between Oromo and Swahili">sw</button>
 	</div>
 </div>
 
@@ -514,7 +529,7 @@ fish.
 	Guyyaa ganama tokko Odongon sa'atti akko isaa gara margati ofee. sawaan suni gara masii ollati sente. Abbaan maasii sana bayee Odongoti aare. Bayee isaan lolee. Guyyaa sanairra calqabee gurbichi sanii akka masii namaa hinseene ofegganno gari godhe.
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3>
 	One morning, Odongo took his
 grandmother's cows to graze.
 They ran onto a neighbour's
@@ -526,7 +541,7 @@ After that day, the boy made
 sure that the cows did not get
 into trouble again.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3>
 	Asubuhi moja, Odongo aliwapeleka ng'ombe wa bibi yake malishoni. Wakakimbilia ndani ya shamba la jirani. Mwenye shamba alikasirishwa sana na Odongo. Akatishia kuwazuia ng'ombe kula mimea yake. Tangu siku hiyo, Odongo alihakikisha kwamba ng'ombe hawaingii matatani tena.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -537,8 +552,8 @@ into trouble again.
 		<button class="btn btn-lg" id="playbutton15" onclick="playpause('15')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('om','en')" class="btn btn-lg lang-en" title="Switch between Oromo and English">en</button>
-		<button onclick="switchlang('om','sw')" class="btn btn-lg lang-sw" title="Switch between Oromo and Swahili">sw</button>
+		<button onclick="switchlang('om,en','en,sw,om')" class="btn btn-lg lang-primary" title="Switch between Oromo and English">en</button>
+		<button onclick="switchlang('om,sw','en,sw,om')" class="btn btn-lg lang-secondary" title="Switch between Oromo and Swahili">sw</button>
 	</div>
 </div>
 
@@ -551,7 +566,7 @@ into trouble again.
 	Yeroo biraa immo ijoolen Nyar-Kanyadan wajjiin gara gabbayaa deemtee. Isheenis kudraa fi samuna gurgurta qabde deemtee. Apiyon gatii meshaalee himmu calqabe. Ondongonim meeshaale maamiltonni bitan waltiqarqabaa ture.
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3>
 	On another day, the children
 went to the marketplace with
 Nyar-Kanyada.
@@ -562,7 +577,7 @@ price of items.
 Odongo would pack the items
 that customers bought.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3>
 	Siku nyingine watoto walikwenda sokoni pamoja na Nyar-Kanyada. Nyar-Kanyada alikuwa na kibanda cha kuuza mboga, sukari na sabuni. Apiyo alipenda kuwatajia wateja bei za bidhaa. Odongo aliwafungia wateja bidhaa walizonunua.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -573,8 +588,8 @@ that customers bought.
 		<button class="btn btn-lg" id="playbutton16" onclick="playpause('16')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('om','en')" class="btn btn-lg lang-en" title="Switch between Oromo and English">en</button>
-		<button onclick="switchlang('om','sw')" class="btn btn-lg lang-sw" title="Switch between Oromo and Swahili">sw</button>
+		<button onclick="switchlang('om,en','en,sw,om')" class="btn btn-lg lang-primary" title="Switch between Oromo and English">en</button>
+		<button onclick="switchlang('om,sw','en,sw,om')" class="btn btn-lg lang-secondary" title="Switch between Oromo and Swahili">sw</button>
 	</div>
 </div>
 
@@ -587,13 +602,13 @@ that customers bought.
 	Gara galgalaa shahii chayi wajjiin dhugan. Akkoo isaani maallaqa lakka'udhan gargaran.
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3>
 	At the end of the day they
 drank chai tea together.
 They helped grandmother to
 count the money she earned.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3>
 	Mwisho wa siku walikunywa chai pamoja. Walimsaidia bibi yao kuhesabu pesa alizozipata.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -604,8 +619,8 @@ count the money she earned.
 		<button class="btn btn-lg" id="playbutton17" onclick="playpause('17')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('om','en')" class="btn btn-lg lang-en" title="Switch between Oromo and English">en</button>
-		<button onclick="switchlang('om','sw')" class="btn btn-lg lang-sw" title="Switch between Oromo and Swahili">sw</button>
+		<button onclick="switchlang('om,en','en,sw,om')" class="btn btn-lg lang-primary" title="Switch between Oromo and English">en</button>
+		<button onclick="switchlang('om,sw','en,sw,om')" class="btn btn-lg lang-secondary" title="Switch between Oromo and Swahili">sw</button>
 	</div>
 </div>
 
@@ -618,7 +633,7 @@ count the money she earned.
 	Osoo bayee hinturin yeroon boqqonna isaani dhumee ijoolen gara magaalaa debite. Nyar-Kanyadan odongo dhaf kophii Apiyoodhaf immo shurrabi kenetef. Dhiyana oolchaa isaanif laatte.
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3>
 	But too soon the holidays were
 over and the children had to go
 back to the city.
@@ -627,7 +642,7 @@ cap and Apiyo a sweater.
 She packed food for their
 journey.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3>
 	Likizo ilikaribia kuisha na watoto walitakiwa kurudi mjini. Nyar-Kanyada alimpa Odongo kofia na Apiyo sweta. Aliwafungia chakula cha kula safarini.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -638,8 +653,8 @@ journey.
 		<button class="btn btn-lg" id="playbutton18" onclick="playpause('18')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('om','en')" class="btn btn-lg lang-en" title="Switch between Oromo and English">en</button>
-		<button onclick="switchlang('om','sw')" class="btn btn-lg lang-sw" title="Switch between Oromo and Swahili">sw</button>
+		<button onclick="switchlang('om,en','en,sw,om')" class="btn btn-lg lang-primary" title="Switch between Oromo and English">en</button>
+		<button onclick="switchlang('om,sw','en,sw,om')" class="btn btn-lg lang-secondary" title="Switch between Oromo and Swahili">sw</button>
 	</div>
 </div>
 
@@ -652,7 +667,7 @@ journey.
 	Yeroo abban isaani isaan fudhachudhaf dhufu ijoolen deemu hinbarbanne. Ijoolen Nyar-Kanyadan akka isaani waliin demtu kadhaate. Ishe akka kofuu jette, akkan jetten, "Ani magalaa deemuudhaf bayeen dulomme kanaafu ani asumatin isin eega."
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3>
 	When their father came to fetch
 them, they did not want to
 leave.
@@ -663,7 +678,7 @@ old for the city. I will be waiting
 for you to come to my village
 again."
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3>
 	Baba yao alipokuja kuwachukua, hawakutaka kuondoka. Walimuomba Nyar-Kanyada aende nao mjini. Alitabasamu na kusema, "Nimezeeka, siyawezi ya mjini. Nitasubiri mje kijijini kwangu tena."
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -674,8 +689,8 @@ again."
 		<button class="btn btn-lg" id="playbutton19" onclick="playpause('19')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('om','en')" class="btn btn-lg lang-en" title="Switch between Oromo and English">en</button>
-		<button onclick="switchlang('om','sw')" class="btn btn-lg lang-sw" title="Switch between Oromo and Swahili">sw</button>
+		<button onclick="switchlang('om,en','en,sw,om')" class="btn btn-lg lang-primary" title="Switch between Oromo and English">en</button>
+		<button onclick="switchlang('om,sw','en,sw,om')" class="btn btn-lg lang-secondary" title="Switch between Oromo and Swahili">sw</button>
 	</div>
 </div>
 
@@ -688,11 +703,11 @@ again."
 	Odongo fi Apiyon hammatani naggati ta'ii jedhanin.
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3>
 	Odongo and Apiyo both hugged
 her tightly and said goodbye.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3>
 	Odongo na Apiyo walimkumbatia kwa pamoja na kumuaga.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -703,8 +718,8 @@ her tightly and said goodbye.
 		<button class="btn btn-lg" id="playbutton20" onclick="playpause('20')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('om','en')" class="btn btn-lg lang-en" title="Switch between Oromo and English">en</button>
-		<button onclick="switchlang('om','sw')" class="btn btn-lg lang-sw" title="Switch between Oromo and Swahili">sw</button>
+		<button onclick="switchlang('om,en','en,sw,om')" class="btn btn-lg lang-primary" title="Switch between Oromo and English">en</button>
+		<button onclick="switchlang('om,sw','en,sw,om')" class="btn btn-lg lang-secondary" title="Switch between Oromo and Swahili">sw</button>
 	</div>
 </div>
 
@@ -717,7 +732,7 @@ her tightly and said goodbye.
 	Yeroo Odongo fi Apiyon gara mana barumsaa dhaqan wa'ee badiyaa hiriyota isaanit himan. Ijoolen tokko jireenya magaala dansaa jedhani yadaan. kun immo badiyyan dansaa dha jechuu calqaban. Hundi isaani garu Odongo for Apiyon akko dansaa akka qabaan waligalan.
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3>
 	When Odongo and Apiyo went
 back to school they told their
 friends about life in the village.
@@ -729,7 +744,7 @@ But most of all, everyone
 agreed that Odongo and Apiyo
 had a wonderful grandmother!
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3>
 	Odongo na Apiyo waliporudi shuleni, waliwasimulia marafiki zao kuhusu maisha ya kijijini. Baadhi ya watoto waliamini kuwa maisha ya mjini ni mazuri. Wengine waliamini kijijini ni bora zaidi. Lakini zaidi ya yote, kila mmoja alikubali kwamba Odongo na Apiyo walikuwa na bibi wa kipekee.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -740,8 +755,8 @@ had a wonderful grandmother!
 		<button class="btn btn-lg" id="playbutton21" onclick="playpause('21')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('om','en')" class="btn btn-lg lang-en" title="Switch between Oromo and English">en</button>
-		<button onclick="switchlang('om','sw')" class="btn btn-lg lang-sw" title="Switch between Oromo and Swahili">sw</button>
+		<button onclick="switchlang('om,en','en,sw,om')" class="btn btn-lg lang-primary" title="Switch between Oromo and English">en</button>
+		<button onclick="switchlang('om,sw','en,sw,om')" class="btn btn-lg lang-secondary" title="Switch between Oromo and Swahili">sw</button>
 	</div>
 </div>
 
@@ -762,9 +777,6 @@ had a wonderful grandmother!
 	</div>
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12">
 		<h5>Read more <a href="/storybooks-kenya/stories/om/level4">level 4</a> stories:</h5>
-			<label class="chip"><a href="/storybooks-kenya/stories/om/0072/">Gadoo Dammaqajelchitu</a></label>
-			<label class="chip"><a href="/storybooks-kenya/stories/om/0291/">Waan Vusi waa'ee obboloetti ishe jette</a></label>
-			<label class="chip"><a href="/storybooks-kenya/stories/om/0294/">Muzaa Akko</a></label>
 	</div>
 </div>
 <div>

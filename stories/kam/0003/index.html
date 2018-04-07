@@ -4,9 +4,16 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="icon" href="/storybooks-kenya/favicon.ico?v=3" />
+	<link rel="apple-touch-icon" sizes="180x180" href="/storybooks-kenya/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/storybooks-kenya/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/storybooks-kenya/favicon-16x16.png">
+	<link rel="manifest" href="/storybooks-kenya/site.webmanifest">
+	<link rel="mask-icon" href="/storybooks-kenya/safari-pinned-tab.svg" color="#5bbad5">
+	<link rel="shortcut icon" href=/storybooks-kenya/favicon.ico?v=4">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
 	<title>Ngua sya sukulu - Storybooks Kenya</title>
-	<meta name="description" content="Storybooks Kenya is designed specifically for teachers and makes 40 stories from the African Storybook available in English and Swahili, as well as all the major regional and immigrant languages of Kenya (with text and audio in Amharic, Arabic, Embu / Kîembu, English, Gujarati, Ekegusii, Kamba / Kikamba, Gikuyu / Kikuyu, Kalenjin, Luganda, Olukhayo, Luo / Dholuo, Luhya / Oluluhya, Pokomo / Kipfokomo, Maa / Maasai, Meru / Kimîîru, Giryama / Kigiryama, Oromo / Afaan Oromo, Rendille, Samburu, Somali, Swahili / Kiswahili, and Turkana / Ng‘aturkana).
+	<meta name="description" content="Storybooks Kenya is designed specifically for teachers, parents, and community members. It makes 40 stories from the African Storybook available in English and Swahili, as well as all the major regional and immigrant languages of Kenya (with text and audio in Amharic, Arabic, Embu / Kîembu, English, Gujarati, Ekegusii, Kamba / Kikamba, Gikuyu / Kikuyu, Kalenjin, Luganda, Olukhayo, Luo / Dholuo, Luhya / Oluluhya, Pokomo / Kipfokomo, Maa / Maasai, Meru / Kimîîru, Giryama / Kigiryama, Oromo / Afaan Oromo, Rendille, Samburu, Somali, Swahili / Kiswahili, and Turkana / Ng‘aturkana, among others).
 ">
 	<link rel="stylesheet" href="/storybooks-kenya/css/spectre.min.css">
 	<link rel="stylesheet" href="/storybooks-kenya/css/fontello.min.css">
@@ -22,13 +29,18 @@
         <header class="navbar">
 	<section class="navbar-section">
 		<a href="/storybooks-kenya/" class="navbar-brand">
-			<object type="image/svg+xml" data="/storybooks-kenya/images/sbk_logo.svg" width="100" height="100" border="0"></object>
+			<object type="image/svg+xml" data="/storybooks-kenya/images/sbke_logo.svg" width="100" height="100" border="0"></object>
 		</a>
 		<div class="btn-group btn-group-block">
 			<a href="/storybooks-kenya/" class="btn btn-primary">Home</a>
-			<a href="/storybooks-kenya/about.html" class="btn btn-primary">About us</a>
-			<a href="/storybooks-kenya/how-to.html" class="btn btn-primary">How to use this website</a>
-			<a href="/storybooks-kenya/contact.html" class="btn btn-primary">Contact us</a>
+			<div class="dropdown">
+				<a href="#" class="btn btn-primary dropdown-toggle" tabindex="0">About</a>
+				<ul class="menu">
+					<li class="menu-item"><a href="/storybooks-kenya/about">About us</a></li>
+				</ul>
+			</div>
+			<a href="/storybooks-kenya/how-to" class="btn btn-primary">How to use this website</a>
+			<a href="/storybooks-kenya/contact" class="btn btn-primary">Contact us</a>
 		</div>
 	</section>
 </header>
@@ -59,20 +71,23 @@
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0003/01.jpg"></div>
 	<div class=" column col-7 col-lg-12 col-md-12 col-sm-12">
 		<h1><span class="def">Ngua sya sukulu</span>
-<span class="en">School clothes</span>
-<span class="sw">Sare za shule</span>
-			<div class="btn-group">
-				<a href="#text02" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-				<button class="btn btn-lg" id="playbutton" onclick="playpause('')" title="Play/pause"><i class="icon-volume-up"></i></button>
-				<audio id="audio01" onended="resetbutton('01')" src="http://globalstorybooks.net/media/audio/kam/0003/mp3/01.mp3"></audio>
-			</div>
+<span class="l1">School clothes</span>
+<span class="l2">Sare za shule</span>
+		<div class="btn-group">
+			<a href="#text02" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
+			<button class="btn btn-lg" id="playbutton01" onclick="playpause('01')" title="Play/pause"><i class="icon-volume-up"></i></button>
+			<audio id="audio01" onended="resetbutton('01')" src="http://globalstorybooks.net/media/audio/kam/0003/mp3/01.mp3"></audio>
+			<button onclick="switchlang('kam,en','en,sw,kam')" class="btn btn-lg lang-primary" title="Switch between Kikamba and English">en</button>
+			<button onclick="switchlang('kam,sw','en,sw,kam')" class="btn btn-lg lang-secondary" title="Switch between Kikamba and Swahili">sw</button>
+		</div>
 		</h1>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Written by"><img class="cover-icon" src="/storybooks-kenya/css/pencil.svg" alt="Written by" width="38px"></span> Clare Verbeek, Thembani Dladla, Zanele Buthelezi</h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Illustrated by"><img class="cover-icon" src="/storybooks-kenya/css/art.svg" alt="Illustrated by" width="38px"></span> Mlungisi Dlamini</h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Translated by"><img class="cover-icon" src="/storybooks-kenya/css/global.svg" alt="Translated by" width="38px"></span> Stephen Musyoka</h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Language"><img class="cover-icon" src="/storybooks-kenya/css/language.svg" alt="Language" width="38px"></span> <a href="/storybooks-kenya/stories/kam">Kikamba</a></h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Level"><img class="cover-icon" src="/storybooks-kenya/css/level.svg" alt="Level" width="38px"></span> <a href="/storybooks-kenya/stories/kam/level1">Level 1</a></h3>
-		<h3><span class="tooltip tooltip-right" data-tooltip="Narrate story"><img class="cover-icon" src="/storybooks-kenya/css/speaker.svg" alt="Narrate full story" width="38px"></span> <audio id="audioplayer" controls><source src="http://globalstorybooks.net/media/audio/kam/0003/0003.mp3" type="audio/mpeg"></audio></h3>
+		<h3><span class="tooltip tooltip-right" data-tooltip="Narrate story"><img class="cover-icon" src="/storybooks-kenya/css/speaker.svg" alt="Narrate full story" width="38px"></span> <audio id="audioplayer" controls><source src="http://globalstorybooks.net/media/audio/kam/0003/kam-0003_clothes.mp3" type="audio/mpeg"></audio></h3>
+		<h3><span class="tooltip tooltip-right" data-tooltip="Autoplay story (beta - desktop only)"><img id="autoplay_icon" class="cover-icon" src="https://dohliam.github.io/elegant-circles/svg/play.svg" alt="Autoplay story" style="cursor:pointer" width="38px" onclick="autoplay()"></span></h3>
 	</div>
 </div>
 <hr>
@@ -83,10 +98,10 @@
 	Ilinda yii ni yaasa.
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3>
 	This dress is long.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3>
 	Gauni hili ni refu.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -97,8 +112,8 @@
 		<button class="btn btn-lg" id="playbutton02" onclick="playpause('02')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('kam','en')" class="btn btn-lg lang-en" title="Switch between Kikamba and English">en</button>
-		<button onclick="switchlang('kam','sw')" class="btn btn-lg lang-sw" title="Switch between Kikamba and Swahili">sw</button>
+		<button onclick="switchlang('kam,en','en,sw,kam')" class="btn btn-lg lang-primary" title="Switch between Kikamba and English">en</button>
+		<button onclick="switchlang('kam,sw','en,sw,kam')" class="btn btn-lg lang-secondary" title="Switch between Kikamba and Swahili">sw</button>
 	</div>
 </div>
 
@@ -111,10 +126,10 @@
 	Vulana ii ni nene.
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3>
 	This jersey is big.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3>
 	Sweta hii ni kubwa.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -125,8 +140,8 @@
 		<button class="btn btn-lg" id="playbutton03" onclick="playpause('03')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('kam','en')" class="btn btn-lg lang-en" title="Switch between Kikamba and English">en</button>
-		<button onclick="switchlang('kam','sw')" class="btn btn-lg lang-sw" title="Switch between Kikamba and Swahili">sw</button>
+		<button onclick="switchlang('kam,en','en,sw,kam')" class="btn btn-lg lang-primary" title="Switch between Kikamba and English">en</button>
+		<button onclick="switchlang('kam,sw','en,sw,kam')" class="btn btn-lg lang-secondary" title="Switch between Kikamba and Swahili">sw</button>
 	</div>
 </div>
 
@@ -139,10 +154,10 @@
 	Muvuko uu ni munene.
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3>
 	This bag is big.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3>
 	Mkoba huu ni mkubwa.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -153,8 +168,8 @@
 		<button class="btn btn-lg" id="playbutton04" onclick="playpause('04')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('kam','en')" class="btn btn-lg lang-en" title="Switch between Kikamba and English">en</button>
-		<button onclick="switchlang('kam','sw')" class="btn btn-lg lang-sw" title="Switch between Kikamba and Swahili">sw</button>
+		<button onclick="switchlang('kam,en','en,sw,kam')" class="btn btn-lg lang-primary" title="Switch between Kikamba and English">en</button>
+		<button onclick="switchlang('kam,sw','en,sw,kam')" class="btn btn-lg lang-secondary" title="Switch between Kikamba and Swahili">sw</button>
 	</div>
 </div>
 
@@ -167,10 +182,10 @@
 	Musivi uu...........
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3>
 	This belt is...
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3>
 	Mkanda huu ni …
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -181,8 +196,8 @@
 		<button class="btn btn-lg" id="playbutton05" onclick="playpause('05')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('kam','en')" class="btn btn-lg lang-en" title="Switch between Kikamba and English">en</button>
-		<button onclick="switchlang('kam','sw')" class="btn btn-lg lang-sw" title="Switch between Kikamba and Swahili">sw</button>
+		<button onclick="switchlang('kam,en','en,sw,kam')" class="btn btn-lg lang-primary" title="Switch between Kikamba and English">en</button>
+		<button onclick="switchlang('kam,sw','en,sw,kam')" class="btn btn-lg lang-secondary" title="Switch between Kikamba and Swahili">sw</button>
 	</div>
 </div>
 
@@ -195,10 +210,10 @@
 	Ngovia ii ni nini.
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3>
 	This hat is small.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3>
 	Kofia hii ni ndogo.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -209,8 +224,8 @@
 		<button class="btn btn-lg" id="playbutton06" onclick="playpause('06')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('kam','en')" class="btn btn-lg lang-en" title="Switch between Kikamba and English">en</button>
-		<button onclick="switchlang('kam','sw')" class="btn btn-lg lang-sw" title="Switch between Kikamba and Swahili">sw</button>
+		<button onclick="switchlang('kam,en','en,sw,kam')" class="btn btn-lg lang-primary" title="Switch between Kikamba and English">en</button>
+		<button onclick="switchlang('kam,sw','en,sw,kam')" class="btn btn-lg lang-secondary" title="Switch between Kikamba and Swahili">sw</button>
 	</div>
 </div>
 
@@ -223,10 +238,10 @@
 	Sokisi ni nguvi.
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3>
 	The socks are short.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3>
 	Soksi hizi ni fupi.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -237,8 +252,8 @@
 		<button class="btn btn-lg" id="playbutton07" onclick="playpause('07')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('kam','en')" class="btn btn-lg lang-en" title="Switch between Kikamba and English">en</button>
-		<button onclick="switchlang('kam','sw')" class="btn btn-lg lang-sw" title="Switch between Kikamba and Swahili">sw</button>
+		<button onclick="switchlang('kam,en','en,sw,kam')" class="btn btn-lg lang-primary" title="Switch between Kikamba and English">en</button>
+		<button onclick="switchlang('kam,sw','en,sw,kam')" class="btn btn-lg lang-secondary" title="Switch between Kikamba and Swahili">sw</button>
 	</div>
 </div>
 
@@ -251,10 +266,10 @@
 	Na syaatu ii ni nzau.
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3>
 	But these shoes are new.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3>
 	Lakini viatu hivi ni vipya.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -265,8 +280,8 @@
 		<button class="btn btn-lg" id="playbutton08" onclick="playpause('08')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('kam','en')" class="btn btn-lg lang-en" title="Switch between Kikamba and English">en</button>
-		<button onclick="switchlang('kam','sw')" class="btn btn-lg lang-sw" title="Switch between Kikamba and Swahili">sw</button>
+		<button onclick="switchlang('kam,en','en,sw,kam')" class="btn btn-lg lang-primary" title="Switch between Kikamba and English">en</button>
+		<button onclick="switchlang('kam,sw','en,sw,kam')" class="btn btn-lg lang-secondary" title="Switch between Kikamba and Swahili">sw</button>
 	</div>
 </div>
 
@@ -279,10 +294,10 @@
 	...syaania nesa.
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3>
 	... they fit well.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3>
 	… vinanitosha vizuri.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -293,8 +308,8 @@
 		<button class="btn btn-lg" id="playbutton09" onclick="playpause('09')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('kam','en')" class="btn btn-lg lang-en" title="Switch between Kikamba and English">en</button>
-		<button onclick="switchlang('kam','sw')" class="btn btn-lg lang-sw" title="Switch between Kikamba and Swahili">sw</button>
+		<button onclick="switchlang('kam,en','en,sw,kam')" class="btn btn-lg lang-primary" title="Switch between Kikamba and English">en</button>
+		<button onclick="switchlang('kam,sw','en,sw,kam')" class="btn btn-lg lang-secondary" title="Switch between Kikamba and Swahili">sw</button>
 	</div>
 </div>
 
@@ -315,10 +330,6 @@
 	</div>
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12">
 		<h5>Read more <a href="/storybooks-kenya/stories/kam/level1">level 1</a> stories:</h5>
-			<label class="chip"><a href="/storybooks-kenya/stories/kam/0112/">Mwii wakwa</a></label>
-			<label class="chip"><a href="/storybooks-kenya/stories/kam/0030/">Kwĩw’a</a></label>
-			<label class="chip"><a href="/storybooks-kenya/stories/kam/0120/">Nzwĩĩ</a></label>
-			<label class="chip"><a href="/storybooks-kenya/stories/kam/0129/">Kamwanayia kaanu</a></label>
 	</div>
 </div>
 <div>

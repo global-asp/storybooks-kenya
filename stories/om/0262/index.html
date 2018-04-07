@@ -4,9 +4,16 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="icon" href="/storybooks-kenya/favicon.ico?v=3" />
+	<link rel="apple-touch-icon" sizes="180x180" href="/storybooks-kenya/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/storybooks-kenya/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/storybooks-kenya/favicon-16x16.png">
+	<link rel="manifest" href="/storybooks-kenya/site.webmanifest">
+	<link rel="mask-icon" href="/storybooks-kenya/safari-pinned-tab.svg" color="#5bbad5">
+	<link rel="shortcut icon" href=/storybooks-kenya/favicon.ico?v=4">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
 	<title>Magozee - Storybooks Kenya</title>
-	<meta name="description" content="Storybooks Kenya is designed specifically for teachers and makes 40 stories from the African Storybook available in English and Swahili, as well as all the major regional and immigrant languages of Kenya (with text and audio in Amharic, Arabic, Embu / Kîembu, English, Gujarati, Ekegusii, Kamba / Kikamba, Gikuyu / Kikuyu, Kalenjin, Luganda, Olukhayo, Luo / Dholuo, Luhya / Oluluhya, Pokomo / Kipfokomo, Maa / Maasai, Meru / Kimîîru, Giryama / Kigiryama, Oromo / Afaan Oromo, Rendille, Samburu, Somali, Swahili / Kiswahili, and Turkana / Ng‘aturkana).
+	<meta name="description" content="Storybooks Kenya is designed specifically for teachers, parents, and community members. It makes 40 stories from the African Storybook available in English and Swahili, as well as all the major regional and immigrant languages of Kenya (with text and audio in Amharic, Arabic, Embu / Kîembu, English, Gujarati, Ekegusii, Kamba / Kikamba, Gikuyu / Kikuyu, Kalenjin, Luganda, Olukhayo, Luo / Dholuo, Luhya / Oluluhya, Pokomo / Kipfokomo, Maa / Maasai, Meru / Kimîîru, Giryama / Kigiryama, Oromo / Afaan Oromo, Rendille, Samburu, Somali, Swahili / Kiswahili, and Turkana / Ng‘aturkana, among others).
 ">
 	<link rel="stylesheet" href="/storybooks-kenya/css/spectre.min.css">
 	<link rel="stylesheet" href="/storybooks-kenya/css/fontello.min.css">
@@ -22,13 +29,18 @@
         <header class="navbar">
 	<section class="navbar-section">
 		<a href="/storybooks-kenya/" class="navbar-brand">
-			<object type="image/svg+xml" data="/storybooks-kenya/images/sbk_logo.svg" width="100" height="100" border="0"></object>
+			<object type="image/svg+xml" data="/storybooks-kenya/images/sbke_logo.svg" width="100" height="100" border="0"></object>
 		</a>
 		<div class="btn-group btn-group-block">
 			<a href="/storybooks-kenya/" class="btn btn-primary">Home</a>
-			<a href="/storybooks-kenya/about.html" class="btn btn-primary">About us</a>
-			<a href="/storybooks-kenya/how-to.html" class="btn btn-primary">How to use this website</a>
-			<a href="/storybooks-kenya/contact.html" class="btn btn-primary">Contact us</a>
+			<div class="dropdown">
+				<a href="#" class="btn btn-primary dropdown-toggle" tabindex="0">About</a>
+				<ul class="menu">
+					<li class="menu-item"><a href="/storybooks-kenya/about">About us</a></li>
+				</ul>
+			</div>
+			<a href="/storybooks-kenya/how-to" class="btn btn-primary">How to use this website</a>
+			<a href="/storybooks-kenya/contact" class="btn btn-primary">Contact us</a>
 		</div>
 	</section>
 </header>
@@ -59,20 +71,23 @@
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0262/01.jpg"></div>
 	<div class=" column col-7 col-lg-12 col-md-12 col-sm-12">
 		<h1><span class="def">Magozee</span>
-<span class="en">Magozwe</span>
-<span class="sw">Magozwe</span>
-			<div class="btn-group">
-				<a href="#text02" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-				<button class="btn btn-lg" id="playbutton" onclick="playpause('')" title="Play/pause"><i class="icon-volume-up"></i></button>
-				<audio id="audio01" onended="resetbutton('01')" src="http://globalstorybooks.net/media/audio/om/0262/mp3/01.mp3"></audio>
-			</div>
+<span class="l1">Magozwe</span>
+<span class="l2">Magozwe</span>
+		<div class="btn-group">
+			<a href="#text02" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
+			<button class="btn btn-lg" id="playbutton01" onclick="playpause('01')" title="Play/pause"><i class="icon-volume-up"></i></button>
+			<audio id="audio01" onended="resetbutton('01')" src="http://globalstorybooks.net/media/audio/om/0262/mp3/01.mp3"></audio>
+			<button onclick="switchlang('om,en','en,sw,om')" class="btn btn-lg lang-primary" title="Switch between Oromo and English">en</button>
+			<button onclick="switchlang('om,sw','en,sw,om')" class="btn btn-lg lang-secondary" title="Switch between Oromo and Swahili">sw</button>
+		</div>
 		</h1>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Written by"><img class="cover-icon" src="/storybooks-kenya/css/pencil.svg" alt="Written by" width="38px"></span> Lesley Koyi</h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Illustrated by"><img class="cover-icon" src="/storybooks-kenya/css/art.svg" alt="Illustrated by" width="38px"></span> Wiehan de Jager</h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Translated by"><img class="cover-icon" src="/storybooks-kenya/css/global.svg" alt="Translated by" width="38px"></span> Demoze Degefa</h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Language"><img class="cover-icon" src="/storybooks-kenya/css/language.svg" alt="Language" width="38px"></span> <a href="/storybooks-kenya/stories/om">Oromo</a></h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Level"><img class="cover-icon" src="/storybooks-kenya/css/level.svg" alt="Level" width="38px"></span> <a href="/storybooks-kenya/stories/om/level5">Level 5</a></h3>
-		<h3><span class="tooltip tooltip-right" data-tooltip="Narrate story"><img class="cover-icon" src="/storybooks-kenya/css/speaker.svg" alt="Narrate full story" width="38px"></span> <audio id="audioplayer" controls><source src="http://globalstorybooks.net/media/audio/om/0262/0262.mp3" type="audio/mpeg"></audio></h3>
+		<h3><span class="tooltip tooltip-right" data-tooltip="Narrate story"><img class="cover-icon" src="/storybooks-kenya/css/speaker.svg" alt="Narrate full story" width="38px"></span> <audio id="audioplayer" controls><source src="http://globalstorybooks.net/media/audio/om/0262/om-0262_magozwe.mp3" type="audio/mpeg"></audio></h3>
+		<h3><span class="tooltip tooltip-right" data-tooltip="Autoplay story (beta - desktop only)"><img id="autoplay_icon" class="cover-icon" src="https://dohliam.github.io/elegant-circles/svg/play.svg" alt="Autoplay story" style="cursor:pointer" width="38px" onclick="autoplay()"></span></h3>
 	</div>
 </div>
 <hr>
@@ -83,14 +98,14 @@
 	Magaala Nyiroobii irraa fagooti ijooleen mana dhabiyyin manaan ala jiraata turan. Guyyaa maraa akkuma dhufite kessumessu. Guyyaa ganama tokko ijooleen kun afaa irra rafanii bulan marachu jalqaban. Akka isaaniti hinqorrinee waan garagaraa boobesanii o'ifatu. Magozeen garee ijoole kana kessa namtokko dha. Magozeenis umriidhan isa xiqqa ture.
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3>
 	In the busy city of Nairobi, far away from a caring life at home, lived a group of homeless boys. They welcomed each day just as it came.
 
 On one morning, the boys were packing their mats after sleeping on cold pavements. To chase away the cold they lit a fire with rubbish.
 
 Among the group of boys was Magozwe. He was the youngest.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3>
 	Kwenye jiji la Nairobi lenye pilikapilika nyingi, mbali na malezi ya nyumbani, paliishi kikundi cha wavulana wasiokuwa na makwao. Waliipokea kila siku ijayo kama ilivyo. Siku moja asubuhi, walikuwa wanakusanya virago vyao baada ya kulala kwenye baridi kando ya barabara. Ili kuondoa baridi, walikoka moto kwa kutumia takataka. Miongoni mwa kikundi hicho cha wavulana alikuwepo Magozwe. Alikuwa ni mdogo kuliko wote.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -101,8 +116,8 @@ Among the group of boys was Magozwe. He was the youngest.
 		<button class="btn btn-lg" id="playbutton02" onclick="playpause('02')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('om','en')" class="btn btn-lg lang-en" title="Switch between Oromo and English">en</button>
-		<button onclick="switchlang('om','sw')" class="btn btn-lg lang-sw" title="Switch between Oromo and Swahili">sw</button>
+		<button onclick="switchlang('om,en','en,sw,om')" class="btn btn-lg lang-primary" title="Switch between Oromo and English">en</button>
+		<button onclick="switchlang('om,sw','en,sw,om')" class="btn btn-lg lang-secondary" title="Switch between Oromo and Swahili">sw</button>
 	</div>
 </div>
 
@@ -115,10 +130,10 @@ Among the group of boys was Magozwe. He was the youngest.
 	Yeroo matiin isaa du'u Magozee waggaa shan qofa ture. Magozeenis essumaa isa wajjiiin jirachuf bira dhaqee. Namni kuni garauu mucaa kanaf bayee hindhimamnee. Magozeedhaf nyataa gahaa hinkenninef. Mucichi garu hojii bayee akka hojaatu godhe.
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3>
 	When Magozwe's parents died, he was only five years old. He went to live with his uncle. This man did not care about the child. He did not give Magozwe enough food. He made the boy do a lot of hard work.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3>
 	Wakati wazazi wa Magozwe walipofariki, alikuwa na miaka mitano tu. Alienda kuishi na mjomba wake. Mjomba hakumjali Magozwe. Hakumpa chakula cha kutosha. Alimfanyisha kazi nyingi nzito.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -129,8 +144,8 @@ Among the group of boys was Magozwe. He was the youngest.
 		<button class="btn btn-lg" id="playbutton03" onclick="playpause('03')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('om','en')" class="btn btn-lg lang-en" title="Switch between Oromo and English">en</button>
-		<button onclick="switchlang('om','sw')" class="btn btn-lg lang-sw" title="Switch between Oromo and Swahili">sw</button>
+		<button onclick="switchlang('om,en','en,sw,om')" class="btn btn-lg lang-primary" title="Switch between Oromo and English">en</button>
+		<button onclick="switchlang('om,sw','en,sw,om')" class="btn btn-lg lang-secondary" title="Switch between Oromo and Swahili">sw</button>
 	</div>
 </div>
 
@@ -143,12 +158,12 @@ Among the group of boys was Magozwe. He was the youngest.
 	Yeroo Magozee gaafi kasuu essumina isa isa tumaa. Yeroo immo Magozeen gara mana barnoota nandeema jedhe gaafatu, essumini isaa akan jedhe: "Bayee raata'a waan tateef barumsi sif galu hindanda'u." Wagga sadi booda Magozee mana essuma isa dhisee deeme. Daandi gubba jirachu calqabee.
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3>
 	If Magozwe complained or questioned, his uncle beat him. When Magozwe asked if he could go to school, his uncle beat him and said, "You're too stupid to learn anything."
 
 After three years of this treatment Magozwe ran away from his uncle. He started living on the street.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3>
 	Magozwe alipolalamika au kuuliza, mjomba wake alimpiga. Magozwe alipouliza kama ataweza kwenda shule, mjomba wake alimpiga na kumwambia, “Wewe ni mjinga, hutaweza kujifunza chochote.” Baada ya miaka mitatu ya kunyanyaswa, Magozwe alitoroka kwa mjomba wake. Akaanza kuishi mtaani.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -159,8 +174,8 @@ After three years of this treatment Magozwe ran away from his uncle. He started 
 		<button class="btn btn-lg" id="playbutton04" onclick="playpause('04')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('om','en')" class="btn btn-lg lang-en" title="Switch between Oromo and English">en</button>
-		<button onclick="switchlang('om','sw')" class="btn btn-lg lang-sw" title="Switch between Oromo and Swahili">sw</button>
+		<button onclick="switchlang('om,en','en,sw,om')" class="btn btn-lg lang-primary" title="Switch between Oromo and English">en</button>
+		<button onclick="switchlang('om,sw','en,sw,om')" class="btn btn-lg lang-secondary" title="Switch between Oromo and Swahili">sw</button>
 	</div>
 </div>
 
@@ -173,14 +188,14 @@ After three years of this treatment Magozwe ran away from his uncle. He started 
 	Jiruun dandii gubba hamaa ture. Ijooleen waan nyaatan argachuuf bayee dhama'aa turan. Ijollen kun yeroo tokko tokko nihidhaamu, nitumaamus. Yeroo dhibaman namni isaan gargaruu hinturre. Gareen kuni kan jiraatu mallaqa kadhaafi meshaale xixinno gurguratuuni. Jireenya isaani irra caala kan hammesse waldhanis gareen kuni garee biraa wajjiin qabudha.
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3>
 	Street life was difficult and most of the boys struggled daily just to get food. Sometimes they were arrested, sometimes they were beaten. When they were sick, there was no one to help.
 
 The group depended on the little money they got from begging, and from selling plastics and other recycling.
 
 Life was even more difficult because of fights with rival groups who wanted control of parts of the city.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3>
 	Maisha ya mtaani yalikuwa magumu na wavulana wengi walipambana kila siku ili wapate chakula tu. Mara nyingine walikamatwa, mara nyingine walipigwa. Walipougua, kulikuwa hakuna mtu wa kuwasaidia. Kikundi kilitegemea hela ndogo ndogo walizopata kwa kuomba omba, na kwa kuuza plastiki na vitu kuukuu. Maisha yalikuwa magumu zaidi hasa kwa sababu ya vita dhidi ya vikundi pinzani vilivyotaka kudhibiti baadhi ya maeneo ya jiji.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -191,8 +206,8 @@ Life was even more difficult because of fights with rival groups who wanted cont
 		<button class="btn btn-lg" id="playbutton05" onclick="playpause('05')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('om','en')" class="btn btn-lg lang-en" title="Switch between Oromo and English">en</button>
-		<button onclick="switchlang('om','sw')" class="btn btn-lg lang-sw" title="Switch between Oromo and Swahili">sw</button>
+		<button onclick="switchlang('om,en','en,sw,om')" class="btn btn-lg lang-primary" title="Switch between Oromo and English">en</button>
+		<button onclick="switchlang('om,sw','en,sw,om')" class="btn btn-lg lang-secondary" title="Switch between Oromo and Swahili">sw</button>
 	</div>
 </div>
 
@@ -205,12 +220,12 @@ Life was even more difficult because of fights with rival groups who wanted cont
 	Guyyaa tokko Magozee yeroo qawwaa balfa kessa yeroo ilaalu kitaaba senaa duloomaa tokko argate. Kitaabicha qulqullesse keeshaa isa kessa godhate. Guyyaa sana irra caalqabee kitaabicha banee suraawan adda adda ilaala ture. Kitaabicha akka itti dubbisu hinbeeku ture.
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3>
 	One day while Magozwe was looking through the dustbins, he found an old tattered storybook. He cleaned the dirt from it and put it in his sack.
 
 Every day after that he would take out the book and look at the pictures. He did not know how to read the words.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3>
 	Siku moja Magozwe alipokuwa anachakura kwenye mapipa ya takataka, alikuta kitabu cha hadithi kilichokuwa kimechakaa. Aliondoa uchafu kwenye kitabu na kukiweka ndani ya mfuko wake. Kila siku baada ya hapo, alikitoa kitabu na kuangalia picha. Hakujua kusoma maandishi.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -221,8 +236,8 @@ Every day after that he would take out the book and look at the pictures. He did
 		<button class="btn btn-lg" id="playbutton06" onclick="playpause('06')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('om','en')" class="btn btn-lg lang-en" title="Switch between Oromo and English">en</button>
-		<button onclick="switchlang('om','sw')" class="btn btn-lg lang-sw" title="Switch between Oromo and Swahili">sw</button>
+		<button onclick="switchlang('om,en','en,sw,om')" class="btn btn-lg lang-primary" title="Switch between Oromo and English">en</button>
+		<button onclick="switchlang('om,sw','en,sw,om')" class="btn btn-lg lang-secondary" title="Switch between Oromo and Swahili">sw</button>
 	</div>
 </div>
 
@@ -235,12 +250,12 @@ Every day after that he would take out the book and look at the pictures. He did
 	Suuraawan sun wa'ee mucaa paylata ta'uf fedhii qabu akkamit akka guddate agarsiisa. Magazeenis paylata ta'uf yaddan balali'ee. Yeroo tokko tokko akkan mucaa seenaa sanati of ilaala,
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3>
 	The pictures told the story of a boy who grew up to be a pilot.
 
 Magozwe would daydream of being a pilot. Sometimes, he imagined that he was the boy in the story.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3>
 	Picha zilikuwa zinaongelea hadithi ya mvulana ambaye alikuja kuwa rubani. Magozwe aliota kuwa rubani. Mara nyingine alifikiria kwamba yeye ni yule mvulana kwenye hadithi.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -251,8 +266,8 @@ Magozwe would daydream of being a pilot. Sometimes, he imagined that he was the 
 		<button class="btn btn-lg" id="playbutton07" onclick="playpause('07')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('om','en')" class="btn btn-lg lang-en" title="Switch between Oromo and English">en</button>
-		<button onclick="switchlang('om','sw')" class="btn btn-lg lang-sw" title="Switch between Oromo and Swahili">sw</button>
+		<button onclick="switchlang('om,en','en,sw,om')" class="btn btn-lg lang-primary" title="Switch between Oromo and English">en</button>
+		<button onclick="switchlang('om,sw','en,sw,om')" class="btn btn-lg lang-secondary" title="Switch between Oromo and Swahili">sw</button>
 	</div>
 </div>
 
@@ -265,14 +280,14 @@ Magozwe would daydream of being a pilot. Sometimes, he imagined that he was the 
 	Guyyaan bayee qorraa dha yeroo Magazeeen kara gubba dhabate kadhatu. Namni tokko itti kiiqee akan jedheen," Ashamaa, ani Tomaas jedham. Ani lafa ati waan nyaatu argatutaan hojadha." Namni kunis karkaan gara mana kelloo kan gubbaan isaa dokiyyee ta'ee it agarsisee." Bakka mana sana dhaqtee akka nyaata argatu abdiin qaba?" jedhe gafatee. Magazzenis yeroo tokko gara manichaa yeroo biraa immo gara namichaa ilaale. "Akka tasa," jedhe gara mannicha deeme.
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3>
 	It was cold and Magozwe was standing on the road begging. A man walked up to him. "Hello, I'm Thomas. I work near here, at a place where you can get something to eat," said the man.
 
 He pointed to a yellow house with a blue roof. "I hope you will go there to get some food?" he asked.
 
 Magozwe looked at the man, and then at the house. "Maybe," he said, and walked away.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3>
 	Kulikuwa na baridi na Magozwe alikuwa amesimama barabarani akiomba omba. Mtu alimkaribia. “Hujambo? Naitwa Thomas. Nafanya kazi karibu na hapa, mahali unapoweza kupata kitu cha kula,” mtu yule alisema. Alionyesha nyumba ya njano yenye paa la buluu. “Natumaini utaenda pale kupata chakula kidogo?” Thomas aliuliza. Magozwe alimwangalia yule mtu, kisha akaiangalia ile nyumba. “Labda,” akasema, halafu akaondoka.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -283,8 +298,8 @@ Magozwe looked at the man, and then at the house. "Maybe," he said, and walked a
 		<button class="btn btn-lg" id="playbutton08" onclick="playpause('08')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('om','en')" class="btn btn-lg lang-en" title="Switch between Oromo and English">en</button>
-		<button onclick="switchlang('om','sw')" class="btn btn-lg lang-sw" title="Switch between Oromo and Swahili">sw</button>
+		<button onclick="switchlang('om,en','en,sw,om')" class="btn btn-lg lang-primary" title="Switch between Oromo and English">en</button>
+		<button onclick="switchlang('om,sw','en,sw,om')" class="btn btn-lg lang-secondary" title="Switch between Oromo and Swahili">sw</button>
 	</div>
 </div>
 
@@ -297,12 +312,12 @@ Magozwe looked at the man, and then at the house. "Maybe," he said, and walked a
 	Ji'oota ittiaanan kessatti manadhabeyyni kun Tomaasni walarguu cimsanii qaban. Innis immo namoota wajjiin kessaahu namoota karaa gubbaa jirataniin hasa'u jallata. Senaa namoota dhaggefachu jallata. Tomaas nama amala garii qabuufi nama namaa tufatu mit. Ijoolen tokko tokko gara guyyaa walakaa irrati gara mana kelloo fi doqiyoo sana deemudhan waan nyataan argatan.
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3>
 	Over the months that followed, the homeless boys got used to seeing Thomas around. He liked to talk to people, especially people living on the streets.
 
 Thomas listened to the stories of people's lives. He was serious and patient, never rude or disrespectful. Some of the boys started going to the yellow and blue house to get food at midday.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3>
 	Miezi iliyofuata, wavulana wale wa mtaani walizoea kumwona Thomas hapa na pale. Alipenda kuzungumza na watu, hasa walioishi mitaani. Thomas alisikiliza simulizi za maisha ya watu. Alikuwa makini na mwenye subira, na hakuwa na kiburi wala dharau. Baadhi ya wavulana walianza kwenda kwenye ile nyumba ya njano na buluu ili kupata chakula cha mchana.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -313,8 +328,8 @@ Thomas listened to the stories of people's lives. He was serious and patient, ne
 		<button class="btn btn-lg" id="playbutton09" onclick="playpause('09')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('om','en')" class="btn btn-lg lang-en" title="Switch between Oromo and English">en</button>
-		<button onclick="switchlang('om','sw')" class="btn btn-lg lang-sw" title="Switch between Oromo and Swahili">sw</button>
+		<button onclick="switchlang('om,en','en,sw,om')" class="btn btn-lg lang-primary" title="Switch between Oromo and English">en</button>
+		<button onclick="switchlang('om,sw','en,sw,om')" class="btn btn-lg lang-secondary" title="Switch between Oromo and Swahili">sw</button>
 	</div>
 </div>
 
@@ -327,7 +342,7 @@ Thomas listened to the stories of people's lives. He was serious and patient, ne
 	Yeroo Tomaas dhufee Magozee bira ta'u Magozeen immo kitaaba dubbisa ture. Tomaas akkan jedhe isa gafate, "Seenaa malii dubsitaa?" "Wa'ee mucaa paylata ta'eeti" jedhene Magozee. Tomaas, "Maqaa isaa enyuu jedhe gaafate?" "Anni himbekku, dubbisu hindanda'u," jedhe Magozeen.
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3>
 	Magozwe was sitting on the pavement looking at his picture book when Thomas sat down next to him.
 
 "What is the story about?" asked Thomas.
@@ -338,7 +353,7 @@ Thomas listened to the stories of people's lives. He was serious and patient, ne
 
 "I don't know, I can't read," said Magozwe quietly.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3>
 	Magozwe alikuwa amekaa kando ya barabara akiangalia kitabu chake cha picha Thomas alipokaa pembeni mwake. “Hadithi hiyo inahusu nini?” Thomas akauliza. “Inahusu mvulana aliyekuja kuwa rubani,” Magozwe akajibu. “Jina lake ni nani?” Thomas akauliza. “Sijui, siwezi kusoma,” Magozwe akasema kwa sauti ya chini.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -349,8 +364,8 @@ Thomas listened to the stories of people's lives. He was serious and patient, ne
 		<button class="btn btn-lg" id="playbutton10" onclick="playpause('10')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('om','en')" class="btn btn-lg lang-en" title="Switch between Oromo and English">en</button>
-		<button onclick="switchlang('om','sw')" class="btn btn-lg lang-sw" title="Switch between Oromo and Swahili">sw</button>
+		<button onclick="switchlang('om,en','en,sw,om')" class="btn btn-lg lang-primary" title="Switch between Oromo and English">en</button>
+		<button onclick="switchlang('om,sw','en,sw,om')" class="btn btn-lg lang-secondary" title="Switch between Oromo and Swahili">sw</button>
 	</div>
 </div>
 
@@ -363,14 +378,14 @@ Thomas listened to the stories of people's lives. He was serious and patient, ne
 	Yeroo walqunnaman Magozee seenaa mataa isaa Tomaasiti himuu calaqabee. Seenaan isaas wa'ee essuma isaatif akka inni itti mana bahee ilaalchisee ture. Tomaas bayee hindubbannes waan Magozeen godhuu qabuus itti hinmnee. Yeroo tokko tokko manaa nyataa kelloo sanaa kessati hasa'u.
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3>
 	When they met, Magozwe began to tell his own story to Thomas. It was the story of his uncle and why he ran away.
 
 Thomas didn't talk a lot, and he didn't tell Magozwe what to do, but he always listened carefully.
 
 Sometimes they would talk while they ate at the house with the blue roof.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3>
 	Walipokutana, Magozwe alianza kumsimulia Thomas maisha yake. Alimwelezea kuhusu mjomba wake na sababu zilizomfanya atoroke. Thomas hakuongea sana, wala hakumwambia Magozwe nini cha kufanya, bali alisikiliza kwa makini kila mara. Wakati mwingine waliongea wakiwa wanakula kwenye ile nyumba yenye paa la buluu.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -381,8 +396,8 @@ Sometimes they would talk while they ate at the house with the blue roof.
 		<button class="btn btn-lg" id="playbutton11" onclick="playpause('11')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('om','en')" class="btn btn-lg lang-en" title="Switch between Oromo and English">en</button>
-		<button onclick="switchlang('om','sw')" class="btn btn-lg lang-sw" title="Switch between Oromo and Swahili">sw</button>
+		<button onclick="switchlang('om,en','en,sw,om')" class="btn btn-lg lang-primary" title="Switch between Oromo and English">en</button>
+		<button onclick="switchlang('om,sw','en,sw,om')" class="btn btn-lg lang-secondary" title="Switch between Oromo and Swahili">sw</button>
 	</div>
 </div>
 
@@ -395,12 +410,12 @@ Sometimes they would talk while they ate at the house with the blue roof.
 	Woggaa kurnaffa Magozee irrati, Tomaas kitaaba seenaa tokko kennef. Kitaabichis wa'ee mucaa badiyya tokko kan guddate taphaata kubba milaa ta'eedha. Tomaasis seenaa kana yeroo bayee dubbiseef, akkan jedheen, Amma yeroo ati mana barmusaa dhaqixee dubbisufi barressu barrachuu qabdu dha. Mal yaddaa jedhee gafatee?" Tomaasis lafaa ijoolen itti dhaqxee barattu itti ibsee.
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3>
 	Around Magozwe's tenth birthday, Thomas gave him a new storybook. It was a story about a village boy who grew up to be a famous soccer player.
 
 Thomas read that story to Magozwe many times, until one day he said, "I think it's time you went to school and learned to read. What do you think?" Thomas explained that he knew of a place where children could stay, and go to school.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3>
 	Mnamo mwaka wa kumi wa kuzaliwa kwa Magozwe, Thomas alimzawadia kitabu kipya cha hadithi. Ilikuwa ni hadithi inayohusu mvulana wa kijijini aliyekuja kuwa mcheza mpira maarufu. Thomas alimsomea Magozwe hadithi hiyo mara nyingi, mpaka siku moja akasema, “Nafikiri wakati umewadia wa kwenda shule kujifunza kusoma. Unaonaje?” Thomas alieleza kwamba anajua sehemu ambayo watoto wanaweza kuishi na kwenda shule.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -411,8 +426,8 @@ Thomas read that story to Magozwe many times, until one day he said, "I think it
 		<button class="btn btn-lg" id="playbutton12" onclick="playpause('12')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('om','en')" class="btn btn-lg lang-en" title="Switch between Oromo and English">en</button>
-		<button onclick="switchlang('om','sw')" class="btn btn-lg lang-sw" title="Switch between Oromo and Swahili">sw</button>
+		<button onclick="switchlang('om,en','en,sw,om')" class="btn btn-lg lang-primary" title="Switch between Oromo and English">en</button>
+		<button onclick="switchlang('om,sw','en,sw,om')" class="btn btn-lg lang-secondary" title="Switch between Oromo and Swahili">sw</button>
 	</div>
 </div>
 
@@ -425,12 +440,12 @@ Thomas read that story to Magozwe many times, until one day he said, "I think it
 	Magozeenis wa'ee iddoo hara'a kana fi wa'ee gara mana barnoota deemu ittiyada ture. Yoo wanti essumni isaa jedhe sirri ta'e garuu inni barachuu hodadhabee? Yoo lafa hara'a kanati issa rukutan? Bayee sodaate. "Gara gubba jirachu wayya ta'a jedhe yaade."
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3>
 	Magozwe thought about this new place, and about going to school. What if his uncle was right and he was too stupid to learn anything?
 
 What if they beat him at this new place? He was afraid. "Maybe it is better to stay living on the street," he thought.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3>
 	Magozwe alifikiria kuhusu sehemu hii mpya, na kuhusu kwenda shule. Itakuwaje kama mjomba wake alikuwa sahihi kwamba alikuwa mjinga kiasi cha kutoweza kujifunza chochote? Itakuwaje kama watampiga sehemu hii mpya? Aliogopa. “Labda ni heri kuendelea kuishi mtaani,” aliwaza.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -441,8 +456,8 @@ What if they beat him at this new place? He was afraid. "Maybe it is better to s
 		<button class="btn btn-lg" id="playbutton13" onclick="playpause('13')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('om','en')" class="btn btn-lg lang-en" title="Switch between Oromo and English">en</button>
-		<button onclick="switchlang('om','sw')" class="btn btn-lg lang-sw" title="Switch between Oromo and Swahili">sw</button>
+		<button onclick="switchlang('om,en','en,sw,om')" class="btn btn-lg lang-primary" title="Switch between Oromo and English">en</button>
+		<button onclick="switchlang('om,sw','en,sw,om')" class="btn btn-lg lang-secondary" title="Switch between Oromo and Swahili">sw</button>
 	</div>
 </div>
 
@@ -455,10 +470,10 @@ What if they beat him at this new place? He was afraid. "Maybe it is better to s
 	Sodaa isas Tomaasit himee. Yeroo dheera booda Tomaas jiruun lafa hara'a kanati mishaa akka ta'u itti hime.
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3>
 	He shared his fears with Thomas. Over time the man reassured the boy that life could be better at the new place.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3>
 	Alimshirikisha Thomas juu ya hofu aliyokuwa nayo. Baada ya muda Thomas alimhakikishia kwamba maisha yatakuwa bora huko sehemu mpya.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -469,8 +484,8 @@ What if they beat him at this new place? He was afraid. "Maybe it is better to s
 		<button class="btn btn-lg" id="playbutton14" onclick="playpause('14')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('om','en')" class="btn btn-lg lang-en" title="Switch between Oromo and English">en</button>
-		<button onclick="switchlang('om','sw')" class="btn btn-lg lang-sw" title="Switch between Oromo and Swahili">sw</button>
+		<button onclick="switchlang('om,en','en,sw,om')" class="btn btn-lg lang-primary" title="Switch between Oromo and English">en</button>
+		<button onclick="switchlang('om,sw','en,sw,om')" class="btn btn-lg lang-secondary" title="Switch between Oromo and Swahili">sw</button>
 	</div>
 </div>
 
@@ -483,12 +498,12 @@ What if they beat him at this new place? He was afraid. "Maybe it is better to s
 	Haaluma kanan Magozeen lafa hara'a sana dhaqee mana doqiyye sana kessa gale. Namoota lama wajjiin kutaa tokko kessaa walwajjiin jiratan. walmaa galatti ijoolee 10 mana sana kessa gala. Anitee, sisii fi abbaa manaa ishee, saree 3 fi addurre tokko fi ra'ee dullooma taokko mana sana kessa gala.
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3>
 	And so Magozwe moved into a room in a house with a green roof. He shared the room with two other boys.
 
 Altogether there were ten children living at that house. Along with Auntie Cissy and her husband, three dogs, a cat, and an old goat.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3>
 	Kwa hiyo Magozwe alihamia kwenye chumba katika nyumba yenye paa la kijani. Alikaa chumba kimoja na wavulana wengine wawili. Kwa ujumla kulikuwa na watoto kumi walioishi kwenye nyumba ile. Waliishi pamoja na Shangazi Cissy na mume wake, mbwa watatu, paka mmoja, na mbuzi aliyezeeka.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -499,8 +514,8 @@ Altogether there were ten children living at that house. Along with Auntie Cissy
 		<button class="btn btn-lg" id="playbutton15" onclick="playpause('15')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('om','en')" class="btn btn-lg lang-en" title="Switch between Oromo and English">en</button>
-		<button onclick="switchlang('om','sw')" class="btn btn-lg lang-sw" title="Switch between Oromo and Swahili">sw</button>
+		<button onclick="switchlang('om,en','en,sw,om')" class="btn btn-lg lang-primary" title="Switch between Oromo and English">en</button>
+		<button onclick="switchlang('om,sw','en,sw,om')" class="btn btn-lg lang-secondary" title="Switch between Oromo and Swahili">sw</button>
 	</div>
 </div>
 
@@ -513,12 +528,12 @@ Altogether there were ten children living at that house. Along with Auntie Cissy
 	Magozeen barmusaa calqabee garu barmusi itti cimee. Bayee dubati hafee ture. Yeroo tokko tokko dhisulee yaada. Garuu wa'ee paylata fi taphaata kubbaa milaa yeroo yaddu immo yada isaa jijjira. Mana barmusaa kessaa hinbanee.
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3>
 	Magozwe started school and it was difficult. He had a lot to catch up. Sometimes he wanted to give up.
 
 But he thought about the pilot and the soccer player in the storybooks. Like them, he did not give up.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3>
 	Magozwe alianza shule na ilikuwa ngumu. Alikuwa na mengi ya kujifunza. Mara nyingine alitaka kukata tamaa. Lakini aliwaza kuhusu rubani na mcheza mpira kwenye vitabu vya hadithi. Kama wao, hakukata tamaa.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -529,8 +544,8 @@ But he thought about the pilot and the soccer player in the storybooks. Like the
 		<button class="btn btn-lg" id="playbutton16" onclick="playpause('16')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('om','en')" class="btn btn-lg lang-en" title="Switch between Oromo and English">en</button>
-		<button onclick="switchlang('om','sw')" class="btn btn-lg lang-sw" title="Switch between Oromo and Swahili">sw</button>
+		<button onclick="switchlang('om,en','en,sw,om')" class="btn btn-lg lang-primary" title="Switch between Oromo and English">en</button>
+		<button onclick="switchlang('om,sw','en,sw,om')" class="btn btn-lg lang-secondary" title="Switch between Oromo and Swahili">sw</button>
 	</div>
 </div>
 
@@ -543,7 +558,7 @@ But he thought about the pilot and the soccer player in the storybooks. Like the
 	Magozeen oddoo kessa ta'ee kitaabaa mana magarisaa irra argatee san dubbisaa. Tomaas dhufee mal godhaa jirta jedhe isa gafate. "Wa'ee mal dubistaa?" "Wa'ee mucaa barsiisaa ta'eti," jedhe Magozeen. "Maqaan mucaa sani enyuu dha?" jedhe Tomaas. "Maqaan isaa, Magozee," jedhama.
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3>
 	Magozwe was sitting in the yard at the house with the green roof, reading a storybook from school. Thomas came up and sat next to him.
 
 "What is the story about?" asked Thomas.
@@ -554,7 +569,7 @@ But he thought about the pilot and the soccer player in the storybooks. Like the
 
 "His name is Magozwe," said Magozwe with a smile.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3>
 	Magozwe alikuwa amekaa uani kwenye nyumba yenye paa la kijani, akisoma kitabu cha hadithi cha shule. Thomas alikuja na kukaa kando yake. “Hadithi inahusu nini?” Thomas akauliza. “Inahusu mvulana aliyekuja kuwa mwalimu,” Magozwe akajibu. “Jina lake ni nani?” akauliza Thomas. “Jina lake ni Magozwe,” Magozwe akasema kwa tabasamu.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -565,8 +580,8 @@ But he thought about the pilot and the soccer player in the storybooks. Like the
 		<button class="btn btn-lg" id="playbutton17" onclick="playpause('17')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('om','en')" class="btn btn-lg lang-en" title="Switch between Oromo and English">en</button>
-		<button onclick="switchlang('om','sw')" class="btn btn-lg lang-sw" title="Switch between Oromo and Swahili">sw</button>
+		<button onclick="switchlang('om,en','en,sw,om')" class="btn btn-lg lang-primary" title="Switch between Oromo and English">en</button>
+		<button onclick="switchlang('om,sw','en,sw,om')" class="btn btn-lg lang-secondary" title="Switch between Oromo and Swahili">sw</button>
 	</div>
 </div>
 
@@ -587,7 +602,6 @@ But he thought about the pilot and the soccer player in the storybooks. Like the
 	</div>
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12">
 		<h5>Read more <a href="/storybooks-kenya/stories/om/level5">level 5</a> stories:</h5>
-			<label class="chip"><a href="/storybooks-kenya/stories/om/0052/">Simbagwayir</a></label>
 	</div>
 </div>
 <div>

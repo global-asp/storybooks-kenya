@@ -4,9 +4,16 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="icon" href="/storybooks-kenya/favicon.ico?v=3" />
+	<link rel="apple-touch-icon" sizes="180x180" href="/storybooks-kenya/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/storybooks-kenya/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/storybooks-kenya/favicon-16x16.png">
+	<link rel="manifest" href="/storybooks-kenya/site.webmanifest">
+	<link rel="mask-icon" href="/storybooks-kenya/safari-pinned-tab.svg" color="#5bbad5">
+	<link rel="shortcut icon" href=/storybooks-kenya/favicon.ico?v=4">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
 	<title>Mbui, Ngiti na Ng'ombe - Storybooks Kenya</title>
-	<meta name="description" content="Storybooks Kenya is designed specifically for teachers and makes 40 stories from the African Storybook available in English and Swahili, as well as all the major regional and immigrant languages of Kenya (with text and audio in Amharic, Arabic, Embu / Kîembu, English, Gujarati, Ekegusii, Kamba / Kikamba, Gikuyu / Kikuyu, Kalenjin, Luganda, Olukhayo, Luo / Dholuo, Luhya / Oluluhya, Pokomo / Kipfokomo, Maa / Maasai, Meru / Kimîîru, Giryama / Kigiryama, Oromo / Afaan Oromo, Rendille, Samburu, Somali, Swahili / Kiswahili, and Turkana / Ng‘aturkana).
+	<meta name="description" content="Storybooks Kenya is designed specifically for teachers, parents, and community members. It makes 40 stories from the African Storybook available in English and Swahili, as well as all the major regional and immigrant languages of Kenya (with text and audio in Amharic, Arabic, Embu / Kîembu, English, Gujarati, Ekegusii, Kamba / Kikamba, Gikuyu / Kikuyu, Kalenjin, Luganda, Olukhayo, Luo / Dholuo, Luhya / Oluluhya, Pokomo / Kipfokomo, Maa / Maasai, Meru / Kimîîru, Giryama / Kigiryama, Oromo / Afaan Oromo, Rendille, Samburu, Somali, Swahili / Kiswahili, and Turkana / Ng‘aturkana, among others).
 ">
 	<link rel="stylesheet" href="/storybooks-kenya/css/spectre.min.css">
 	<link rel="stylesheet" href="/storybooks-kenya/css/fontello.min.css">
@@ -22,13 +29,18 @@
         <header class="navbar">
 	<section class="navbar-section">
 		<a href="/storybooks-kenya/" class="navbar-brand">
-			<object type="image/svg+xml" data="/storybooks-kenya/images/sbk_logo.svg" width="100" height="100" border="0"></object>
+			<object type="image/svg+xml" data="/storybooks-kenya/images/sbke_logo.svg" width="100" height="100" border="0"></object>
 		</a>
 		<div class="btn-group btn-group-block">
 			<a href="/storybooks-kenya/" class="btn btn-primary">Home</a>
-			<a href="/storybooks-kenya/about.html" class="btn btn-primary">About us</a>
-			<a href="/storybooks-kenya/how-to.html" class="btn btn-primary">How to use this website</a>
-			<a href="/storybooks-kenya/contact.html" class="btn btn-primary">Contact us</a>
+			<div class="dropdown">
+				<a href="#" class="btn btn-primary dropdown-toggle" tabindex="0">About</a>
+				<ul class="menu">
+					<li class="menu-item"><a href="/storybooks-kenya/about">About us</a></li>
+				</ul>
+			</div>
+			<a href="/storybooks-kenya/how-to" class="btn btn-primary">How to use this website</a>
+			<a href="/storybooks-kenya/contact" class="btn btn-primary">Contact us</a>
 		</div>
 	</section>
 </header>
@@ -59,20 +71,23 @@
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0315/01.jpg"></div>
 	<div class=" column col-7 col-lg-12 col-md-12 col-sm-12">
 		<h1><span class="def">Mbui, Ngiti na Ng'ombe</span>
-<span class="en">Sakima's song</span>
-<span class="sw">Wimbo wa Sakima</span>
-			<div class="btn-group">
-				<a href="#text02" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-				<button class="btn btn-lg" id="playbutton" onclick="playpause('')" title="Play/pause"><i class="icon-volume-up"></i></button>
-				<audio id="audio01" onended="resetbutton('01')" src="http://globalstorybooks.net/media/audio/kam/0315/mp3/01.mp3"></audio>
-			</div>
+<span class="l1">Sakima's song</span>
+<span class="l2">Wimbo wa Sakima</span>
+		<div class="btn-group">
+			<a href="#text02" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
+			<button class="btn btn-lg" id="playbutton01" onclick="playpause('01')" title="Play/pause"><i class="icon-volume-up"></i></button>
+			<audio id="audio01" onended="resetbutton('01')" src="http://globalstorybooks.net/media/audio/kam/0315/mp3/01.mp3"></audio>
+			<button onclick="switchlang('kam,en','en,sw,kam')" class="btn btn-lg lang-primary" title="Switch between Kikamba and English">en</button>
+			<button onclick="switchlang('kam,sw','en,sw,kam')" class="btn btn-lg lang-secondary" title="Switch between Kikamba and Swahili">sw</button>
+		</div>
 		</h1>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Written by"><img class="cover-icon" src="/storybooks-kenya/css/pencil.svg" alt="Written by" width="38px"></span> Fabian Wakholi</h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Illustrated by"><img class="cover-icon" src="/storybooks-kenya/css/art.svg" alt="Illustrated by" width="38px"></span> Marleen Visser</h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Translated by"><img class="cover-icon" src="/storybooks-kenya/css/global.svg" alt="Translated by" width="38px"></span> Alice Oghana</h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Language"><img class="cover-icon" src="/storybooks-kenya/css/language.svg" alt="Language" width="38px"></span> <a href="/storybooks-kenya/stories/kam">Kikamba</a></h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Level"><img class="cover-icon" src="/storybooks-kenya/css/level.svg" alt="Level" width="38px"></span> <a href="/storybooks-kenya/stories/kam/level3">Level 3</a></h3>
-		<h3><span class="tooltip tooltip-right" data-tooltip="Narrate story"><img class="cover-icon" src="/storybooks-kenya/css/speaker.svg" alt="Narrate full story" width="38px"></span> <audio id="audioplayer" controls><source src="http://globalstorybooks.net/media/audio/kam/0315/0315.mp3" type="audio/mpeg"></audio></h3>
+		<h3><span class="tooltip tooltip-right" data-tooltip="Narrate story"><img class="cover-icon" src="/storybooks-kenya/css/speaker.svg" alt="Narrate full story" width="38px"></span> <audio id="audioplayer" controls><source src="http://globalstorybooks.net/media/audio/kam/0315/kam-0315_sakima.mp3" type="audio/mpeg"></audio></h3>
+		<h3><span class="tooltip tooltip-right" data-tooltip="Autoplay story (beta - desktop only)"><img id="autoplay_icon" class="cover-icon" src="https://dohliam.github.io/elegant-circles/svg/play.svg" alt="Autoplay story" style="cursor:pointer" width="38px" onclick="autoplay()"></span></h3>
 	</div>
 </div>
 <hr>
@@ -86,14 +101,14 @@ anene.Muthenyia umwe
 maendie kyalo na ngali.
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3>
 	Sakima lived with his parents and his four year old sister.
 
 They lived on a rich man's land.
 
 Their grass-thatched hut was at the end of a row of trees.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3>
 	Sakima aliishi na wazazi wake na dada yake wa miaka minne. Waliishi katika shamba la mtu tajiri. Nyumba yao ya nyasi ilikuwa mwisho wa safu ya miti iliyopendeza.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -104,8 +119,8 @@ Their grass-thatched hut was at the end of a row of trees.
 		<button class="btn btn-lg" id="playbutton02" onclick="playpause('02')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('kam','en')" class="btn btn-lg lang-en" title="Switch between Kikamba and English">en</button>
-		<button onclick="switchlang('kam','sw')" class="btn btn-lg lang-sw" title="Switch between Kikamba and Swahili">sw</button>
+		<button onclick="switchlang('kam,en','en,sw,kam')" class="btn btn-lg lang-primary" title="Switch between Kikamba and English">en</button>
+		<button onclick="switchlang('kam,sw','en,sw,kam')" class="btn btn-lg lang-secondary" title="Switch between Kikamba and Swahili">sw</button>
 	</div>
 </div>
 
@@ -121,12 +136,12 @@ maive tikiti.Ng'ombe
 aiva tikiti wake.
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3>
 	When Sakima was three years old, he fell sick and lost his sight.
 
 Sakima was a talented boy.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3>
 	Sakima alipokuwa na umri wa miaka mitatu, aliugua na kupoteza uwezo wa kuona. Hata hivyo, Sakima alikuwa mvulana mwenye kipaji.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -137,8 +152,8 @@ Sakima was a talented boy.
 		<button class="btn btn-lg" id="playbutton03" onclick="playpause('03')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('kam','en')" class="btn btn-lg lang-en" title="Switch between Kikamba and English">en</button>
-		<button onclick="switchlang('kam','sw')" class="btn btn-lg lang-sw" title="Switch between Kikamba and Swahili">sw</button>
+		<button onclick="switchlang('kam,en','en,sw,kam')" class="btn btn-lg lang-primary" title="Switch between Kikamba and English">en</button>
+		<button onclick="switchlang('kam,sw','en,sw,kam')" class="btn btn-lg lang-secondary" title="Switch between Kikamba and Swahili">sw</button>
 	</div>
 </div>
 
@@ -154,12 +169,12 @@ ndaii na mbesa ila
 syailite.
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3>
 	Sakima did many things that other six year old boys did not do.
 
 For example, he could sit with older members of the village and discuss important matters.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3>
 	Sakima alitenda mambo mengi ambayo wavulana wengine wa umri wake hawakufanya. Kwa mfano, angeketi na watu wazima na kujadili mambo muhimu.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -170,8 +185,8 @@ For example, he could sit with older members of the village and discuss importan
 		<button class="btn btn-lg" id="playbutton04" onclick="playpause('04')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('kam','en')" class="btn btn-lg lang-en" title="Switch between Kikamba and English">en</button>
-		<button onclick="switchlang('kam','sw')" class="btn btn-lg lang-sw" title="Switch between Kikamba and Swahili">sw</button>
+		<button onclick="switchlang('kam,en','en,sw,kam')" class="btn btn-lg lang-primary" title="Switch between Kikamba and English">en</button>
+		<button onclick="switchlang('kam,sw','en,sw,kam')" class="btn btn-lg lang-secondary" title="Switch between Kikamba and Swahili">sw</button>
 	</div>
 </div>
 
@@ -188,14 +203,14 @@ asembete ataivite
 kindu!
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3>
 	The parents of Sakima worked at the rich man's house.
 
 They left home early in the morning and returned late in the evening.
 
 Sakima was left with his little sister.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3>
 	Wazazi wa Sakima walifanya kazi katika nyumba ya yule tajiri. Walitoka nyumbani asubuhi na mapema na kurudi jioni. Sakima aliachwa na dada yake.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -206,8 +221,8 @@ Sakima was left with his little sister.
 		<button class="btn btn-lg" id="playbutton05" onclick="playpause('05')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('kam','en')" class="btn btn-lg lang-en" title="Switch between Kikamba and English">en</button>
-		<button onclick="switchlang('kam','sw')" class="btn btn-lg lang-sw" title="Switch between Kikamba and Swahili">sw</button>
+		<button onclick="switchlang('kam,en','en,sw,kam')" class="btn btn-lg lang-primary" title="Switch between Kikamba and English">en</button>
+		<button onclick="switchlang('kam,sw','en,sw,kam')" class="btn btn-lg lang-secondary" title="Switch between Kikamba and Swahili">sw</button>
 	</div>
 </div>
 
@@ -223,12 +238,12 @@ atanatungia Ngiti
 mbesa sya yuulu.
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3>
 	Sakima loved to sing songs.
 
 One day his mother asked him, "Where do you learn these songs from, Sakima?"
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3>
 	Sakima alipenda kuimba nyimbo. Siku moja mama yake alimuuliza, "Sakima, unajifunza nyimbo hizi kutoka wapi?"
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -239,8 +254,8 @@ One day his mother asked him, "Where do you learn these songs from, Sakima?"
 		<button class="btn btn-lg" id="playbutton06" onclick="playpause('06')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('kam','en')" class="btn btn-lg lang-en" title="Switch between Kikamba and English">en</button>
-		<button onclick="switchlang('kam','sw')" class="btn btn-lg lang-sw" title="Switch between Kikamba and Swahili">sw</button>
+		<button onclick="switchlang('kam,en','en,sw,kam')" class="btn btn-lg lang-primary" title="Switch between Kikamba and English">en</button>
+		<button onclick="switchlang('kam,sw','en,sw,kam')" class="btn btn-lg lang-secondary" title="Switch between Kikamba and Swahili">sw</button>
 	</div>
 </div>
 
@@ -259,10 +274,10 @@ utamutungia mbesa
 syake sya yuulu.
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3>
 	Sakima answered, "They just come, mother. I hear them in my head and then I sing."
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3>
 	Sakima alimjibu, "Nazisikia akilini mwangu kisha naziimba."
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -273,8 +288,8 @@ syake sya yuulu.
 		<button class="btn btn-lg" id="playbutton07" onclick="playpause('07')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('kam','en')" class="btn btn-lg lang-en" title="Switch between Kikamba and English">en</button>
-		<button onclick="switchlang('kam','sw')" class="btn btn-lg lang-sw" title="Switch between Kikamba and Swahili">sw</button>
+		<button onclick="switchlang('kam,en','en,sw,kam')" class="btn btn-lg lang-primary" title="Switch between Kikamba and English">en</button>
+		<button onclick="switchlang('kam,sw','en,sw,kam')" class="btn btn-lg lang-secondary" title="Switch between Kikamba and Swahili">sw</button>
 	</div>
 </div>
 
@@ -291,14 +306,14 @@ ndakakwatwe nundu wa
 ulea iva tikiti wake.
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3>
 	Sakima liked to sing for his little sister, especially, if she felt hungry.
 
 His sister would listen to him singing his favourite song.
 
 She would sway to the soothing tune.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3>
 	Sakima alipenda kumwimbia mdogo wake hasa akihisi njaa. Dada yake alimsikiliza na kucheza.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -309,8 +324,8 @@ She would sway to the soothing tune.
 		<button class="btn btn-lg" id="playbutton08" onclick="playpause('08')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('kam','en')" class="btn btn-lg lang-en" title="Switch between Kikamba and English">en</button>
-		<button onclick="switchlang('kam','sw')" class="btn btn-lg lang-sw" title="Switch between Kikamba and Swahili">sw</button>
+		<button onclick="switchlang('kam,en','en,sw,kam')" class="btn btn-lg lang-primary" title="Switch between Kikamba and English">en</button>
+		<button onclick="switchlang('kam,sw','en,sw,kam')" class="btn btn-lg lang-secondary" title="Switch between Kikamba and Swahili">sw</button>
 	</div>
 </div>
 
@@ -328,12 +343,12 @@ nzia nundu niwaivie
 tikiti wake wonze!
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3>
 	"Can you sing it again and again, Sakima," his sister would beg him.
 
 Sakima would accept and sing it over and over again.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3>
 	"Naomba uimbe tena na tena, Sakima," mdogo wake alimsihi. Sakima alikubali na kuimba mara nyingine.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -344,8 +359,8 @@ Sakima would accept and sing it over and over again.
 		<button class="btn btn-lg" id="playbutton09" onclick="playpause('09')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('kam','en')" class="btn btn-lg lang-en" title="Switch between Kikamba and English">en</button>
-		<button onclick="switchlang('kam','sw')" class="btn btn-lg lang-sw" title="Switch between Kikamba and Swahili">sw</button>
+		<button onclick="switchlang('kam,en','en,sw,kam')" class="btn btn-lg lang-primary" title="Switch between Kikamba and English">en</button>
+		<button onclick="switchlang('kam,sw','en,sw,kam')" class="btn btn-lg lang-secondary" title="Switch between Kikamba and Swahili">sw</button>
 	</div>
 </div>
 
@@ -366,8 +381,6 @@ Sakima would accept and sing it over and over again.
 	</div>
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12">
 		<h5>Read more <a href="/storybooks-kenya/stories/kam/level3">level 3</a> stories:</h5>
-			<label class="chip"><a href="/storybooks-kenya/stories/kam/0066/">Nonzimbele na Nzwĩĩ Itatũ</a></label>
-			<label class="chip"><a href="/storybooks-kenya/stories/kam/0006/">Ananzi na ũĩ</a></label>
 	</div>
 </div>
 <div>

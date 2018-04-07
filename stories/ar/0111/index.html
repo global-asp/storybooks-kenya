@@ -4,9 +4,16 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="icon" href="/storybooks-kenya/favicon.ico?v=3" />
+	<link rel="apple-touch-icon" sizes="180x180" href="/storybooks-kenya/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/storybooks-kenya/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/storybooks-kenya/favicon-16x16.png">
+	<link rel="manifest" href="/storybooks-kenya/site.webmanifest">
+	<link rel="mask-icon" href="/storybooks-kenya/safari-pinned-tab.svg" color="#5bbad5">
+	<link rel="shortcut icon" href=/storybooks-kenya/favicon.ico?v=4">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
 	<title>لِمَاذَا لاَ تَمْلِكُ أَفْرَاسُ اَلْنَّهْرِ شَعْراً - Storybooks Kenya</title>
-	<meta name="description" content="Storybooks Kenya is designed specifically for teachers and makes 40 stories from the African Storybook available in English and Swahili, as well as all the major regional and immigrant languages of Kenya (with text and audio in Amharic, Arabic, Embu / Kîembu, English, Gujarati, Ekegusii, Kamba / Kikamba, Gikuyu / Kikuyu, Kalenjin, Luganda, Olukhayo, Luo / Dholuo, Luhya / Oluluhya, Pokomo / Kipfokomo, Maa / Maasai, Meru / Kimîîru, Giryama / Kigiryama, Oromo / Afaan Oromo, Rendille, Samburu, Somali, Swahili / Kiswahili, and Turkana / Ng‘aturkana).
+	<meta name="description" content="Storybooks Kenya is designed specifically for teachers, parents, and community members. It makes 40 stories from the African Storybook available in English and Swahili, as well as all the major regional and immigrant languages of Kenya (with text and audio in Amharic, Arabic, Embu / Kîembu, English, Gujarati, Ekegusii, Kamba / Kikamba, Gikuyu / Kikuyu, Kalenjin, Luganda, Olukhayo, Luo / Dholuo, Luhya / Oluluhya, Pokomo / Kipfokomo, Maa / Maasai, Meru / Kimîîru, Giryama / Kigiryama, Oromo / Afaan Oromo, Rendille, Samburu, Somali, Swahili / Kiswahili, and Turkana / Ng‘aturkana, among others).
 ">
 	<link rel="stylesheet" href="/storybooks-kenya/css/spectre.min.css">
 	<link rel="stylesheet" href="/storybooks-kenya/css/fontello.min.css">
@@ -22,13 +29,18 @@
         <header class="navbar">
 	<section class="navbar-section">
 		<a href="/storybooks-kenya/" class="navbar-brand">
-			<object type="image/svg+xml" data="/storybooks-kenya/images/sbk_logo.svg" width="100" height="100" border="0"></object>
+			<object type="image/svg+xml" data="/storybooks-kenya/images/sbke_logo.svg" width="100" height="100" border="0"></object>
 		</a>
 		<div class="btn-group btn-group-block">
 			<a href="/storybooks-kenya/" class="btn btn-primary">Home</a>
-			<a href="/storybooks-kenya/about.html" class="btn btn-primary">About us</a>
-			<a href="/storybooks-kenya/how-to.html" class="btn btn-primary">How to use this website</a>
-			<a href="/storybooks-kenya/contact.html" class="btn btn-primary">Contact us</a>
+			<div class="dropdown">
+				<a href="#" class="btn btn-primary dropdown-toggle" tabindex="0">About</a>
+				<ul class="menu">
+					<li class="menu-item"><a href="/storybooks-kenya/about">About us</a></li>
+				</ul>
+			</div>
+			<a href="/storybooks-kenya/how-to" class="btn btn-primary">How to use this website</a>
+			<a href="/storybooks-kenya/contact" class="btn btn-primary">Contact us</a>
 		</div>
 	</section>
 </header>
@@ -59,13 +71,15 @@
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0111/01.jpg"></div>
 	<div class=" column col-7 col-lg-12 col-md-12 col-sm-12">
 		<h1 dir="rtl"><span class="def">لِمَاذَا لاَ تَمْلِكُ أَفْرَاسُ اَلْنَّهْرِ شَعْراً</span>
-<span dir="ltr" class="en">Why hippos have no hair</span>
-<span dir="ltr" class="sw">Kwanini Viboko Hawana Nywele</span>
-			<div class="btn-group">
-				<a href="#text02" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-				<button class="btn btn-lg" id="playbutton" onclick="playpause('')" title="Play/pause"><i class="icon-volume-up"></i></button>
-				<audio id="audio01" onended="resetbutton('01')" src="http://globalstorybooks.net/media/audio/ar/0111/mp3/01.mp3"></audio>
-			</div>
+<span class="l1">Why hippos have no hair</span>
+<span class="l2">Kwanini Viboko Hawana Nywele</span>
+		<div class="btn-group">
+			<a href="#text02" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
+			<button class="btn btn-lg" id="playbutton01" onclick="playpause('01')" title="Play/pause"><i class="icon-volume-up"></i></button>
+			<audio id="audio01" onended="resetbutton('01')" src="http://globalstorybooks.net/media/audio/ar/0111/mp3/01.mp3"></audio>
+			<button onclick="switchlang('ar,en','en,sw,ar')" class="btn btn-lg lang-primary" title="Switch between Arabic and English">en</button>
+			<button onclick="switchlang('ar,sw','en,sw,ar')" class="btn btn-lg lang-secondary" title="Switch between Arabic and Swahili">sw</button>
+		</div>
 		</h1>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Written by"><img class="cover-icon" src="/storybooks-kenya/css/pencil.svg" alt="Written by" width="38px"></span> Basilio Gimo, David Ker</h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Illustrated by"><img class="cover-icon" src="/storybooks-kenya/css/art.svg" alt="Illustrated by" width="38px"></span> Carol Liddiment</h3>
@@ -73,7 +87,8 @@
 		<h3><span class="tooltip tooltip-right" data-tooltip="Read by"><img class="cover-icon" src="/storybooks-kenya/css/megaphone.svg" alt="Read by" width="38px"></span> Mashael Muhanna</h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Language"><img class="cover-icon" src="/storybooks-kenya/css/language.svg" alt="Language" width="38px"></span> <a href="/storybooks-kenya/stories/ar">Arabic</a></h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Level"><img class="cover-icon" src="/storybooks-kenya/css/level.svg" alt="Level" width="38px"></span> <a href="/storybooks-kenya/stories/ar/level2">Level 2</a></h3>
-		<h3><span class="tooltip tooltip-right" data-tooltip="Narrate story"><img class="cover-icon" src="/storybooks-kenya/css/speaker.svg" alt="Narrate full story" width="38px"></span> <audio id="audioplayer" controls><source src="http://globalstorybooks.net/media/audio/ar/0111/0111.mp3" type="audio/mpeg"></audio></h3>
+		<h3><span class="tooltip tooltip-right" data-tooltip="Narrate story"><img class="cover-icon" src="/storybooks-kenya/css/speaker.svg" alt="Narrate full story" width="38px"></span> <audio id="audioplayer" controls><source src="http://globalstorybooks.net/media/audio/ar/0111/ar-0111_hippos.mp3" type="audio/mpeg"></audio></h3>
+		<h3><span class="tooltip tooltip-right" data-tooltip="Autoplay story (beta - desktop only)"><img id="autoplay_icon" class="cover-icon" src="https://dohliam.github.io/elegant-circles/svg/play.svg" alt="Autoplay story" style="cursor:pointer" width="38px" onclick="autoplay()"></span></h3>
 	</div>
 </div>
 <hr>
@@ -84,10 +99,10 @@
 	فِي أَحَدِ اَلْأَيَّامِ، كَانَ أَرْنَبٌ يَمْشِي بِاْلْقُرْبِ مِنْ حَافَةِ النَّهْرِ.
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3 dir="rtl">
 	One day, Rabbit was walking by the riverside.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3 dir="rtl">
 	Siku moja, Sungura alikuwa akitembea pembeni ya mto.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -98,8 +113,8 @@
 		<button class="btn btn-lg" id="playbutton02" onclick="playpause('02')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('ar','en')" class="btn btn-lg lang-en" title="Switch between Arabic and English">en</button>
-		<button onclick="switchlang('ar','sw')" class="btn btn-lg lang-sw" title="Switch between Arabic and Swahili">sw</button>
+		<button onclick="switchlang('ar,en','en,sw,ar')" class="btn btn-lg lang-primary" title="Switch between Arabic and English">en</button>
+		<button onclick="switchlang('ar,sw','en,sw,ar')" class="btn btn-lg lang-secondary" title="Switch between Arabic and Swahili">sw</button>
 	</div>
 </div>
 
@@ -112,10 +127,10 @@
 	كَانَ هُنَاكَ أَيْضًا فَرَسُ نَهْرٍ جَاءَتْ في نُزْهَةٍ، وَكَانَتْ تَأْكُلُ بَعْضَ العُشْبِ الأَخْضَرِ اللَّذِيذِ.
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3 dir="rtl">
 	Hippo was there too, going for a stroll and eating some nice green grass.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3 dir="rtl">
 	Kiboko alikuwepo pia, akitembea huku akila majani mazuri ya kijani.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -126,8 +141,8 @@
 		<button class="btn btn-lg" id="playbutton03" onclick="playpause('03')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('ar','en')" class="btn btn-lg lang-en" title="Switch between Arabic and English">en</button>
-		<button onclick="switchlang('ar','sw')" class="btn btn-lg lang-sw" title="Switch between Arabic and Swahili">sw</button>
+		<button onclick="switchlang('ar,en','en,sw,ar')" class="btn btn-lg lang-primary" title="Switch between Arabic and English">en</button>
+		<button onclick="switchlang('ar,sw','en,sw,ar')" class="btn btn-lg lang-secondary" title="Switch between Arabic and Swahili">sw</button>
 	</div>
 </div>
 
@@ -141,12 +156,12 @@
 صَرَخَ الأرْنَبُ بِوَجْهِ فَرَسِ اَلْنَّهْر، "أَنْتِ يَا فَرَسَ اَلْنَّهْرِ! أَلاَ تَرَيْنَ أَنَّكِ دُسْتِ عَلَى قَدَمِي؟"
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3 dir="rtl">
 	Hippo didn't see that Rabbit was there and she accidentally stepped on Rabbit's foot.
 
 Rabbit started screaming at Hippo, "You Hippo! Can't you see that you're stepping on my foot?"
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3 dir="rtl">
 	Kiboko hakumwona Sungura na kwa bahati mbaya akaukanyaga mguu wa Sungura. Sungura akaanza kumpigia Kiboko kelele. "We Kiboko huoni kama umeukanyaga mguu wangu?"
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -157,8 +172,8 @@ Rabbit started screaming at Hippo, "You Hippo! Can't you see that you're steppin
 		<button class="btn btn-lg" id="playbutton04" onclick="playpause('04')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('ar','en')" class="btn btn-lg lang-en" title="Switch between Arabic and English">en</button>
-		<button onclick="switchlang('ar','sw')" class="btn btn-lg lang-sw" title="Switch between Arabic and Swahili">sw</button>
+		<button onclick="switchlang('ar,en','en,sw,ar')" class="btn btn-lg lang-primary" title="Switch between Arabic and English">en</button>
+		<button onclick="switchlang('ar,sw','en,sw,ar')" class="btn btn-lg lang-secondary" title="Switch between Arabic and Swahili">sw</button>
 	</div>
 </div>
 
@@ -172,12 +187,12 @@ Rabbit started screaming at Hippo, "You Hippo! Can't you see that you're steppin
 لَكِنَّ الأَرْنَبَ لَمْ يَسْمَعْ كَلاَمَهَا وَصَرَخَ بِهَا، "أَنْتِ قَصَدْتِ هَذَا وَسَتَدْفَعِينَ اَلثَّمَنَ"!
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3 dir="rtl">
 	Hippo apologised to Rabbit, "I'm so sorry. I didn't see you. Please forgive me!"
 
 But Rabbit wouldn't listen and he shouted at Hippo, "You did that on purpose! Someday, you'll see! You're going to pay!"
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3 dir="rtl">
 	Kiboko akamwomba Sungura msamaha, "Samahani, sikukuona, tafadhali nisamehe!" Lakini Sungura hakukubali na akaendelea kumbwatukia Kiboko, "Umefanya makusudi! Kuna siku utakiona, na nitakulipizia!"
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -188,8 +203,8 @@ But Rabbit wouldn't listen and he shouted at Hippo, "You did that on purpose! So
 		<button class="btn btn-lg" id="playbutton05" onclick="playpause('05')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('ar','en')" class="btn btn-lg lang-en" title="Switch between Arabic and English">en</button>
-		<button onclick="switchlang('ar','sw')" class="btn btn-lg lang-sw" title="Switch between Arabic and Swahili">sw</button>
+		<button onclick="switchlang('ar,en','en,sw,ar')" class="btn btn-lg lang-primary" title="Switch between Arabic and English">en</button>
+		<button onclick="switchlang('ar,sw','en,sw,ar')" class="btn btn-lg lang-secondary" title="Switch between Arabic and Swahili">sw</button>
 	</div>
 </div>
 
@@ -202,12 +217,12 @@ But Rabbit wouldn't listen and he shouted at Hippo, "You did that on purpose! So
 	ذَهَبَ اَلأَرْنَبُ ليَبْحَثَ عَنِ النّار وَقَالَ، "اِذْهَبِي وَاَحْرِقِي فَرَسَ اَلْنًّهْرِ عِنْدَمَا تَأْتِ إِلَى المَاءِ لِتَأْكُلَ اَلْعُشْبَ لِأَنَّهَا دَاسَتْ عَلَيَّ". أَجَابَتْهُ النَّارُ، "سَأَفْعَلُ مَا طَلَبتَ مِنِّي يَا صَدِيقِي".
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3 dir="rtl">
 	Rabbit went to find Fire and said, "Go, burn Hippo when she comes out of the water to eat grass. She stepped on me!"
 
 Fire answered, "No problem, Rabbit, my friend. I'll do just what you ask."
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3 dir="rtl">
 	Sungura alienda kutafuta moto na akamwambia, "Nenda, ukamchome Kiboko akitoka majini kuja kula majani. Alinikanyaga!" Moto ukajibu, "Hakuna tatizo, rafiki yangu Sungura, nitafanya ulichoniomba kufanya."
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -218,8 +233,8 @@ Fire answered, "No problem, Rabbit, my friend. I'll do just what you ask."
 		<button class="btn btn-lg" id="playbutton06" onclick="playpause('06')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('ar','en')" class="btn btn-lg lang-en" title="Switch between Arabic and English">en</button>
-		<button onclick="switchlang('ar','sw')" class="btn btn-lg lang-sw" title="Switch between Arabic and Swahili">sw</button>
+		<button onclick="switchlang('ar,en','en,sw,ar')" class="btn btn-lg lang-primary" title="Switch between Arabic and English">en</button>
+		<button onclick="switchlang('ar,sw','en,sw,ar')" class="btn btn-lg lang-secondary" title="Switch between Arabic and Swahili">sw</button>
 	</div>
 </div>
 
@@ -232,10 +247,10 @@ Fire answered, "No problem, Rabbit, my friend. I'll do just what you ask."
 	وَبَعْدَ ذَلِكَ بَيْنَمَا كَانَتْ فَرَسُ اَلنَّهْرِ تَأْكُلُ اَلْعُشْبَ، اِنْدَلَعَتِ النِّيرَانُ وَبَدَأَتْ بِحَرْقِ شَعْرِ فَرَسِ اَلنَّهْرِ.
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3 dir="rtl">
 	Later, Hippo was eating grass far from the river when, "Whoosh!" Fire burst into flame. The flames began to burn Hippo's hair.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3 dir="rtl">
 	Baadaye, Kiboko alikuwa akila majani mbali na mto, aliposhtuka moto umelipuka. Miale ya moto ikaanza kuzichoma nywele za Kiboko.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -246,8 +261,8 @@ Fire answered, "No problem, Rabbit, my friend. I'll do just what you ask."
 		<button class="btn btn-lg" id="playbutton07" onclick="playpause('07')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('ar','en')" class="btn btn-lg lang-en" title="Switch between Arabic and English">en</button>
-		<button onclick="switchlang('ar','sw')" class="btn btn-lg lang-sw" title="Switch between Arabic and Swahili">sw</button>
+		<button onclick="switchlang('ar,en','en,sw,ar')" class="btn btn-lg lang-primary" title="Switch between Arabic and English">en</button>
+		<button onclick="switchlang('ar,sw','en,sw,ar')" class="btn btn-lg lang-secondary" title="Switch between Arabic and Swahili">sw</button>
 	</div>
 </div>
 
@@ -261,12 +276,12 @@ Fire answered, "No problem, Rabbit, my friend. I'll do just what you ask."
 ظَلَّت فَرَسُ اَلنَّهْرِ تَبْكِي، "لَقَدْ اِحْتَرَقَ كُلُّ شَعْري بِالنَّارِ، لَقَدْ أَحْرَقْتِ كُلَّ شَعْري ذَهَبَ كُلُّ شَعْرِي! شَعْرِي اَلجَمِيلُ، شَعْرِي اَلْجَميلُ"!
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3 dir="rtl">
 	Hippo started to cry and ran for the water. All her hair was burned off by the fire.
 
 Hippo kept crying, "My hair has burned in the fire! My hair is all gone! My beautiful hair!"
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3 dir="rtl">
 	Kiboko akaanza kulia na kukimbilia kwenye maji. Nywele zake zote zilikuwa zimeungua na moto. Kiboko aliendelea kulia, "Nywele zangu zimeungua na moto! Nywele zangu zote zimeisha! Nywele zangu nzuri!"
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -277,8 +292,8 @@ Hippo kept crying, "My hair has burned in the fire! My hair is all gone! My beau
 		<button class="btn btn-lg" id="playbutton08" onclick="playpause('08')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('ar','en')" class="btn btn-lg lang-en" title="Switch between Arabic and English">en</button>
-		<button onclick="switchlang('ar','sw')" class="btn btn-lg lang-sw" title="Switch between Arabic and Swahili">sw</button>
+		<button onclick="switchlang('ar,en','en,sw,ar')" class="btn btn-lg lang-primary" title="Switch between Arabic and English">en</button>
+		<button onclick="switchlang('ar,sw','en,sw,ar')" class="btn btn-lg lang-secondary" title="Switch between Arabic and Swahili">sw</button>
 	</div>
 </div>
 
@@ -292,12 +307,12 @@ Hippo kept crying, "My hair has burned in the fire! My hair is all gone! My beau
 وَحَتَّى يَوْمِنَا هَذَا، وَخَوْفًا مِنَ النَّارِ، لاَ تَبْتَعِدُ فَرَسُ النَّهْرِ عَنِ المَاءِ أَبَدًا.
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3 dir="rtl">
 	Rabbit was happy that Hippo's hair was burned.
 
 And to this day, for fear of fire, the hippo never goes far from the water.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3 dir="rtl">
 	Sungura alikuwa na furaha kwa kuwa nywele za Kiboko ziliungua. Hadi leo kwa kuogopa moto, Kiboko hawezi kwenda mbali na maji.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -308,8 +323,8 @@ And to this day, for fear of fire, the hippo never goes far from the water.
 		<button class="btn btn-lg" id="playbutton09" onclick="playpause('09')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('ar','en')" class="btn btn-lg lang-en" title="Switch between Arabic and English">en</button>
-		<button onclick="switchlang('ar','sw')" class="btn btn-lg lang-sw" title="Switch between Arabic and Swahili">sw</button>
+		<button onclick="switchlang('ar,en','en,sw,ar')" class="btn btn-lg lang-primary" title="Switch between Arabic and English">en</button>
+		<button onclick="switchlang('ar,sw','en,sw,ar')" class="btn btn-lg lang-secondary" title="Switch between Arabic and Swahili">sw</button>
 	</div>
 </div>
 
@@ -331,16 +346,6 @@ And to this day, for fear of fire, the hippo never goes far from the water.
 	</div>
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12">
 		<h5>Read more <a href="/storybooks-kenya/stories/ar/level2">level 2</a> stories:</h5>
-			<label class="chip"><a href="/storybooks-kenya/stories/ar/0337/">أَطْفَالُ الشَّمْعِ</a></label>
-			<label class="chip"><a href="/storybooks-kenya/stories/ar/0095/">زَامَا المُمَيَّزةْ!</a></label>
-			<label class="chip"><a href="/storybooks-kenya/stories/ar/0089/">خَلَايْ تَتَحَدَّثُ إِلَى النَّبَاتَاتِ</a></label>
-			<label class="chip"><a href="/storybooks-kenya/stories/ar/0027/">القَرَارُ</a></label>
-			<label class="chip"><a href="/storybooks-kenya/stories/ar/0296/">تُومْ، بَائِعُ المَوْزِ</a></label>
-			<label class="chip"><a href="/storybooks-kenya/stories/ar/0210/">تِينْغِي وَ البَقَرُ</a></label>
-			<label class="chip"><a href="/storybooks-kenya/stories/ar/0342/">العِقَابُ</a></label>
-			<label class="chip"><a href="/storybooks-kenya/stories/ar/0004/">المَاعِزُ وَالكَلْبُ وَالبَقَرَةُ</a></label>
-			<label class="chip"><a href="/storybooks-kenya/stories/ar/0234/">أَنْدِيسُوا نَجْمَةُ كُرَةِ اَلقَدَمِ</a></label>
-			<label class="chip"><a href="/storybooks-kenya/stories/ar/0001/">الرَّجُلُ ذُو القَامَةِ الطَّويلَةِ</a></label>
 	</div>
 </div>
 <div>

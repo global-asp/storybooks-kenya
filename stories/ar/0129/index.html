@@ -4,9 +4,16 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="icon" href="/storybooks-kenya/favicon.ico?v=3" />
+	<link rel="apple-touch-icon" sizes="180x180" href="/storybooks-kenya/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/storybooks-kenya/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/storybooks-kenya/favicon-16x16.png">
+	<link rel="manifest" href="/storybooks-kenya/site.webmanifest">
+	<link rel="mask-icon" href="/storybooks-kenya/safari-pinned-tab.svg" color="#5bbad5">
+	<link rel="shortcut icon" href=/storybooks-kenya/favicon.ico?v=4">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
 	<title>الأَخُ الصَّغِيرُ الكَسُولُ - Storybooks Kenya</title>
-	<meta name="description" content="Storybooks Kenya is designed specifically for teachers and makes 40 stories from the African Storybook available in English and Swahili, as well as all the major regional and immigrant languages of Kenya (with text and audio in Amharic, Arabic, Embu / Kîembu, English, Gujarati, Ekegusii, Kamba / Kikamba, Gikuyu / Kikuyu, Kalenjin, Luganda, Olukhayo, Luo / Dholuo, Luhya / Oluluhya, Pokomo / Kipfokomo, Maa / Maasai, Meru / Kimîîru, Giryama / Kigiryama, Oromo / Afaan Oromo, Rendille, Samburu, Somali, Swahili / Kiswahili, and Turkana / Ng‘aturkana).
+	<meta name="description" content="Storybooks Kenya is designed specifically for teachers, parents, and community members. It makes 40 stories from the African Storybook available in English and Swahili, as well as all the major regional and immigrant languages of Kenya (with text and audio in Amharic, Arabic, Embu / Kîembu, English, Gujarati, Ekegusii, Kamba / Kikamba, Gikuyu / Kikuyu, Kalenjin, Luganda, Olukhayo, Luo / Dholuo, Luhya / Oluluhya, Pokomo / Kipfokomo, Maa / Maasai, Meru / Kimîîru, Giryama / Kigiryama, Oromo / Afaan Oromo, Rendille, Samburu, Somali, Swahili / Kiswahili, and Turkana / Ng‘aturkana, among others).
 ">
 	<link rel="stylesheet" href="/storybooks-kenya/css/spectre.min.css">
 	<link rel="stylesheet" href="/storybooks-kenya/css/fontello.min.css">
@@ -22,13 +29,18 @@
         <header class="navbar">
 	<section class="navbar-section">
 		<a href="/storybooks-kenya/" class="navbar-brand">
-			<object type="image/svg+xml" data="/storybooks-kenya/images/sbk_logo.svg" width="100" height="100" border="0"></object>
+			<object type="image/svg+xml" data="/storybooks-kenya/images/sbke_logo.svg" width="100" height="100" border="0"></object>
 		</a>
 		<div class="btn-group btn-group-block">
 			<a href="/storybooks-kenya/" class="btn btn-primary">Home</a>
-			<a href="/storybooks-kenya/about.html" class="btn btn-primary">About us</a>
-			<a href="/storybooks-kenya/how-to.html" class="btn btn-primary">How to use this website</a>
-			<a href="/storybooks-kenya/contact.html" class="btn btn-primary">Contact us</a>
+			<div class="dropdown">
+				<a href="#" class="btn btn-primary dropdown-toggle" tabindex="0">About</a>
+				<ul class="menu">
+					<li class="menu-item"><a href="/storybooks-kenya/about">About us</a></li>
+				</ul>
+			</div>
+			<a href="/storybooks-kenya/how-to" class="btn btn-primary">How to use this website</a>
+			<a href="/storybooks-kenya/contact" class="btn btn-primary">Contact us</a>
 		</div>
 	</section>
 </header>
@@ -59,13 +71,15 @@
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0129/01.jpg"></div>
 	<div class=" column col-7 col-lg-12 col-md-12 col-sm-12">
 		<h1 dir="rtl"><span class="def">الأَخُ الصَّغِيرُ الكَسُولُ</span>
-<span dir="ltr" class="en">Lazy little brother</span>
-<span dir="ltr" class="sw">Mdogo wangu mvivu</span>
-			<div class="btn-group">
-				<a href="#text02" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-				<button class="btn btn-lg" id="playbutton" onclick="playpause('')" title="Play/pause"><i class="icon-volume-up"></i></button>
-				<audio id="audio01" onended="resetbutton('01')" src="http://globalstorybooks.net/media/audio/ar/0129/mp3/01.mp3"></audio>
-			</div>
+<span class="l1">Lazy little brother</span>
+<span class="l2">Mdogo wangu mvivu</span>
+		<div class="btn-group">
+			<a href="#text02" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
+			<button class="btn btn-lg" id="playbutton01" onclick="playpause('01')" title="Play/pause"><i class="icon-volume-up"></i></button>
+			<audio id="audio01" onended="resetbutton('01')" src="http://globalstorybooks.net/media/audio/ar/0129/mp3/01.mp3"></audio>
+			<button onclick="switchlang('ar,en','en,sw,ar')" class="btn btn-lg lang-primary" title="Switch between Arabic and English">en</button>
+			<button onclick="switchlang('ar,sw','en,sw,ar')" class="btn btn-lg lang-secondary" title="Switch between Arabic and Swahili">sw</button>
+		</div>
 		</h1>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Written by"><img class="cover-icon" src="/storybooks-kenya/css/pencil.svg" alt="Written by" width="38px"></span> Clare Verbeek, Thembani Dladla, Zanele Buthelezi</h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Illustrated by"><img class="cover-icon" src="/storybooks-kenya/css/art.svg" alt="Illustrated by" width="38px"></span> Mlungisi Dlamini</h3>
@@ -73,7 +87,8 @@
 		<h3><span class="tooltip tooltip-right" data-tooltip="Read by"><img class="cover-icon" src="/storybooks-kenya/css/megaphone.svg" alt="Read by" width="38px"></span> Mashael Muhanna</h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Language"><img class="cover-icon" src="/storybooks-kenya/css/language.svg" alt="Language" width="38px"></span> <a href="/storybooks-kenya/stories/ar">Arabic</a></h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Level"><img class="cover-icon" src="/storybooks-kenya/css/level.svg" alt="Level" width="38px"></span> <a href="/storybooks-kenya/stories/ar/level1">Level 1</a></h3>
-		<h3><span class="tooltip tooltip-right" data-tooltip="Narrate story"><img class="cover-icon" src="/storybooks-kenya/css/speaker.svg" alt="Narrate full story" width="38px"></span> <audio id="audioplayer" controls><source src="http://globalstorybooks.net/media/audio/ar/0129/0129.mp3" type="audio/mpeg"></audio></h3>
+		<h3><span class="tooltip tooltip-right" data-tooltip="Narrate story"><img class="cover-icon" src="/storybooks-kenya/css/speaker.svg" alt="Narrate full story" width="38px"></span> <audio id="audioplayer" controls><source src="http://globalstorybooks.net/media/audio/ar/0129/ar-0129_lazy.mp3" type="audio/mpeg"></audio></h3>
+		<h3><span class="tooltip tooltip-right" data-tooltip="Autoplay story (beta - desktop only)"><img id="autoplay_icon" class="cover-icon" src="https://dohliam.github.io/elegant-circles/svg/play.svg" alt="Autoplay story" style="cursor:pointer" width="38px" onclick="autoplay()"></span></h3>
 	</div>
 </div>
 <hr>
@@ -84,11 +99,10 @@
 	أَنَا أَسْتَيْقُظُ وَأُشْعِلُ النَارَ.
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
-	I wake up and make
-fire.
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3 dir="rtl">
+	I wake up and make fire.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3 dir="rtl">
 	Ninaamka na kuwasha moto.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -99,8 +113,8 @@ fire.
 		<button class="btn btn-lg" id="playbutton02" onclick="playpause('02')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('ar','en')" class="btn btn-lg lang-en" title="Switch between Arabic and English">en</button>
-		<button onclick="switchlang('ar','sw')" class="btn btn-lg lang-sw" title="Switch between Arabic and Swahili">sw</button>
+		<button onclick="switchlang('ar,en','en,sw,ar')" class="btn btn-lg lang-primary" title="Switch between Arabic and English">en</button>
+		<button onclick="switchlang('ar,sw','en,sw,ar')" class="btn btn-lg lang-secondary" title="Switch between Arabic and Swahili">sw</button>
 	</div>
 </div>
 
@@ -113,10 +127,10 @@ fire.
 	أَنَا أَغْلِي القَلِيلَ مِنَ المَاءِ.
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3 dir="rtl">
 	I boil some water.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3 dir="rtl">
 	Ninachemsha maji.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -127,8 +141,8 @@ fire.
 		<button class="btn btn-lg" id="playbutton03" onclick="playpause('03')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('ar','en')" class="btn btn-lg lang-en" title="Switch between Arabic and English">en</button>
-		<button onclick="switchlang('ar','sw')" class="btn btn-lg lang-sw" title="Switch between Arabic and Swahili">sw</button>
+		<button onclick="switchlang('ar,en','en,sw,ar')" class="btn btn-lg lang-primary" title="Switch between Arabic and English">en</button>
+		<button onclick="switchlang('ar,sw','en,sw,ar')" class="btn btn-lg lang-secondary" title="Switch between Arabic and Swahili">sw</button>
 	</div>
 </div>
 
@@ -141,10 +155,10 @@ fire.
 	أَنَا أُقَطِّعُ حَطَبَ الأَشْجَارِ.
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3 dir="rtl">
 	I chop the firewood.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3 dir="rtl">
 	Ninakata kuni.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -155,8 +169,8 @@ fire.
 		<button class="btn btn-lg" id="playbutton04" onclick="playpause('04')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('ar','en')" class="btn btn-lg lang-en" title="Switch between Arabic and English">en</button>
-		<button onclick="switchlang('ar','sw')" class="btn btn-lg lang-sw" title="Switch between Arabic and Swahili">sw</button>
+		<button onclick="switchlang('ar,en','en,sw,ar')" class="btn btn-lg lang-primary" title="Switch between Arabic and English">en</button>
+		<button onclick="switchlang('ar,sw','en,sw,ar')" class="btn btn-lg lang-secondary" title="Switch between Arabic and Swahili">sw</button>
 	</div>
 </div>
 
@@ -169,10 +183,10 @@ fire.
 	أَنَا أُحَرِّكُ الوِعَاءَ.
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3 dir="rtl">
 	I stir the pot.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3 dir="rtl">
 	Ninakoroga uji kwenye chungu.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -183,8 +197,8 @@ fire.
 		<button class="btn btn-lg" id="playbutton05" onclick="playpause('05')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('ar','en')" class="btn btn-lg lang-en" title="Switch between Arabic and English">en</button>
-		<button onclick="switchlang('ar','sw')" class="btn btn-lg lang-sw" title="Switch between Arabic and Swahili">sw</button>
+		<button onclick="switchlang('ar,en','en,sw,ar')" class="btn btn-lg lang-primary" title="Switch between Arabic and English">en</button>
+		<button onclick="switchlang('ar,sw','en,sw,ar')" class="btn btn-lg lang-secondary" title="Switch between Arabic and Swahili">sw</button>
 	</div>
 </div>
 
@@ -197,10 +211,10 @@ fire.
 	أَنَا أُنَظِّفُ الأرْضَ.
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3 dir="rtl">
 	I sweep the floor.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3 dir="rtl">
 	Ninafagia sakafu.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -211,8 +225,8 @@ fire.
 		<button class="btn btn-lg" id="playbutton06" onclick="playpause('06')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('ar','en')" class="btn btn-lg lang-en" title="Switch between Arabic and English">en</button>
-		<button onclick="switchlang('ar','sw')" class="btn btn-lg lang-sw" title="Switch between Arabic and Swahili">sw</button>
+		<button onclick="switchlang('ar,en','en,sw,ar')" class="btn btn-lg lang-primary" title="Switch between Arabic and English">en</button>
+		<button onclick="switchlang('ar,sw','en,sw,ar')" class="btn btn-lg lang-secondary" title="Switch between Arabic and Swahili">sw</button>
 	</div>
 </div>
 
@@ -225,10 +239,10 @@ fire.
 	أَنَا أَغْسِلُ الصُّحُونَ.
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3 dir="rtl">
 	I wash the dishes.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3 dir="rtl">
 	Ninaosha vyombo.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -239,8 +253,8 @@ fire.
 		<button class="btn btn-lg" id="playbutton07" onclick="playpause('07')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('ar','en')" class="btn btn-lg lang-en" title="Switch between Arabic and English">en</button>
-		<button onclick="switchlang('ar','sw')" class="btn btn-lg lang-sw" title="Switch between Arabic and Swahili">sw</button>
+		<button onclick="switchlang('ar,en','en,sw,ar')" class="btn btn-lg lang-primary" title="Switch between Arabic and English">en</button>
+		<button onclick="switchlang('ar,sw','en,sw,ar')" class="btn btn-lg lang-secondary" title="Switch between Arabic and Swahili">sw</button>
 	</div>
 </div>
 
@@ -254,13 +268,12 @@ fire.
 …بَيْنَما أَخِي مَشْغُولٌ بِاللَّعبِ؟
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3 dir="rtl">
 	Why do I work so hard...
 
-... when my brother is
-busy playing?
+... when my brother is busy playing?
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3 dir="rtl">
 	Kwa nini ninafanya kazi kwa bidii …
 
 … wakati mdogo wangu anacheza?
@@ -273,8 +286,8 @@ busy playing?
 		<button class="btn btn-lg" id="playbutton08" onclick="playpause('08')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('ar','en')" class="btn btn-lg lang-en" title="Switch between Arabic and English">en</button>
-		<button onclick="switchlang('ar','sw')" class="btn btn-lg lang-sw" title="Switch between Arabic and Swahili">sw</button>
+		<button onclick="switchlang('ar,en','en,sw,ar')" class="btn btn-lg lang-primary" title="Switch between Arabic and English">en</button>
+		<button onclick="switchlang('ar,sw','en,sw,ar')" class="btn btn-lg lang-secondary" title="Switch between Arabic and Swahili">sw</button>
 	</div>
 </div>
 
@@ -296,20 +309,6 @@ busy playing?
 	</div>
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12">
 		<h5>Read more <a href="/storybooks-kenya/stories/ar/level1">level 1</a> stories:</h5>
-			<label class="chip"><a href="/storybooks-kenya/stories/ar/0112/">جَسَدِي</a></label>
-			<label class="chip"><a href="/storybooks-kenya/stories/ar/0009/">أَيْنَ قِطَّتِي؟</a></label>
-			<label class="chip"><a href="/storybooks-kenya/stories/ar/0327/">لِنَعُدَّ الحَيَوَانَاتِ</a></label>
-			<label class="chip"><a href="/storybooks-kenya/stories/ar/0030/">المَشَاعِرُ</a></label>
-			<label class="chip"><a href="/storybooks-kenya/stories/ar/0002/">اُنْظُرْ إِلَى الحَيَوَانَاتِ</a></label>
-			<label class="chip"><a href="/storybooks-kenya/stories/ar/0003/">مَلَابِسُ المَدْرَسَةِ</a></label>
-			<label class="chip"><a href="/storybooks-kenya/stories/ar/0271/">اثْنَانِ</a></label>
-			<label class="chip"><a href="/storybooks-kenya/stories/ar/0008/">مَاذَا تَفْعَلُ؟</a></label>
-			<label class="chip"><a href="/storybooks-kenya/stories/ar/0156/">التِّمْسَاحُ الجَائِعُ</a></label>
-			<label class="chip"><a href="/storybooks-kenya/stories/ar/0120/">الشَّعْرُ</a></label>
-			<label class="chip"><a href="/storybooks-kenya/stories/ar/0302/">النَّارُ</a></label>
-			<label class="chip"><a href="/storybooks-kenya/stories/ar/0087/">أُحِبُّ أَنْ أَقْرَأَ!</a></label>
-			<label class="chip"><a href="/storybooks-kenya/stories/ar/0067/">الطَّبْخُ</a></label>
-			<label class="chip"><a href="/storybooks-kenya/stories/ar/0231/">كِتَابُ الطَّقْسِ</a></label>
 	</div>
 </div>
 <div>

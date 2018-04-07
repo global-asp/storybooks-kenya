@@ -4,9 +4,16 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="icon" href="/storybooks-kenya/favicon.ico?v=3" />
+	<link rel="apple-touch-icon" sizes="180x180" href="/storybooks-kenya/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/storybooks-kenya/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/storybooks-kenya/favicon-16x16.png">
+	<link rel="manifest" href="/storybooks-kenya/site.webmanifest">
+	<link rel="mask-icon" href="/storybooks-kenya/safari-pinned-tab.svg" color="#5bbad5">
+	<link rel="shortcut icon" href=/storybooks-kenya/favicon.ico?v=4">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
 	<title>አህያ ሆኖ የተወለደው ልጅ - Storybooks Kenya</title>
-	<meta name="description" content="Storybooks Kenya is designed specifically for teachers and makes 40 stories from the African Storybook available in English and Swahili, as well as all the major regional and immigrant languages of Kenya (with text and audio in Amharic, Arabic, Embu / Kîembu, English, Gujarati, Ekegusii, Kamba / Kikamba, Gikuyu / Kikuyu, Kalenjin, Luganda, Olukhayo, Luo / Dholuo, Luhya / Oluluhya, Pokomo / Kipfokomo, Maa / Maasai, Meru / Kimîîru, Giryama / Kigiryama, Oromo / Afaan Oromo, Rendille, Samburu, Somali, Swahili / Kiswahili, and Turkana / Ng‘aturkana).
+	<meta name="description" content="Storybooks Kenya is designed specifically for teachers, parents, and community members. It makes 40 stories from the African Storybook available in English and Swahili, as well as all the major regional and immigrant languages of Kenya (with text and audio in Amharic, Arabic, Embu / Kîembu, English, Gujarati, Ekegusii, Kamba / Kikamba, Gikuyu / Kikuyu, Kalenjin, Luganda, Olukhayo, Luo / Dholuo, Luhya / Oluluhya, Pokomo / Kipfokomo, Maa / Maasai, Meru / Kimîîru, Giryama / Kigiryama, Oromo / Afaan Oromo, Rendille, Samburu, Somali, Swahili / Kiswahili, and Turkana / Ng‘aturkana, among others).
 ">
 	<link rel="stylesheet" href="/storybooks-kenya/css/spectre.min.css">
 	<link rel="stylesheet" href="/storybooks-kenya/css/fontello.min.css">
@@ -22,13 +29,18 @@
         <header class="navbar">
 	<section class="navbar-section">
 		<a href="/storybooks-kenya/" class="navbar-brand">
-			<object type="image/svg+xml" data="/storybooks-kenya/images/sbk_logo.svg" width="100" height="100" border="0"></object>
+			<object type="image/svg+xml" data="/storybooks-kenya/images/sbke_logo.svg" width="100" height="100" border="0"></object>
 		</a>
 		<div class="btn-group btn-group-block">
 			<a href="/storybooks-kenya/" class="btn btn-primary">Home</a>
-			<a href="/storybooks-kenya/about.html" class="btn btn-primary">About us</a>
-			<a href="/storybooks-kenya/how-to.html" class="btn btn-primary">How to use this website</a>
-			<a href="/storybooks-kenya/contact.html" class="btn btn-primary">Contact us</a>
+			<div class="dropdown">
+				<a href="#" class="btn btn-primary dropdown-toggle" tabindex="0">About</a>
+				<ul class="menu">
+					<li class="menu-item"><a href="/storybooks-kenya/about">About us</a></li>
+				</ul>
+			</div>
+			<a href="/storybooks-kenya/how-to" class="btn btn-primary">How to use this website</a>
+			<a href="/storybooks-kenya/contact" class="btn btn-primary">Contact us</a>
 		</div>
 	</section>
 </header>
@@ -59,20 +71,23 @@
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12"><img class="img-responsive" src="https://raw.githubusercontent.com/global-asp/gsn-imagebank/master/0201/01.jpg"></div>
 	<div class=" column col-7 col-lg-12 col-md-12 col-sm-12">
 		<h1><span class="def">አህያ ሆኖ የተወለደው ልጅ</span>
-<span class="en">Donkey Child</span>
-<span class="sw">Mtoto Punda</span>
-			<div class="btn-group">
-				<a href="#text02" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-				<button class="btn btn-lg" id="playbutton" onclick="playpause('')" title="Play/pause"><i class="icon-volume-up"></i></button>
-				<audio id="audio01" onended="resetbutton('01')" src="http://globalstorybooks.net/media/audio/am/0201/mp3/01.mp3"></audio>
-			</div>
+<span class="l1">Donkey Child</span>
+<span class="l2">Mtoto Punda</span>
+		<div class="btn-group">
+			<a href="#text02" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
+			<button class="btn btn-lg" id="playbutton01" onclick="playpause('01')" title="Play/pause"><i class="icon-volume-up"></i></button>
+			<audio id="audio01" onended="resetbutton('01')" src="http://globalstorybooks.net/media/audio/am/0201/mp3/01.mp3"></audio>
+			<button onclick="switchlang('am,en','en,sw,am')" class="btn btn-lg lang-primary" title="Switch between Amharic and English">en</button>
+			<button onclick="switchlang('am,sw','en,sw,am')" class="btn btn-lg lang-secondary" title="Switch between Amharic and Swahili">sw</button>
+		</div>
 		</h1>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Written by"><img class="cover-icon" src="/storybooks-kenya/css/pencil.svg" alt="Written by" width="38px"></span> Lindiwe Matshikiza</h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Illustrated by"><img class="cover-icon" src="/storybooks-kenya/css/art.svg" alt="Illustrated by" width="38px"></span> Meghan Judge</h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Translated by"><img class="cover-icon" src="/storybooks-kenya/css/global.svg" alt="Translated by" width="38px"></span> Dawit Girma</h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Language"><img class="cover-icon" src="/storybooks-kenya/css/language.svg" alt="Language" width="38px"></span> <a href="/storybooks-kenya/stories/am">Amharic</a></h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Level"><img class="cover-icon" src="/storybooks-kenya/css/level.svg" alt="Level" width="38px"></span> <a href="/storybooks-kenya/stories/am/level3">Level 3</a></h3>
-		<h3><span class="tooltip tooltip-right" data-tooltip="Narrate story"><img class="cover-icon" src="/storybooks-kenya/css/speaker.svg" alt="Narrate full story" width="38px"></span> <audio id="audioplayer" controls><source src="http://globalstorybooks.net/media/audio/am/0201/0201.mp3" type="audio/mpeg"></audio></h3>
+		<h3><span class="tooltip tooltip-right" data-tooltip="Narrate story"><img class="cover-icon" src="/storybooks-kenya/css/speaker.svg" alt="Narrate full story" width="38px"></span> <audio id="audioplayer" controls><source src="http://globalstorybooks.net/media/audio/am/0201/am-0201_donkey.mp3" type="audio/mpeg"></audio></h3>
+		<h3><span class="tooltip tooltip-right" data-tooltip="Autoplay story (beta - desktop only)"><img id="autoplay_icon" class="cover-icon" src="https://dohliam.github.io/elegant-circles/svg/play.svg" alt="Autoplay story" style="cursor:pointer" width="38px" onclick="autoplay()"></span></h3>
 	</div>
 </div>
 <hr>
@@ -83,10 +98,10 @@
 	አንዲት ህጻን ልጅ አንድ የሆነ አስገራሚ ቅርጽ ከርቀት ተመለከተች።
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3>
 	It was a little girl who first saw the mysterious shape in the distance.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3>
 	Ilikuwa ni msichana mdogo aliyekuwa wa kwanza kuona umbo la ajabu kwa mbali.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -97,8 +112,8 @@
 		<button class="btn btn-lg" id="playbutton02" onclick="playpause('02')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('am','en')" class="btn btn-lg lang-en" title="Switch between Amharic and English">en</button>
-		<button onclick="switchlang('am','sw')" class="btn btn-lg lang-sw" title="Switch between Amharic and Swahili">sw</button>
+		<button onclick="switchlang('am,en','en,sw,am')" class="btn btn-lg lang-primary" title="Switch between Amharic and English">en</button>
+		<button onclick="switchlang('am,sw','en,sw,am')" class="btn btn-lg lang-secondary" title="Switch between Amharic and Swahili">sw</button>
 	</div>
 </div>
 
@@ -111,10 +126,10 @@
 	ያ ቅርጽ እየቀረበ ሲመጣ ድርስ እርጉዝ ሴት መሆኗን ህጻኗ ተረዳች።
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3>
 	As the shape moved closer, she saw that it was a heavily pregnant woman.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3>
 	Kadiri umbo lilipokaribia, aliona kwamba lilikuwa ni mwanamke mwenye ujauzito mkubwa.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -125,8 +140,8 @@
 		<button class="btn btn-lg" id="playbutton03" onclick="playpause('03')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('am','en')" class="btn btn-lg lang-en" title="Switch between Amharic and English">en</button>
-		<button onclick="switchlang('am','sw')" class="btn btn-lg lang-sw" title="Switch between Amharic and Swahili">sw</button>
+		<button onclick="switchlang('am,en','en,sw,am')" class="btn btn-lg lang-primary" title="Switch between Amharic and English">en</button>
+		<button onclick="switchlang('am,sw','en,sw,am')" class="btn btn-lg lang-secondary" title="Switch between Amharic and Swahili">sw</button>
 	</div>
 </div>
 
@@ -139,12 +154,12 @@
 	ዓይንአፋር ግን ደግሞ ጎበዝ የሆነችው ይህች ህጻን እርጉዟን ሴትዮ ተጠጋቻት። ‹‹ይህችን ሴት ከእኛ ጋር ማኖር አለብን›› በማለት የህጻኗ ቤተ ዘመዶች ወሰኑ። ‹‹እሷን ከእኛ ጋር እናኖራታለን፤ ልጇንም አንንከባከባለን።››
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3>
 	Shy but brave, the little girl moved nearer to the woman.
 
 "We must keep her with us," the little girl's people decided. "We'll keep her and her child safe."
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3>
 	Kwa upole na ujasiri, msichana alimsogelea mwanamke yule. "Lazima tumhifadhi," watu wa msichana yule walisema. "Tutawaweka yeye na mtoto wake salama."
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -155,8 +170,8 @@
 		<button class="btn btn-lg" id="playbutton04" onclick="playpause('04')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('am','en')" class="btn btn-lg lang-en" title="Switch between Amharic and English">en</button>
-		<button onclick="switchlang('am','sw')" class="btn btn-lg lang-sw" title="Switch between Amharic and Swahili">sw</button>
+		<button onclick="switchlang('am,en','en,sw,am')" class="btn btn-lg lang-primary" title="Switch between Amharic and English">en</button>
+		<button onclick="switchlang('am,sw','en,sw,am')" class="btn btn-lg lang-secondary" title="Switch between Amharic and Swahili">sw</button>
 	</div>
 </div>
 
@@ -169,7 +184,7 @@
 	ወዲያው ምጥ ጀመራት። ‹‹ግፊ!›› ‹‹ብርድ ልብስ አምጡ!›› ‹‹ውሃ!›› ‹‹ግፊፊፊፊፊፊ!!!››
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3>
 	The child was soon on its way.
 
 "Push!"
@@ -180,7 +195,7 @@
 
 "Puuuuussssshhh!!!"
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3>
 	Mtoto alikuwa njiani kuzaliwa si muda mrefu. "Sukuma!" "Leteni mablanketi!" "Maji!" "Suuukuuumaaaa!!!"
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -191,8 +206,8 @@
 		<button class="btn btn-lg" id="playbutton05" onclick="playpause('05')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('am','en')" class="btn btn-lg lang-en" title="Switch between Amharic and English">en</button>
-		<button onclick="switchlang('am','sw')" class="btn btn-lg lang-sw" title="Switch between Amharic and Swahili">sw</button>
+		<button onclick="switchlang('am,en','en,sw,am')" class="btn btn-lg lang-primary" title="Switch between Amharic and English">en</button>
+		<button onclick="switchlang('am,sw','en,sw,am')" class="btn btn-lg lang-secondary" title="Switch between Amharic and Swahili">sw</button>
 	</div>
 </div>
 
@@ -205,12 +220,12 @@
 	ነገር ግን ህጻኑን ሲያዩ ሁሉም በድንጋጤ ወደኋላ አፈገፈጉ። ‹‹አህያ?!››
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3>
 	But when they saw the baby, everyone jumped back in shock.
 
 "A donkey?!"
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3>
 	Lakini walipomwona mtoto, wote waliruka kwa mshtuko. "Punda?!"
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -221,8 +236,8 @@
 		<button class="btn btn-lg" id="playbutton06" onclick="playpause('06')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('am','en')" class="btn btn-lg lang-en" title="Switch between Amharic and English">en</button>
-		<button onclick="switchlang('am','sw')" class="btn btn-lg lang-sw" title="Switch between Amharic and Swahili">sw</button>
+		<button onclick="switchlang('am,en','en,sw,am')" class="btn btn-lg lang-primary" title="Switch between Amharic and English">en</button>
+		<button onclick="switchlang('am,sw','en,sw,am')" class="btn btn-lg lang-secondary" title="Switch between Amharic and Swahili">sw</button>
 	</div>
 </div>
 
@@ -235,14 +250,14 @@
 	ሁሉም መከራከር ያዘ። ‹‹እናትና ልጇን እንንከባከባለን ብለን ቃል ገብተን ነበር፤ አሁንም ቢሆን ማድረግ ያለብን እሱን ነው።›› ሲሉ አንዳንዶቹ፤ ሌሎቹ ደግሞ ‹‹ግን መጥፎ እድል ሊያመጡብን ይችላሉ›› አሉ።
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3>
 	Everyone began to argue.
 
 "We said we would keep mother and child safe, and that's what we'll do," said some.
 
 "But they will bring us bad luck!" said others.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3>
 	Wakaanza kubishana. "Tulisema tutawaweka mama na mtoto salama, na hivyo ndivyo tutakavyofanya," baadhi wakasema. "Lakini watatuletea mkosi!" wengine wakadai.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -253,8 +268,8 @@
 		<button class="btn btn-lg" id="playbutton07" onclick="playpause('07')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('am','en')" class="btn btn-lg lang-en" title="Switch between Amharic and English">en</button>
-		<button onclick="switchlang('am','sw')" class="btn btn-lg lang-sw" title="Switch between Amharic and Swahili">sw</button>
+		<button onclick="switchlang('am,en','en,sw,am')" class="btn btn-lg lang-primary" title="Switch between Amharic and English">en</button>
+		<button onclick="switchlang('am,sw','en,sw,am')" class="btn btn-lg lang-secondary" title="Switch between Amharic and Swahili">sw</button>
 	</div>
 </div>
 
@@ -267,14 +282,14 @@
 	በመሆኑም ሴትዮዋ እንደገና ብቸኝነት ተሰማት። ሴትዮዋ ግራ ተጋባች፤ ይህንን ያልተጠበቀ ፍጡር ምን እንደምታደርገው ጨነቃት። ምን ማድረግ እንዳለባት አላወቀችም፣ በጣም ተወዛገበች።
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3>
 	And so the woman found herself alone again.
 
 She wondered what to do with this awkward child.
 
 She wondered what to do with herself.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3>
 	Kwa hiyo mwanamke yule alijikuta yuko peke yake kwa mara nyingine tena. Akajiuliza atafanya nini na mtoto huyo wa ajabu. Akajiuliza atafanya nini na yeye mwenyewe.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -285,8 +300,8 @@ She wondered what to do with herself.
 		<button class="btn btn-lg" id="playbutton08" onclick="playpause('08')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('am','en')" class="btn btn-lg lang-en" title="Switch between Amharic and English">en</button>
-		<button onclick="switchlang('am','sw')" class="btn btn-lg lang-sw" title="Switch between Amharic and Swahili">sw</button>
+		<button onclick="switchlang('am,en','en,sw,am')" class="btn btn-lg lang-primary" title="Switch between Amharic and English">en</button>
+		<button onclick="switchlang('am,sw','en,sw,am')" class="btn btn-lg lang-secondary" title="Switch between Amharic and Swahili">sw</button>
 	</div>
 </div>
 
@@ -299,10 +314,10 @@ She wondered what to do with herself.
 	በስተመጨረሻም ፍጡሩ ልጇ መሆኑንና እሷም እናቱ መሆኗን አምና ተቀበለች።
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3>
 	But finally she had to accept that he was her child and she was his mother.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3>
 	Lakini hatimaye alikubali kwamba huyo ni mwanaye na yeye ni mama yake.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -313,8 +328,8 @@ She wondered what to do with herself.
 		<button class="btn btn-lg" id="playbutton09" onclick="playpause('09')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('am','en')" class="btn btn-lg lang-en" title="Switch between Amharic and English">en</button>
-		<button onclick="switchlang('am','sw')" class="btn btn-lg lang-sw" title="Switch between Amharic and Swahili">sw</button>
+		<button onclick="switchlang('am,en','en,sw,am')" class="btn btn-lg lang-primary" title="Switch between Amharic and English">en</button>
+		<button onclick="switchlang('am,sw','en,sw,am')" class="btn btn-lg lang-secondary" title="Switch between Amharic and Swahili">sw</button>
 	</div>
 </div>
 
@@ -327,12 +342,12 @@ She wondered what to do with herself.
 	አሁን ነገሮች ሁሉ አስቸጋሪ እየሆኑ መጥተዋል። ልጁ እንደተወለደ ባለው የአካል መጠን በዚያው ቢቀጥል ልዩ ነገር ነው የሚሆነው። ሲያድግም ለናትየዋ ለመንከባከብ፣ ለማዘል ይቸግራታል። የሆነ ሆኖ ህጻኑ አህያ ለእናትየዋ በጀርባዋ ማዘል እስኪያቅታት ድረስ እያደገ መጣ። እናም ልጁ የጣረውን ያህል ቢጥር ልክ እንደሰው ያለ ባህርይ ሊኖረው አልተቻለውም። እናትየዋም እየደከማት እየፈራችም መጣች። አንዳንዴ እንስሳት እንደሚሰሩት ያለ ስራ እንዲሰራ ታደርገዋለች።
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3>
 	Now, if the child had stayed that same, small size, everything might have been different. But the donkey child grew and grew until he could no longer fit on his mother's back.
 
 And no matter how hard he tried, he could not behave like a human being. His mother was often tired and frustrated. Sometimes she made him do work meant for animals.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3>
 	Endapo mtoto huyo angebaki kuwa vilevile, na umbo dogo, labda kila kitu kingekuwa tofauti. Lakini mtoto Punda aliendelea kukua na kukua mpaka hakuweza kutoshea tena mgongoni mwa mama yake. Pamoja na kujaribu kwa bidii, hakuweza kuwa na tabia za kibinadamu. Mara nyingi mama yake alichoka na kuvunjika moyo. Wakati mwingine alimlazimisha kufanya kazi walizostahili wanyama.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -343,8 +358,8 @@ And no matter how hard he tried, he could not behave like a human being. His mot
 		<button class="btn btn-lg" id="playbutton10" onclick="playpause('10')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('am','en')" class="btn btn-lg lang-en" title="Switch between Amharic and English">en</button>
-		<button onclick="switchlang('am','sw')" class="btn btn-lg lang-sw" title="Switch between Amharic and Swahili">sw</button>
+		<button onclick="switchlang('am,en','en,sw,am')" class="btn btn-lg lang-primary" title="Switch between Amharic and English">en</button>
+		<button onclick="switchlang('am,sw','en,sw,am')" class="btn btn-lg lang-secondary" title="Switch between Amharic and Swahili">sw</button>
 	</div>
 </div>
 
@@ -357,12 +372,12 @@ And no matter how hard he tried, he could not behave like a human being. His mot
 	አህያው በውስጡ ግራ መጋባትና ብስጭት እያየለበት መጣ። ይህንና ያንን ማድረግ ላይኖርበት ይችላል፤ እንደዚህ መምሰል እንደዛም መምሰል አይኖርበትም። በዚህ መወዛገብ ውስጥ ሆኖ ይናደዳል፤ አንድ ቀን እናቱን በርግጫ መታትና ከመሬት ጋር አጋጫት።
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3>
 	Confusion and anger built up inside Donkey. He couldn't do this and he couldn't do that. He couldn't be like this and he couldn't be like that.
 
 He became so angry that, one day, he kicked his mother to the ground.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3>
 	Kuchanganyikiwa na hasira vilianza kujengeka ndani mwa Punda. Alishindwa kufanya hivi wala vile. Alishindwa kuwa hivi wala vile. Alipatwa na hasira sana kiasi kwamba, siku moja, alimpiga teke mama yake mpaka akaanguka chini.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -373,8 +388,8 @@ He became so angry that, one day, he kicked his mother to the ground.
 		<button class="btn btn-lg" id="playbutton11" onclick="playpause('11')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('am','en')" class="btn btn-lg lang-en" title="Switch between Amharic and English">en</button>
-		<button onclick="switchlang('am','sw')" class="btn btn-lg lang-sw" title="Switch between Amharic and Swahili">sw</button>
+		<button onclick="switchlang('am,en','en,sw,am')" class="btn btn-lg lang-primary" title="Switch between Amharic and English">en</button>
+		<button onclick="switchlang('am,sw','en,sw,am')" class="btn btn-lg lang-secondary" title="Switch between Amharic and Swahili">sw</button>
 	</div>
 </div>
 
@@ -387,10 +402,10 @@ He became so angry that, one day, he kicked his mother to the ground.
 	አህያው በጣም ሃፍረት ተሰማው። ከዚያ ሮጠ። የሚችለውን ያህል ፈጥኖ በጣም ሩቅ ወደሆነ ቦታ ፈረጠጠ።
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3>
 	Donkey was filled with shame. He started to run away as far and fast as he could.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3>
 	Punda alijawa na aibu. Akaanza kukimbilia mbali kwa haraka kadiri awezavyo.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -401,8 +416,8 @@ He became so angry that, one day, he kicked his mother to the ground.
 		<button class="btn btn-lg" id="playbutton12" onclick="playpause('12')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('am','en')" class="btn btn-lg lang-en" title="Switch between Amharic and English">en</button>
-		<button onclick="switchlang('am','sw')" class="btn btn-lg lang-sw" title="Switch between Amharic and Swahili">sw</button>
+		<button onclick="switchlang('am,en','en,sw,am')" class="btn btn-lg lang-primary" title="Switch between Amharic and English">en</button>
+		<button onclick="switchlang('am,sw','en,sw,am')" class="btn btn-lg lang-secondary" title="Switch between Amharic and Swahili">sw</button>
 	</div>
 </div>
 
@@ -415,7 +430,7 @@ He became so angry that, one day, he kicked his mother to the ground.
 	መሮጡን ሲያቆም መሽቶ ነበር፣ በዚህም አጋጣሚ አህያው ጠፋ። ‹‹ሃ ሂሃ ሂሃ›› አህያው ጨለማው ውስጥ አስካካ። ‹‹ሃ ሂሃ ሂሃ›› ይላል ደግሞ። ግን የገደል ማሚቶው ብቻ ያስተጋባል። ብቻውን ሆነ። ከባድ የድካም ስሜት እንደተጫነው ጥቅልል ብሎ ተኛ።
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3>
 	By the time he stopped running, it was night, and Donkey was lost.
 
 "Hee haw?" he whispered to the darkness.
@@ -424,7 +439,7 @@ He became so angry that, one day, he kicked his mother to the ground.
 
 Curling himself into a tight ball, he fell into a deep and troubled sleep.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3>
 	Wakati aliposimama, ilikuwa ni usiku, na alikuwa amepotea. "Hee haw?" alinong'ona gizani. "Hee haw?" giza likatoa mwangwi. Alikuwa mwenyewe. Alijikunyata katika umbo dogo, akalala fofofo usingizi wa mang'amung'amu.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -435,8 +450,8 @@ Curling himself into a tight ball, he fell into a deep and troubled sleep.
 		<button class="btn btn-lg" id="playbutton13" onclick="playpause('13')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('am','en')" class="btn btn-lg lang-en" title="Switch between Amharic and English">en</button>
-		<button onclick="switchlang('am','sw')" class="btn btn-lg lang-sw" title="Switch between Amharic and Swahili">sw</button>
+		<button onclick="switchlang('am,en','en,sw,am')" class="btn btn-lg lang-primary" title="Switch between Amharic and English">en</button>
+		<button onclick="switchlang('am,sw','en,sw,am')" class="btn btn-lg lang-secondary" title="Switch between Amharic and Swahili">sw</button>
 	</div>
 </div>
 
@@ -449,10 +464,10 @@ Curling himself into a tight ball, he fell into a deep and troubled sleep.
 	አህያው ሲነቃ እንግዳ ሽማግሌ ሰውዬ አፍጥጦ ሲያየው አገኘ። ሽማግሌውን ዓይን ዓይኑን እያየ የተስፋ ጭላንጭል ተሰማው።
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3>
 	Donkey woke up to find a strange old man staring down at him. He looked into the old man's eyes and started to feel a twinkle of hope.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3>
 	Punda aliamka na kumkuta mzee mmoja wa ajabu akimtazama. Akamwangalia mzee yule machoni na akaanza kuhisi ishara ya matumaini.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -463,8 +478,8 @@ Curling himself into a tight ball, he fell into a deep and troubled sleep.
 		<button class="btn btn-lg" id="playbutton14" onclick="playpause('14')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('am','en')" class="btn btn-lg lang-en" title="Switch between Amharic and English">en</button>
-		<button onclick="switchlang('am','sw')" class="btn btn-lg lang-sw" title="Switch between Amharic and Swahili">sw</button>
+		<button onclick="switchlang('am,en','en,sw,am')" class="btn btn-lg lang-primary" title="Switch between Amharic and English">en</button>
+		<button onclick="switchlang('am,sw','en,sw,am')" class="btn btn-lg lang-secondary" title="Switch between Amharic and Swahili">sw</button>
 	</div>
 </div>
 
@@ -477,12 +492,12 @@ Curling himself into a tight ball, he fell into a deep and troubled sleep.
 	አህያው እንዴት መኖር እንደሚገባው የተለያዩ ዘዴዎችን ካስተማረው ከሽማግሌው ሰውዬ ጋር ለመቆዬት አብሮ ሄደ። አህያው በደንብ ያዳምጣል። ትምህርት ይወስዳል። ሽማግሌው ሰውዬም እንደዚያው። እርስበርሳቸው ይረዳዳሉ፤ ይሳሳቃሉም።
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3>
 	Donkey went to stay with the old man, who taught him many different ways to survive.
 
 Donkey listened and learned, and so did the old man. They helped each other, and they laughed together.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3>
 	Punda alienda kuishi na mzee yule, na mzee alimfundisha mbinu nyingi za kuishi. Punda alisikiliza na kujifunza, na mzee vivyo hivyo pia. Walisaidiana na kucheka pamoja.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -493,8 +508,8 @@ Donkey listened and learned, and so did the old man. They helped each other, and
 		<button class="btn btn-lg" id="playbutton15" onclick="playpause('15')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('am','en')" class="btn btn-lg lang-en" title="Switch between Amharic and English">en</button>
-		<button onclick="switchlang('am','sw')" class="btn btn-lg lang-sw" title="Switch between Amharic and Swahili">sw</button>
+		<button onclick="switchlang('am,en','en,sw,am')" class="btn btn-lg lang-primary" title="Switch between Amharic and English">en</button>
+		<button onclick="switchlang('am,sw','en,sw,am')" class="btn btn-lg lang-secondary" title="Switch between Amharic and Swahili">sw</button>
 	</div>
 </div>
 
@@ -507,10 +522,10 @@ Donkey listened and learned, and so did the old man. They helped each other, and
 	አንድ ቀን ማለዳ ሽማግሌው ሰውዬ አህያውን ተሸክመህ ወደ ተራራ ጫፍ አውጣኝ ሲል ጠየቀው።
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3>
 	One morning, the old man asked Donkey to carry him to the top of a mountain.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3>
 	Asubuhi moja, mzee alimwomba Punda ambebe hadi kwenye kilele cha mlima.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -521,8 +536,8 @@ Donkey listened and learned, and so did the old man. They helped each other, and
 		<button class="btn btn-lg" id="playbutton16" onclick="playpause('16')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('am','en')" class="btn btn-lg lang-en" title="Switch between Amharic and English">en</button>
-		<button onclick="switchlang('am','sw')" class="btn btn-lg lang-sw" title="Switch between Amharic and Swahili">sw</button>
+		<button onclick="switchlang('am,en','en,sw,am')" class="btn btn-lg lang-primary" title="Switch between Amharic and English">en</button>
+		<button onclick="switchlang('am,sw','en,sw,am')" class="btn btn-lg lang-secondary" title="Switch between Amharic and Swahili">sw</button>
 	</div>
 </div>
 
@@ -535,14 +550,14 @@ Donkey listened and learned, and so did the old man. They helped each other, and
 	ተራራው ጫፍ ላይ በደመናው መሃል እንቅልፍ ወሰዳቸው። አህያው በህልሙ እናቱን እንዳመማትና ስትጠራው አየ። እንደነቃ….
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3>
 	High up amongst the clouds they fell asleep.
 
 Donkey dreamed that his mother was sick and calling to him.
 
 And when he woke up...
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3>
 	Walipofika juu kwenye mawingu, walipatwa na usingizi. Punda akaota kuwa mama yake alikuwa mgonjwa na alimhitaji. Na alipoamka...
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -553,8 +568,8 @@ And when he woke up...
 		<button class="btn btn-lg" id="playbutton17" onclick="playpause('17')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('am','en')" class="btn btn-lg lang-en" title="Switch between Amharic and English">en</button>
-		<button onclick="switchlang('am','sw')" class="btn btn-lg lang-sw" title="Switch between Amharic and Swahili">sw</button>
+		<button onclick="switchlang('am,en','en,sw,am')" class="btn btn-lg lang-primary" title="Switch between Amharic and English">en</button>
+		<button onclick="switchlang('am,sw','en,sw,am')" class="btn btn-lg lang-secondary" title="Switch between Amharic and Swahili">sw</button>
 	</div>
 </div>
 
@@ -567,10 +582,10 @@ And when he woke up...
 	… ደመናው ጠፍቷል፣ ከጓደኛው ከሽማግሌው ሰውዬ ጋር።
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3>
 	... the clouds had disappeared along with his friend, the old man.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3>
 	...mawingu yalikuwa yametoweka pamoja na rafiki yake, yule mzee.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -581,8 +596,8 @@ And when he woke up...
 		<button class="btn btn-lg" id="playbutton18" onclick="playpause('18')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('am','en')" class="btn btn-lg lang-en" title="Switch between Amharic and English">en</button>
-		<button onclick="switchlang('am','sw')" class="btn btn-lg lang-sw" title="Switch between Amharic and Swahili">sw</button>
+		<button onclick="switchlang('am,en','en,sw,am')" class="btn btn-lg lang-primary" title="Switch between Amharic and English">en</button>
+		<button onclick="switchlang('am,sw','en,sw,am')" class="btn btn-lg lang-secondary" title="Switch between Amharic and Swahili">sw</button>
 	</div>
 </div>
 
@@ -595,10 +610,10 @@ And when he woke up...
 	አህያ በስተመጨረሻም ምን ማድረግ እንዳለበት አወቀ።
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3>
 	Donkey finally knew what to do.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3>
 	Hatimaye, Punda alijua alichotakiwa kufanya.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -609,8 +624,8 @@ And when he woke up...
 		<button class="btn btn-lg" id="playbutton19" onclick="playpause('19')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('am','en')" class="btn btn-lg lang-en" title="Switch between Amharic and English">en</button>
-		<button onclick="switchlang('am','sw')" class="btn btn-lg lang-sw" title="Switch between Amharic and Swahili">sw</button>
+		<button onclick="switchlang('am,en','en,sw,am')" class="btn btn-lg lang-primary" title="Switch between Amharic and English">en</button>
+		<button onclick="switchlang('am,sw','en,sw,am')" class="btn btn-lg lang-secondary" title="Switch between Amharic and Swahili">sw</button>
 	</div>
 </div>
 
@@ -623,12 +638,12 @@ And when he woke up...
 	አህያው እናቱን ብቻዋን ሆና በጠፋው ልጇ እያዘነች አገኛት። ለረጂም ጊዜ ፍጥጥ ብለው ተያዩ። ከዚያም ጥብቅብቅ ብለው ተቃቀፉ።
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3>
 	Donkey found his mother, alone and mourning her lost child. They stared at each other for a long time.
 
 And then hugged each other very hard.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3>
 	Punda alimkuta mama yake akiwa peke yake huku akimwomboleza mwanaye aliyepotea. Wakaangaliana kwa muda mrefu. Na kisha wakakumbatiana kwa hisia.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -639,8 +654,8 @@ And then hugged each other very hard.
 		<button class="btn btn-lg" id="playbutton20" onclick="playpause('20')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('am','en')" class="btn btn-lg lang-en" title="Switch between Amharic and English">en</button>
-		<button onclick="switchlang('am','sw')" class="btn btn-lg lang-sw" title="Switch between Amharic and Swahili">sw</button>
+		<button onclick="switchlang('am,en','en,sw,am')" class="btn btn-lg lang-primary" title="Switch between Amharic and English">en</button>
+		<button onclick="switchlang('am,sw','en,sw,am')" class="btn btn-lg lang-secondary" title="Switch between Amharic and Swahili">sw</button>
 	</div>
 </div>
 
@@ -653,12 +668,12 @@ And then hugged each other very hard.
 	ትንሹ አህያና እናቱ አብረው መኖርና ማደግ ጀመሩ። ህይወታቸውን አብረው ማስቀጠል የሚችሉባቸውን በርካታ መንገዶችም አሰቡ።ቀስ በቀስ ሌሎች ሰዎችና ቤተዘመዶች ተረጋግተው ህይወታቸውን መግፋት ጀመሩ።
 	</h3></div>
 
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 en"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l1"><h3>
 	The donkey child and his mother have grown together and found many ways of living side by side.
 
 Slowly, all around them, other families have started to settle.
 	</h3></div>
-	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 sw"><h3>
+	<div class="column col-6 col-lg-11 col-md-12 col-sm-12 l2"><h3>
 	Mtoto Punda na mama yake wamekuwa kitu kimoja na kuishi kwa ushirikiano. Taratibu, familia nyingine zimeanza kuhamia na kushi miongoni mwao.
 	</h3></div>
 	<div class="column col-1 col-lg-1 col-md-12 col-sm-12">
@@ -669,8 +684,8 @@ Slowly, all around them, other families have started to settle.
 		<button class="btn btn-lg" id="playbutton21" onclick="playpause('21')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
-		<button onclick="switchlang('am','en')" class="btn btn-lg lang-en" title="Switch between Amharic and English">en</button>
-		<button onclick="switchlang('am','sw')" class="btn btn-lg lang-sw" title="Switch between Amharic and Swahili">sw</button>
+		<button onclick="switchlang('am,en','en,sw,am')" class="btn btn-lg lang-primary" title="Switch between Amharic and English">en</button>
+		<button onclick="switchlang('am,sw','en,sw,am')" class="btn btn-lg lang-secondary" title="Switch between Amharic and Swahili">sw</button>
 	</div>
 </div>
 
@@ -691,13 +706,6 @@ Slowly, all around them, other families have started to settle.
 	</div>
 	<div class="column col-5 col-lg-12 col-md-12 col-sm-12">
 		<h5>Read more <a href="/storybooks-kenya/stories/am/level3">level 3</a> stories:</h5>
-			<label class="chip"><a href="/storybooks-kenya/stories/am/0110/">ትንሽ ዘር፣ የዋንጋሪ ማታይ ታሪክ</a></label>
-			<label class="chip"><a href="/storybooks-kenya/stories/am/0141/">ዶሮና ሃምሳ እግር</a></label>
-			<label class="chip"><a href="/storybooks-kenya/stories/am/0066/">ኖዚቤሌና ሦስቱ ጸጉሮች</a></label>
-			<label class="chip"><a href="/storybooks-kenya/stories/am/0315/">የሸዋቀና መዝሙር</a></label>
-			<label class="chip"><a href="/storybooks-kenya/stories/am/0006/">አናንሲና ጥበብ</a></label>
-			<label class="chip"><a href="/storybooks-kenya/stories/am/0324/">ከቀየዬ ወጥቼ ከተማ ስገባ</a></label>
-			<label class="chip"><a href="/storybooks-kenya/stories/am/0158/">ዶሮና ንስር</a></label>
 	</div>
 </div>
 <div>
