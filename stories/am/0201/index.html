@@ -54,6 +54,7 @@
 		<option selected="" disabled="">Change language</option>
 		<option value="/storybooks-kenya/stories/en/0201">English</option>
 		<option value="/storybooks-kenya/stories/sw/0201">Swahili</option>
+		<option value="/storybooks-kenya/stories/am/0201">Amharic</option>
 		<option value="/storybooks-kenya/stories/guz/0201">Ekegusii</option>
 		<option value="/storybooks-kenya/stories/ki/0201">Gikuyu</option>
 		<option value="/storybooks-kenya/stories/gu/0201">Gujarati</option>
@@ -78,17 +79,20 @@
 		</h1>
 		<div class="btn-group cover-buttons">
 			<a href="#text02" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-			<button class="btn btn-lg disabled" id="playbutton01" onclick="playpause('01')" title="Play/pause"><i class="icon-volume-up"></i></button>
+			<button class="btn btn-lg" id="playbutton01" onclick="playpause('01')" title="Play/pause"><i class="icon-volume-up"></i></button>
+			<audio id="audio01" onended="resetbutton('01')" src="https://globalstorybooks.net/media/audio/am/0201/mp3/01.mp3"></audio>
 			<button onclick="switchlang('am,en','en,sw,am')" class="btn btn-lg lang-primary" title="Switch between Amharic and English">en</button>
 			<button onclick="switchlang('am,sw','en,sw,am')" class="btn btn-lg lang-secondary" title="Switch between Amharic and Swahili">sw</button>
 		</div>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Written by"><img class="cover-icon cover-icon-text" src="/storybooks-kenya/css/pencil.svg" alt="Written by"></span> Lindiwe Matshikiza</h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Illustrated by"><img class="cover-icon cover-icon-text" src="/storybooks-kenya/css/art.svg" alt="Illustrated by"></span> Meghan Judge</h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Translated by"><img class="cover-icon cover-icon-text" src="/storybooks-kenya/css/global.svg" alt="Translated by"></span> Dawit Girma</h3>
+		<h3><span class="tooltip tooltip-right" data-tooltip="Read by"><img class="cover-icon cover-icon-text" src="/storybooks-kenya/css/megaphone.svg" alt="Read by"></span> Abenezer Chane</h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Language"><img class="cover-icon cover-icon-text" src="/storybooks-kenya/css/language.svg" alt="Language"></span> <a href="/storybooks-kenya/stories/am">Amharic</a></h3>
 		<h3><span class="tooltip tooltip-right" data-tooltip="Level"><img class="cover-icon cover-icon-text" src="/storybooks-kenya/css/level.svg" alt="Level"></span> <a href="/storybooks-kenya/stories/am/level3">Level 3</a></h3>
-		<h3><span class="tooltip tooltip-right" data-tooltip="Narrate story"><img class="cover-icon cover-icon-text" src="/storybooks-kenya/css/speaker.svg" alt="Narrate full story"></span> <span class="cover_msg">The audio for this story is currently not available.</span></h3>
-
+		<h3><span class="tooltip tooltip-right" data-tooltip="Narrate story"><img class="cover-icon cover-icon-audio" src="/storybooks-kenya/css/speaker.svg" alt="Narrate full story"></span> <audio id="audioplayer" controls><source src="https://globalstorybooks.net/media/audio/am/0201/am-0201_donkey.mp3" type="audio/mpeg"></audio></h3>
+		<h3><span class="tooltip tooltip-right" data-tooltip="Reading speed"><img class="cover-icon cover-icon-text" src="/storybooks-kenya/css/speedometer.svg" alt="Reading speed" style="cursor:pointer" onclick="normalspeed()"></span> <span id="slider_tooltip" class="tooltip" data-tooltip="Reading speed: 1×"><input type="range" min="0.5" max="1.5" value="1" step="0.05" id="audio_slider" class="slider" oninput="adjustslider()"></span></h3>
+		<h3><span class="tooltip tooltip-right" data-tooltip="Autoplay story (beta - desktop only)"><img id="autoplay_icon" class="cover-icon cover-icon-text" src="/storybooks-kenya/css/play.svg" alt="Autoplay story" style="cursor:pointer" onclick="autoplay()"></span></h3>
 	</div>
 </div>
 
@@ -110,7 +114,8 @@
 	<div class="btn-group switcher-group">
 		<a href="#text01" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text03" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton02" onclick="playpause('02')" title="Play/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio02" onended="resetbutton('02')" src="https://globalstorybooks.net/media/audio/am/0201/mp3/02.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton02" onclick="playpause('02')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('am,en','en,sw,am')" class="btn btn-lg lang-primary" title="Switch between Amharic and English">en</button>
@@ -137,7 +142,8 @@
 	<div class="btn-group switcher-group">
 		<a href="#text02" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text04" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton03" onclick="playpause('03')" title="Play/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio03" onended="resetbutton('03')" src="https://globalstorybooks.net/media/audio/am/0201/mp3/03.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton03" onclick="playpause('03')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('am,en','en,sw,am')" class="btn btn-lg lang-primary" title="Switch between Amharic and English">en</button>
@@ -166,7 +172,8 @@
 	<div class="btn-group switcher-group">
 		<a href="#text03" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text05" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton04" onclick="playpause('04')" title="Play/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio04" onended="resetbutton('04')" src="https://globalstorybooks.net/media/audio/am/0201/mp3/04.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton04" onclick="playpause('04')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('am,en','en,sw,am')" class="btn btn-lg lang-primary" title="Switch between Amharic and English">en</button>
@@ -201,7 +208,8 @@
 	<div class="btn-group switcher-group">
 		<a href="#text04" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text06" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton05" onclick="playpause('05')" title="Play/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio05" onended="resetbutton('05')" src="https://globalstorybooks.net/media/audio/am/0201/mp3/05.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton05" onclick="playpause('05')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('am,en','en,sw,am')" class="btn btn-lg lang-primary" title="Switch between Amharic and English">en</button>
@@ -230,7 +238,8 @@
 	<div class="btn-group switcher-group">
 		<a href="#text05" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text07" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton06" onclick="playpause('06')" title="Play/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio06" onended="resetbutton('06')" src="https://globalstorybooks.net/media/audio/am/0201/mp3/06.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton06" onclick="playpause('06')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('am,en','en,sw,am')" class="btn btn-lg lang-primary" title="Switch between Amharic and English">en</button>
@@ -261,7 +270,8 @@
 	<div class="btn-group switcher-group">
 		<a href="#text06" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text08" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton07" onclick="playpause('07')" title="Play/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio07" onended="resetbutton('07')" src="https://globalstorybooks.net/media/audio/am/0201/mp3/07.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton07" onclick="playpause('07')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('am,en','en,sw,am')" class="btn btn-lg lang-primary" title="Switch between Amharic and English">en</button>
@@ -292,7 +302,8 @@ She wondered what to do with herself.
 	<div class="btn-group switcher-group">
 		<a href="#text07" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text09" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton08" onclick="playpause('08')" title="Play/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio08" onended="resetbutton('08')" src="https://globalstorybooks.net/media/audio/am/0201/mp3/08.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton08" onclick="playpause('08')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('am,en','en,sw,am')" class="btn btn-lg lang-primary" title="Switch between Amharic and English">en</button>
@@ -319,7 +330,8 @@ She wondered what to do with herself.
 	<div class="btn-group switcher-group">
 		<a href="#text08" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text10" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton09" onclick="playpause('09')" title="Play/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio09" onended="resetbutton('09')" src="https://globalstorybooks.net/media/audio/am/0201/mp3/09.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton09" onclick="playpause('09')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('am,en','en,sw,am')" class="btn btn-lg lang-primary" title="Switch between Amharic and English">en</button>
@@ -348,7 +360,8 @@ And no matter how hard he tried, he could not behave like a human being. His mot
 	<div class="btn-group switcher-group">
 		<a href="#text09" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text11" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton10" onclick="playpause('10')" title="Play/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio10" onended="resetbutton('10')" src="https://globalstorybooks.net/media/audio/am/0201/mp3/10.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton10" onclick="playpause('10')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('am,en','en,sw,am')" class="btn btn-lg lang-primary" title="Switch between Amharic and English">en</button>
@@ -377,7 +390,8 @@ He became so angry that, one day, he kicked his mother to the ground.
 	<div class="btn-group switcher-group">
 		<a href="#text10" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text12" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton11" onclick="playpause('11')" title="Play/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio11" onended="resetbutton('11')" src="https://globalstorybooks.net/media/audio/am/0201/mp3/11.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton11" onclick="playpause('11')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('am,en','en,sw,am')" class="btn btn-lg lang-primary" title="Switch between Amharic and English">en</button>
@@ -404,7 +418,8 @@ He became so angry that, one day, he kicked his mother to the ground.
 	<div class="btn-group switcher-group">
 		<a href="#text11" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text13" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton12" onclick="playpause('12')" title="Play/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio12" onended="resetbutton('12')" src="https://globalstorybooks.net/media/audio/am/0201/mp3/12.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton12" onclick="playpause('12')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('am,en','en,sw,am')" class="btn btn-lg lang-primary" title="Switch between Amharic and English">en</button>
@@ -437,7 +452,8 @@ Curling himself into a tight ball, he fell into a deep and troubled sleep.
 	<div class="btn-group switcher-group">
 		<a href="#text12" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text14" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton13" onclick="playpause('13')" title="Play/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio13" onended="resetbutton('13')" src="https://globalstorybooks.net/media/audio/am/0201/mp3/13.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton13" onclick="playpause('13')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('am,en','en,sw,am')" class="btn btn-lg lang-primary" title="Switch between Amharic and English">en</button>
@@ -464,7 +480,8 @@ Curling himself into a tight ball, he fell into a deep and troubled sleep.
 	<div class="btn-group switcher-group">
 		<a href="#text13" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text15" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton14" onclick="playpause('14')" title="Play/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio14" onended="resetbutton('14')" src="https://globalstorybooks.net/media/audio/am/0201/mp3/14.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton14" onclick="playpause('14')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('am,en','en,sw,am')" class="btn btn-lg lang-primary" title="Switch between Amharic and English">en</button>
@@ -493,7 +510,8 @@ Donkey listened and learned, and so did the old man. They helped each other, and
 	<div class="btn-group switcher-group">
 		<a href="#text14" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text16" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton15" onclick="playpause('15')" title="Play/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio15" onended="resetbutton('15')" src="https://globalstorybooks.net/media/audio/am/0201/mp3/15.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton15" onclick="playpause('15')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('am,en','en,sw,am')" class="btn btn-lg lang-primary" title="Switch between Amharic and English">en</button>
@@ -520,7 +538,8 @@ Donkey listened and learned, and so did the old man. They helped each other, and
 	<div class="btn-group switcher-group">
 		<a href="#text15" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text17" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton16" onclick="playpause('16')" title="Play/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio16" onended="resetbutton('16')" src="https://globalstorybooks.net/media/audio/am/0201/mp3/16.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton16" onclick="playpause('16')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('am,en','en,sw,am')" class="btn btn-lg lang-primary" title="Switch between Amharic and English">en</button>
@@ -551,7 +570,8 @@ And when he woke up…
 	<div class="btn-group switcher-group">
 		<a href="#text16" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text18" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton17" onclick="playpause('17')" title="Play/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio17" onended="resetbutton('17')" src="https://globalstorybooks.net/media/audio/am/0201/mp3/17.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton17" onclick="playpause('17')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('am,en','en,sw,am')" class="btn btn-lg lang-primary" title="Switch between Amharic and English">en</button>
@@ -578,7 +598,8 @@ And when he woke up…
 	<div class="btn-group switcher-group">
 		<a href="#text17" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text19" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton18" onclick="playpause('18')" title="Play/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio18" onended="resetbutton('18')" src="https://globalstorybooks.net/media/audio/am/0201/mp3/18.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton18" onclick="playpause('18')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('am,en','en,sw,am')" class="btn btn-lg lang-primary" title="Switch between Amharic and English">en</button>
@@ -605,7 +626,8 @@ And when he woke up…
 	<div class="btn-group switcher-group">
 		<a href="#text18" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text20" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton19" onclick="playpause('19')" title="Play/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio19" onended="resetbutton('19')" src="https://globalstorybooks.net/media/audio/am/0201/mp3/19.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton19" onclick="playpause('19')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('am,en','en,sw,am')" class="btn btn-lg lang-primary" title="Switch between Amharic and English">en</button>
@@ -634,7 +656,8 @@ And then hugged each other very hard.
 	<div class="btn-group switcher-group">
 		<a href="#text19" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#text21" class="btn btn-lg" title="Next page"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton20" onclick="playpause('20')" title="Play/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio20" onended="resetbutton('20')" src="https://globalstorybooks.net/media/audio/am/0201/mp3/20.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton20" onclick="playpause('20')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('am,en','en,sw,am')" class="btn btn-lg lang-primary" title="Switch between Amharic and English">en</button>
@@ -663,7 +686,8 @@ Slowly, all around them, other families have started to settle.
 	<div class="btn-group switcher-group">
 		<a href="#text20" class="btn btn-lg" title="Previous page"><i class="icon-arrow-up"></i></a>
 		<a href="#colophon" class="btn btn-lg" title="Story credits"><i class="icon-arrow-down"></i></a>
-		<button class="btn btn-lg disabled" id="playbutton21" onclick="playpause('21')" title="Play/pause"><i class="icon-volume-up"></i></button>
+		<audio id="audio21" onended="resetbutton('21')" src="https://globalstorybooks.net/media/audio/am/0201/mp3/21.mp3"></audio>
+		<button class="btn btn-lg" id="playbutton21" onclick="playpause('21')" title="Play/pause"><i class="icon-volume-up"></i></button>
 	</div>
 	<div class="btn-group switcher-group">
 		<button onclick="switchlang('am,en','en,sw,am')" class="btn btn-lg lang-primary" title="Switch between Amharic and English">en</button>
@@ -680,6 +704,7 @@ Slowly, all around them, other families have started to settle.
 		<h5><span class="colophon-heading">Written by:</span> Lindiwe Matshikiza</h5>
 		<h5><span class="colophon-heading">Illustrated by:</span> Meghan Judge</h5>
 		<h5><span class="colophon-heading">Translated by:</span> Dawit Girma</h5>
+		<h5><span class="colophon-heading">Read by:</span> Abenezer Chane</h5>
 		<h5><span class="colophon-heading">Language:</span> <a href="/storybooks-kenya/stories/am">Amharic</a></h5>
 		<h5><span class="colophon-heading">Level:</span> <a href="/storybooks-kenya/stories/am/level3">Level 3</a></h5>
 		<h5><span class="colophon-heading">Source:</span> <a href="https://africanstorybook.org/reader.php?id=15028" target="_blank">Donkey Child</a> from <a href="https://africanstorybook.org/">African Storybook</a></h5>
